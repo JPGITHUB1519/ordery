@@ -97,8 +97,7 @@ namespace data
            return rpta;
             
        }
-
-        public DataSet getCliente()
+       public DataSet getCliente()
         {
             string rpta = "ok";
             DataSet ds = new DataSet();
@@ -112,6 +111,35 @@ namespace data
             }
 
             return ds;
-       }
+        }
+        public DataSet filterByName(string name)
+        {
+            DataSet ds = new DataSet();
+            try
+            {
+                ds = database.executeQuery("EXEC FILTERBYNAME_CLIENTE @nombre",
+                                            new KeyValuePair<string,object>("@nombre", name));
+            }
+            catch(Exception ex)
+            {
+                ds = null;
+            }
+            return ds;
+        }
+
+        public DataSet filterById(int idcliente)
+        {
+            DataSet ds = new DataSet();
+            try
+            {
+                ds = database.executeQuery("EXEC FILTERBYID_CLIENTE @idcliente",
+                                            new KeyValuePair<string, object>("@idcliente", idcliente));
+            }
+            catch(Exception ex)
+            {
+                ds = null;
+            }
+            return ds;
+        }
     }
 }

@@ -57,6 +57,10 @@
             this.label8.Size = new System.Drawing.Size(324, 29);
             this.label8.Text = "Mantenimiento de Clientes";
             // 
+            // btnbuscar
+            // 
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
+            // 
             // btneliminar
             // 
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
@@ -95,6 +99,10 @@
             this.tabplistado.Controls.SetChildIndex(this.btnimprimir, 0);
             this.tabplistado.Controls.SetChildIndex(this.dataGridView1, 0);
             // 
+            // btn_buscar2
+            // 
+            this.btn_buscar2.Click += new System.EventHandler(this.btn_buscar2_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -122,6 +130,7 @@
             this.txtidcliente.Size = new System.Drawing.Size(193, 20);
             this.txtidcliente.TabIndex = 91;
             this.txtidcliente.validate = false;
+            this.txtidcliente.Validating += new System.ComponentModel.CancelEventHandler(this.txtidcliente_Validating);
             // 
             // txtnombre
             // 

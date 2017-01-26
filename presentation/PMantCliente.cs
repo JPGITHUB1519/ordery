@@ -41,6 +41,16 @@ namespace presentation
             this.chkis_active.Checked = false;
             this.txtidcliente.Focus();
         }
+        /* clear Textboxes but not the idtextbox */
+        public void clearTextBoxesExceptId()
+        {
+            this.txtnombre.Text = string.Empty;
+            this.txtapellido.Text = string.Empty;
+            this.txttelefono.Text = string.Empty;
+            this.txtemail.Text = string.Empty;
+            this.txtdireccion.Text = string.Empty;
+            this.chkis_active.Checked = false;
+        }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -79,6 +89,48 @@ namespace presentation
         private void btncancelar_Click(object sender, EventArgs e)
         {
             clearTextBoxes();
+        }
+
+        private void btn_buscar2_Click(object sender, EventArgs e)
+        {
+            DataSet ds = new DataSet();
+            Cliente cliente = new Cliente();
+            ds = cliente.filterByName(this.txtbuscar.Text.Trim());
+            this.dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void txtidcliente_Validating(object sender, CancelEventArgs e)
+        {
+            DataSet ds = new DataSet();
+            Cliente cliente = new Cliente();
+            if(this.txtidcliente.Text != string.Empty)
+            {
+                ds = cliente.filterById(Convert.ToInt32(this.txtidcliente.Text.Trim()));
+                if (database.checkEmptyDataset(ds) == true)
+                {
+                    clearTextBoxesExceptId();
+                }
+                else
+                {
+                    this.txtidcliente.Text = ds.Tables[0].Rows[0]["idcliente"].ToString();
+                    this.txtnombre.Text = ds.Tables[0].Rows[0]["nombre"].ToString();
+                    this.txtapellido.Text = ds.Tables[0].Rows[0]["apellido"].ToString();
+                    this.txtdireccion.Text = ds.Tables[0].Rows[0]["direccion"].ToString();
+                    this.txttelefono.Text = ds.Tables[0].Rows[0]["telefono"].ToString();
+                    this.txtemail.Text = ds.Tables[0].Rows[0]["email"].ToString();
+                    this.chkis_active.Checked = Convert.ToBoolean(ds.Tables[0].Rows[0]["is_active"]);
+                }
+            }
+            else
+            {
+                clearTextBoxesExceptId();
+            }    
+        }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            this.tabControl1.SelectedIndex = 1;
+            this.txtbuscar.Focus();
         }
     }
 }
