@@ -1,0 +1,14 @@
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\bin\Debug\presentation.dll
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\bin\Debug\presentation.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.csprojResolveAssemblyReference.cache
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.dll
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.PConsBase.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.PMantBase.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.PMantCliente.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.Properties.Resources.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.csproj.GenerateResource.Cache
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\bin\Debug\data.dll
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\bin\Debug\utils.dll
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\bin\Debug\data.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\bin\Debug\utils.pdb

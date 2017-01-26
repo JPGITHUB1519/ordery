@@ -1,0 +1,5 @@
+C:\Users\JPNESS\Desktop\Universidad\ordery\testing\bin\Debug\testing.exe.config
+C:\Users\JPNESS\Desktop\Universidad\ordery\testing\bin\Debug\testing.exe
+C:\Users\JPNESS\Desktop\Universidad\ordery\testing\bin\Debug\testing.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\testing\obj\Debug\testing.exe
+C:\Users\JPNESS\Desktop\Universidad\ordery\testing\obj\Debug\testing.pdb

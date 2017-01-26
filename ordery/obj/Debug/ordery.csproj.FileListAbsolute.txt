@@ -1,0 +1,15 @@
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Debug\ordery.exe.config
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Debug\ordery.exe
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Debug\ordery.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\obj\Debug\ordery.csprojResolveAssemblyReference.cache
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\obj\Debug\ordery.Properties.Resources.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\obj\Debug\ordery.csproj.GenerateResource.Cache
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\obj\Debug\ordery.exe
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\obj\Debug\ordery.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\obj\Debug\ordery.mdiPrincipal.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Debug\data.dll
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Debug\presentation.dll
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Debug\utils.dll
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Debug\data.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Debug\presentation.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Debug\utils.pdb
