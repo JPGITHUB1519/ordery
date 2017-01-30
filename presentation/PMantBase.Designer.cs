@@ -33,23 +33,30 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabpmantenimiento = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabplistado = new System.Windows.Forms.TabPage();
+            this.dgvData = new System.Windows.Forms.DataGridView();
+            this.btnimprimir = new System.Windows.Forms.Button();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnbuscar = new System.Windows.Forms.Button();
-            this.btneliminar = new System.Windows.Forms.Button();
-            this.btnsalir = new System.Windows.Forms.Button();
-            this.btncancelar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnimprimir = new System.Windows.Forms.Button();
             this.btn_buscar2 = new System.Windows.Forms.Button();
-            this.errprov = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errProv = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ttpNotification = new System.Windows.Forms.ToolTip(this.components);
+            this.chkeliminar = new System.Windows.Forms.CheckBox();
+            this.eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btnDelete2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabpmantenimiento.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabplistado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errprov)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProv)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -87,17 +94,78 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnbuscar);
-            this.groupBox2.Controls.Add(this.btneliminar);
-            this.groupBox2.Controls.Add(this.btnsalir);
-            this.groupBox2.Controls.Add(this.btncancelar);
-            this.groupBox2.Controls.Add(this.btnNuevo);
-            this.groupBox2.Location = new System.Drawing.Point(120, 419);
+            this.groupBox2.Controls.Add(this.btnEdit);
+            this.groupBox2.Controls.Add(this.btnSave);
+            this.groupBox2.Controls.Add(this.btnDelete);
+            this.groupBox2.Controls.Add(this.btnExit);
+            this.groupBox2.Controls.Add(this.btnCancel);
+            this.groupBox2.Controls.Add(this.btnNew);
+            this.groupBox2.Location = new System.Drawing.Point(3, 419);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(584, 122);
+            this.groupBox2.Size = new System.Drawing.Size(740, 122);
             this.groupBox2.TabIndex = 40;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Acciones";
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Image = global::presentation.Properties.Resources.edit;
+            this.btnEdit.Location = new System.Drawing.Point(263, 19);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(106, 72);
+            this.btnEdit.TabIndex = 13;
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Image = global::presentation.Properties.Resources.save;
+            this.btnSave.Location = new System.Drawing.Point(151, 19);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(106, 72);
+            this.btnSave.TabIndex = 12;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Image = global::presentation.Properties.Resources.delete;
+            this.btnDelete.Location = new System.Drawing.Point(375, 19);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(106, 72);
+            this.btnDelete.TabIndex = 8;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Image = global::presentation.Properties.Resources.User_Interface_Login_icon;
+            this.btnExit.Location = new System.Drawing.Point(599, 19);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(106, 72);
+            this.btnExit.TabIndex = 11;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Image = global::presentation.Properties.Resources.Undo_icon;
+            this.btnCancel.Location = new System.Drawing.Point(487, 19);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(106, 72);
+            this.btnCancel.TabIndex = 10;
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnNew
+            // 
+            this.btnNew.Image = global::presentation.Properties.Resources.add_icon;
+            this.btnNew.Location = new System.Drawing.Point(39, 19);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(106, 72);
+            this.btnNew.TabIndex = 7;
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // groupBox1
             // 
@@ -110,6 +178,9 @@
             // 
             // tabplistado
             // 
+            this.tabplistado.Controls.Add(this.btnDelete2);
+            this.tabplistado.Controls.Add(this.chkeliminar);
+            this.tabplistado.Controls.Add(this.dgvData);
             this.tabplistado.Controls.Add(this.btnimprimir);
             this.tabplistado.Controls.Add(this.txtbuscar);
             this.tabplistado.Controls.Add(this.label2);
@@ -121,6 +192,31 @@
             this.tabplistado.TabIndex = 1;
             this.tabplistado.Text = "Listado";
             this.tabplistado.UseVisualStyleBackColor = true;
+            // 
+            // dgvData
+            // 
+            this.dgvData.AllowUserToAddRows = false;
+            this.dgvData.AllowUserToDeleteRows = false;
+            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.eliminar});
+            this.dgvData.Location = new System.Drawing.Point(45, 150);
+            this.dgvData.Name = "dgvData";
+            this.dgvData.ReadOnly = true;
+            this.dgvData.Size = new System.Drawing.Size(656, 361);
+            this.dgvData.TabIndex = 75;
+            this.dgvData.AllowUserToAddRowsChanged += new System.EventHandler(this.dgvData_AllowUserToAddRowsChanged);
+            this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
+            this.dgvData.DoubleClick += new System.EventHandler(this.dgvData_DoubleClick);
+            // 
+            // btnimprimir
+            // 
+            this.btnimprimir.Image = global::presentation.Properties.Resources.print;
+            this.btnimprimir.Location = new System.Drawing.Point(595, 6);
+            this.btnimprimir.Name = "btnimprimir";
+            this.btnimprimir.Size = new System.Drawing.Size(106, 72);
+            this.btnimprimir.TabIndex = 73;
+            this.btnimprimir.UseVisualStyleBackColor = true;
             // 
             // txtbuscar
             // 
@@ -139,60 +235,6 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Buscar";
             // 
-            // btnbuscar
-            // 
-            this.btnbuscar.Image = global::presentation.Properties.Resources.search;
-            this.btnbuscar.Location = new System.Drawing.Point(239, 19);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(106, 72);
-            this.btnbuscar.TabIndex = 9;
-            this.btnbuscar.UseVisualStyleBackColor = true;
-            // 
-            // btneliminar
-            // 
-            this.btneliminar.Image = global::presentation.Properties.Resources.delete;
-            this.btneliminar.Location = new System.Drawing.Point(127, 19);
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(106, 72);
-            this.btneliminar.TabIndex = 8;
-            this.btneliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnsalir
-            // 
-            this.btnsalir.Image = global::presentation.Properties.Resources.User_Interface_Login_icon;
-            this.btnsalir.Location = new System.Drawing.Point(463, 19);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(106, 72);
-            this.btnsalir.TabIndex = 11;
-            this.btnsalir.UseVisualStyleBackColor = true;
-            // 
-            // btncancelar
-            // 
-            this.btncancelar.Image = global::presentation.Properties.Resources.Undo_icon;
-            this.btncancelar.Location = new System.Drawing.Point(351, 19);
-            this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(106, 72);
-            this.btncancelar.TabIndex = 10;
-            this.btncancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Image = global::presentation.Properties.Resources.save;
-            this.btnNuevo.Location = new System.Drawing.Point(15, 19);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(106, 72);
-            this.btnNuevo.TabIndex = 7;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
-            // btnimprimir
-            // 
-            this.btnimprimir.Image = global::presentation.Properties.Resources.print;
-            this.btnimprimir.Location = new System.Drawing.Point(595, 6);
-            this.btnimprimir.Name = "btnimprimir";
-            this.btnimprimir.Size = new System.Drawing.Size(106, 72);
-            this.btnimprimir.TabIndex = 73;
-            this.btnimprimir.UseVisualStyleBackColor = true;
-            // 
             // btn_buscar2
             // 
             this.btn_buscar2.Image = global::presentation.Properties.Resources.search;
@@ -201,10 +243,40 @@
             this.btn_buscar2.Size = new System.Drawing.Size(106, 72);
             this.btn_buscar2.TabIndex = 71;
             this.btn_buscar2.UseVisualStyleBackColor = true;
+            this.btn_buscar2.Click += new System.EventHandler(this.btn_buscar2_Click);
             // 
-            // errprov
+            // errProv
             // 
-            this.errprov.ContainerControl = this;
+            this.errProv.ContainerControl = this;
+            // 
+            // chkeliminar
+            // 
+            this.chkeliminar.AutoSize = true;
+            this.chkeliminar.Location = new System.Drawing.Point(60, 90);
+            this.chkeliminar.Name = "chkeliminar";
+            this.chkeliminar.Size = new System.Drawing.Size(62, 17);
+            this.chkeliminar.TabIndex = 76;
+            this.chkeliminar.Text = "Eliminar";
+            this.chkeliminar.UseVisualStyleBackColor = true;
+            this.chkeliminar.CheckedChanged += new System.EventHandler(this.chkeliminar_CheckedChanged);
+            // 
+            // eliminar
+            // 
+            this.eliminar.HeaderText = "eliminar";
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
+            this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // btnDelete2
+            // 
+            this.btnDelete2.Image = global::presentation.Properties.Resources.delete;
+            this.btnDelete2.Location = new System.Drawing.Point(168, 61);
+            this.btnDelete2.Name = "btnDelete2";
+            this.btnDelete2.Size = new System.Drawing.Size(106, 72);
+            this.btnDelete2.TabIndex = 77;
+            this.btnDelete2.UseVisualStyleBackColor = true;
+            this.btnDelete2.Click += new System.EventHandler(this.button1_Click);
             // 
             // PMantBase
             // 
@@ -215,12 +287,14 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "PMantBase";
             this.Text = "PMantBase";
+            this.Load += new System.EventHandler(this.PMantBase_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabpmantenimiento.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.tabplistado.ResumeLayout(false);
             this.tabplistado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errprov)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,17 +306,23 @@
         public System.Windows.Forms.TabControl tabControl1;
         public System.Windows.Forms.TabPage tabpmantenimiento;
         public System.Windows.Forms.GroupBox groupBox2;
-        public System.Windows.Forms.Button btnbuscar;
-        public System.Windows.Forms.Button btneliminar;
-        public System.Windows.Forms.Button btnsalir;
-        public System.Windows.Forms.Button btncancelar;
-        public System.Windows.Forms.Button btnNuevo;
+        public System.Windows.Forms.Button btnDelete;
+        public System.Windows.Forms.Button btnExit;
+        public System.Windows.Forms.Button btnCancel;
+        public System.Windows.Forms.Button btnNew;
         public System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.TabPage tabplistado;
         public System.Windows.Forms.Button btnimprimir;
         public System.Windows.Forms.TextBox txtbuscar;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Button btn_buscar2;
-        public System.Windows.Forms.ErrorProvider errprov;
+        public System.Windows.Forms.ErrorProvider errProv;
+        public System.Windows.Forms.Button btnSave;
+        public System.Windows.Forms.Button btnEdit;
+        public System.Windows.Forms.ToolTip ttpNotification;
+        public System.Windows.Forms.DataGridView dgvData;
+        private System.Windows.Forms.CheckBox chkeliminar;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn eliminar;
+        public System.Windows.Forms.Button btnDelete2;
     }
 }

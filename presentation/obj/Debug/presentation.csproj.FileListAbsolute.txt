@@ -12,3 +12,5 @@ C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\bin\Debug\data.dll
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\bin\Debug\utils.dll
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\bin\Debug\data.pdb
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\bin\Debug\utils.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.PMantArticulo.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.PMantCategoria.resources

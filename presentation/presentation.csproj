@@ -47,11 +47,23 @@
     <Compile Include="PConsBase.Designer.cs">
       <DependentUpon>PConsBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="PMantArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PMantArticulo.Designer.cs">
+      <DependentUpon>PMantArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="PMantBase.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PMantBase.Designer.cs">
       <DependentUpon>PMantBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PMantCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PMantCategoria.Designer.cs">
+      <DependentUpon>PMantCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="PMantCliente.cs">
       <SubType>Form</SubType>
@@ -70,8 +82,14 @@
     <EmbeddedResource Include="PConsBase.resx">
       <DependentUpon>PConsBase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PMantArticulo.resx">
+      <DependentUpon>PMantArticulo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PMantBase.resx">
       <DependentUpon>PMantBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PMantCategoria.resx">
+      <DependentUpon>PMantCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PMantCliente.resx">
       <DependentUpon>PMantCliente.cs</DependentUpon>
@@ -108,6 +126,12 @@
       <Project>{78878A46-2A52-4567-98EE-D39B233F670E}</Project>
       <Name>utils</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

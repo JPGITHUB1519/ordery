@@ -1,0 +1,12 @@
+* Stores Procedures
+
+	<Action> = { Insert, Delete, Update }
+	<nombre> = nombre de tabla
+		<Action><Nombre>
+
+	Get All
+		get<Nombre>All
+	Get by attribute
+		get<Nombre>By<Attribute>
+
+

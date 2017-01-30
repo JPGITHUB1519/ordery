@@ -24,13 +24,13 @@ namespace presentation
             fillDatagrid();
         }
 
-        public void fillDatagrid()
+        public override void fillDatagrid()
         {
             Cliente cliente = new Cliente();
             this.dataGridView1.DataSource = cliente.getCliente().Tables[0];
         }
 
-        public void clearTextBoxes()
+        public override void clearTextBoxes()
         {
             this.txtidcliente.Text = string.Empty;
             this.txtnombre.Text = string.Empty;

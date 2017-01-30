@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using utils;
 
 namespace data
 {
@@ -94,11 +96,11 @@ namespace data
          * */
 
         // Using params allows you to call the function with no arguments.
-        /*
+        /* Using this Method to execute query that returns rows
          * Execute Parametized Query sending KeyValuePar array
          * from http://codereview.stackexchange.com/questions/56025/passing-parameters-to-a-query
-         * if the params is not set it execute the query whatever
-        */
+         * if the params is not set it execute the query whateve
+         */
         public static DataSet executeQuery(string query, params KeyValuePair<String, object>[] parameters)
         {
             SqlConnection con = new SqlConnection();
@@ -119,7 +121,7 @@ namespace data
             }
             catch (Exception ex)
             {
-                ds = null;
+                throw ex;
             }
             finally
             {
@@ -131,6 +133,42 @@ namespace data
 
             return ds;
         }
+
+        // A variation of the above method
+        // use this for querys that not returns rows
+        public static string executeNonQuery(string query, params KeyValuePair<String, object>[] parameters)
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = connection_string;
+            DataSet ds = new DataSet();
+            string rpta = configuration.db_ok;
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand(query, con);
+                // adding parameters to the commands
+                foreach (KeyValuePair<string, object> kvp in parameters)
+                {
+                    cmd.Parameters.Add(new SqlParameter(kvp.Key, kvp.Value));
+                }
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+
+            return rpta;
+        }
+
 
         // print a dataset for console stuffs and line separate
         public static void printDataset(DataSet ds)

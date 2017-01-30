@@ -1,0 +1,31 @@
+Sistema para restaurantes de Comida Rapida.
+
+* permitira registrar Categoria de Productos
+* permirá Registrar Productos
+* permitirá Registrar Combos
+* permitirá Registrar Combos combinados con productos
+
+* Registar combos por día
+* Generación aleatoria de combos
+* Al elegir uno de los combos Aparecerá la Pantalla de pedidos que es donde se facturá el pedido Y También se enviará la orden a la cocina.
+* los cocineros serán capaces de ver las ordenes y sus estados
+* al terminar de cocinar la comida los cocineros deben marcar la orden como lista para notificar al cajero.
+* Debe haber un historial de combos para saber que combo habia ese dia
+
+
+Tipos de Pedidos :
+	* A Domicilio
+	* Para comedor(Rapida)
+	* Para llevar
+	* Para Recoger(El cliente llama para recogerla en un futuro)
+
+
+Para comidas a Domicilio:
+	* Se debe asignar pedido a Repartidor para que lo lleve
+	Cuando el Repartidor regrese :
+		Aparecerá la pantalla de cobro a repartidor
+
+Cajeros y Turnos
+	* Apertura de Turnos Y Cierre
+	* Cortes de caja
+

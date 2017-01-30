@@ -1,6 +1,6 @@
 ﻿namespace presentation
 {
-    partial class PMantCliente
+    partial class PMantArticulo
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.txtidarticulo = new utils.ntextbox(this.components);
             this.label3 = new System.Windows.Forms.Label();
+            this.txtcategoria = new utils.ntextbox(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.txtidcliente = new utils.ntextbox(this.components);
             this.txtnombre = new utils.ntextbox(this.components);
-            this.txtapellido = new utils.ntextbox(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txttelefono = new utils.ntextbox(this.components);
-            this.txtdireccion = new utils.ntextbox(this.components);
+            this.rchdescripcion = new System.Windows.Forms.RichTextBox();
+            this.txtprecio = new utils.ntextbox(this.components);
             this.label6 = new System.Windows.Forms.Label();
-            this.txtemail = new utils.ntextbox(this.components);
+            this.txtunidad = new utils.ntextbox(this.components);
             this.label7 = new System.Windows.Forms.Label();
-            this.chkis_active = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabpmantenimiento.SuspendLayout();
@@ -54,40 +53,24 @@
             // 
             // label8
             // 
-            this.label8.Size = new System.Drawing.Size(324, 29);
-            this.label8.Text = "Mantenimiento de Clientes";
-            // 
-            // btnbuscar
-            // 
-            // 
-            // btneliminar
-            // 
-            this.btnDelete.Click += new System.EventHandler(this.btneliminar_Click);
-            // 
-            // btncancelar
-            // 
-            this.btnCancel.Click += new System.EventHandler(this.btncancelar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNew.Click += new System.EventHandler(this.btnNuevo_Click);
+            this.label8.Size = new System.Drawing.Size(329, 29);
+            this.label8.Text = "Mantenimiento de Articulos";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.chkis_active);
-            this.groupBox1.Controls.Add(this.txtemail);
+            this.groupBox1.Controls.Add(this.txtunidad);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtdireccion);
+            this.groupBox1.Controls.Add(this.txtprecio);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txttelefono);
+            this.groupBox1.Controls.Add(this.rchdescripcion);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtapellido);
             this.groupBox1.Controls.Add(this.txtnombre);
-            this.groupBox1.Controls.Add(this.txtidcliente);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtcategoria);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtidarticulo);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Text = "Clientes";
+            this.groupBox1.Text = "Articulos";
             // 
             // tabplistado
             // 
@@ -98,145 +81,138 @@
             this.tabplistado.Controls.SetChildIndex(this.btnimprimir, 0);
             this.tabplistado.Controls.SetChildIndex(this.dataGridView1, 0);
             // 
-            // btn_buscar2
+            // txtbuscar
             // 
-            this.btn_buscar2.Click += new System.EventHandler(this.btn_buscar2_Click);
+            this.txtbuscar.Location = new System.Drawing.Point(159, 33);
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(59, 31);
+            // 
+            // txtidarticulo
+            // 
+            this.txtidarticulo.Location = new System.Drawing.Point(312, 30);
+            this.txtidarticulo.Name = "txtidarticulo";
+            this.txtidarticulo.Size = new System.Drawing.Size(193, 20);
+            this.txtidarticulo.TabIndex = 93;
+            this.txtidarticulo.validate = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(257, 35);
+            this.label3.Location = new System.Drawing.Point(209, 28);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 20);
-            this.label3.TabIndex = 88;
-            this.label3.Text = "IdCliente";
+            this.label3.Size = new System.Drawing.Size(79, 20);
+            this.label3.TabIndex = 92;
+            this.label3.Text = "IDArticulo";
+            // 
+            // txtcategoria
+            // 
+            this.txtcategoria.Location = new System.Drawing.Point(312, 73);
+            this.txtcategoria.Name = "txtcategoria";
+            this.txtcategoria.Size = new System.Drawing.Size(193, 20);
+            this.txtcategoria.TabIndex = 95;
+            this.txtcategoria.validate = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(264, 78);
+            this.label1.Location = new System.Drawing.Point(193, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
-            this.label1.TabIndex = 90;
-            this.label1.Text = "Nombre";
-            // 
-            // txtidcliente
-            // 
-            this.txtidcliente.Location = new System.Drawing.Point(353, 37);
-            this.txtidcliente.Name = "txtidcliente";
-            this.txtidcliente.Size = new System.Drawing.Size(193, 20);
-            this.txtidcliente.TabIndex = 91;
-            this.txtidcliente.validate = false;
-            this.txtidcliente.Validating += new System.ComponentModel.CancelEventHandler(this.txtidcliente_Validating);
+            this.label1.Size = new System.Drawing.Size(95, 20);
+            this.label1.TabIndex = 94;
+            this.label1.Text = "IDCategoria";
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(353, 78);
+            this.txtnombre.Location = new System.Drawing.Point(312, 118);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(193, 20);
-            this.txtnombre.TabIndex = 92;
+            this.txtnombre.TabIndex = 97;
             this.txtnombre.validate = false;
-            // 
-            // txtapellido
-            // 
-            this.txtapellido.Location = new System.Drawing.Point(353, 123);
-            this.txtapellido.Name = "txtapellido";
-            this.txtapellido.Size = new System.Drawing.Size(193, 20);
-            this.txtapellido.TabIndex = 93;
-            this.txtapellido.validate = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(264, 123);
+            this.label4.Location = new System.Drawing.Point(223, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 20);
-            this.label4.TabIndex = 94;
-            this.label4.Text = "Apellido";
+            this.label4.TabIndex = 96;
+            this.label4.Text = "Nombre";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(264, 164);
+            this.label5.Location = new System.Drawing.Point(196, 244);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 20);
-            this.label5.TabIndex = 95;
-            this.label5.Text = "Telefono";
+            this.label5.Size = new System.Drawing.Size(92, 20);
+            this.label5.TabIndex = 98;
+            this.label5.Text = "Descripción";
             // 
-            // txttelefono
+            // rchdescripcion
             // 
-            this.txttelefono.Location = new System.Drawing.Point(353, 164);
-            this.txttelefono.Name = "txttelefono";
-            this.txttelefono.Size = new System.Drawing.Size(193, 20);
-            this.txttelefono.TabIndex = 96;
-            this.txttelefono.validate = false;
+            this.rchdescripcion.Location = new System.Drawing.Point(312, 244);
+            this.rchdescripcion.Name = "rchdescripcion";
+            this.rchdescripcion.Size = new System.Drawing.Size(204, 122);
+            this.rchdescripcion.TabIndex = 99;
+            this.rchdescripcion.Text = "";
             // 
-            // txtdireccion
+            // txtprecio
             // 
-            this.txtdireccion.Location = new System.Drawing.Point(353, 202);
-            this.txtdireccion.Name = "txtdireccion";
-            this.txtdireccion.Size = new System.Drawing.Size(193, 20);
-            this.txtdireccion.TabIndex = 98;
-            this.txtdireccion.validate = false;
+            this.txtprecio.Location = new System.Drawing.Point(312, 164);
+            this.txtprecio.Name = "txtprecio";
+            this.txtprecio.Size = new System.Drawing.Size(193, 20);
+            this.txtprecio.TabIndex = 101;
+            this.txtprecio.validate = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(254, 200);
+            this.label6.Location = new System.Drawing.Point(223, 162);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 20);
-            this.label6.TabIndex = 97;
-            this.label6.Text = "Direccion";
+            this.label6.Size = new System.Drawing.Size(53, 20);
+            this.label6.TabIndex = 100;
+            this.label6.Text = "Precio";
             // 
-            // txtemail
+            // txtunidad
             // 
-            this.txtemail.Location = new System.Drawing.Point(353, 244);
-            this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(193, 20);
-            this.txtemail.TabIndex = 100;
-            this.txtemail.validate = false;
+            this.txtunidad.Location = new System.Drawing.Point(312, 202);
+            this.txtunidad.Name = "txtunidad";
+            this.txtunidad.Size = new System.Drawing.Size(193, 20);
+            this.txtunidad.TabIndex = 103;
+            this.txtunidad.validate = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(281, 242);
+            this.label7.Location = new System.Drawing.Point(223, 200);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 20);
-            this.label7.TabIndex = 99;
-            this.label7.Text = "Email";
-            // 
-            // chkis_active
-            // 
-            this.chkis_active.AutoSize = true;
-            this.chkis_active.Location = new System.Drawing.Point(353, 309);
-            this.chkis_active.Name = "chkis_active";
-            this.chkis_active.Size = new System.Drawing.Size(76, 17);
-            this.chkis_active.TabIndex = 101;
-            this.chkis_active.Text = "Is_Active?";
-            this.chkis_active.UseVisualStyleBackColor = true;
+            this.label7.Size = new System.Drawing.Size(60, 20);
+            this.label7.TabIndex = 102;
+            this.label7.Text = "Unidad";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 94);
+            this.dataGridView1.Location = new System.Drawing.Point(45, 87);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(656, 446);
+            this.dataGridView1.Size = new System.Drawing.Size(656, 451);
             this.dataGridView1.TabIndex = 74;
             // 
-            // PMantCliente
+            // PMantArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 665);
-            this.Name = "PMantCliente";
-            this.Text = "PMantCliente";
-            this.Load += new System.EventHandler(this.PMantCliente_Load);
+            this.ClientSize = new System.Drawing.Size(821, 666);
+            this.Name = "PMantArticulo";
+            this.Text = "PMantArticulo";
+            this.Load += new System.EventHandler(this.PMantArticulo_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabpmantenimiento.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -253,18 +229,17 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox chkis_active;
-        private utils.ntextbox txtemail;
+        private utils.ntextbox txtunidad;
         public System.Windows.Forms.Label label7;
-        private utils.ntextbox txtdireccion;
+        private utils.ntextbox txtprecio;
         public System.Windows.Forms.Label label6;
-        private utils.ntextbox txttelefono;
+        private System.Windows.Forms.RichTextBox rchdescripcion;
         public System.Windows.Forms.Label label5;
-        public System.Windows.Forms.Label label4;
-        private utils.ntextbox txtapellido;
         private utils.ntextbox txtnombre;
-        private utils.ntextbox txtidcliente;
+        public System.Windows.Forms.Label label4;
+        private utils.ntextbox txtcategoria;
         public System.Windows.Forms.Label label1;
+        private utils.ntextbox txtidarticulo;
         public System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
