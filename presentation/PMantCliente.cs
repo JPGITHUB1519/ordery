@@ -113,7 +113,7 @@ namespace presentation
                 else
                 {
                     this.txtidcliente.Text = ds.Tables[0].Rows[0]["idcliente"].ToString();
-                    this.txtnombre.Text = ds.Tables[0].Rows[0]["nombre"].ToString();
+                    this.txtnombre.Text = ds.Tables[0].Rows[0]["Nombre"].ToString();
                     this.txtapellido.Text = ds.Tables[0].Rows[0]["apellido"].ToString();
                     this.txtdireccion.Text = ds.Tables[0].Rows[0]["direccion"].ToString();
                     this.txttelefono.Text = ds.Tables[0].Rows[0]["telefono"].ToString();

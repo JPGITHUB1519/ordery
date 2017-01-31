@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.txtidarticulo = new utils.ntextbox(this.components);
             this.label3 = new System.Windows.Forms.Label();
-            this.txtcategoria = new utils.ntextbox(this.components);
+            this.txtidcategoria = new utils.ntextbox(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.txtnombre = new utils.ntextbox(this.components);
             this.label4 = new System.Windows.Forms.Label();
@@ -41,14 +41,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtunidad = new utils.ntextbox(this.components);
             this.label7 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabpmantenimiento.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabplistado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errProv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -66,20 +64,11 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtnombre);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtcategoria);
+            this.groupBox1.Controls.Add(this.txtidcategoria);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtidarticulo);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Text = "Articulos";
-            // 
-            // tabplistado
-            // 
-            this.tabplistado.Controls.Add(this.dataGridView1);
-            this.tabplistado.Controls.SetChildIndex(this.btn_buscar2, 0);
-            this.tabplistado.Controls.SetChildIndex(this.label2, 0);
-            this.tabplistado.Controls.SetChildIndex(this.txtbuscar, 0);
-            this.tabplistado.Controls.SetChildIndex(this.btnimprimir, 0);
-            this.tabplistado.Controls.SetChildIndex(this.dataGridView1, 0);
             // 
             // txtbuscar
             // 
@@ -107,13 +96,13 @@
             this.label3.TabIndex = 92;
             this.label3.Text = "IDArticulo";
             // 
-            // txtcategoria
+            // txtidcategoria
             // 
-            this.txtcategoria.Location = new System.Drawing.Point(312, 73);
-            this.txtcategoria.Name = "txtcategoria";
-            this.txtcategoria.Size = new System.Drawing.Size(193, 20);
-            this.txtcategoria.TabIndex = 95;
-            this.txtcategoria.validate = false;
+            this.txtidcategoria.Location = new System.Drawing.Point(312, 73);
+            this.txtidcategoria.Name = "txtidcategoria";
+            this.txtidcategoria.Size = new System.Drawing.Size(193, 20);
+            this.txtidcategoria.TabIndex = 95;
+            this.txtidcategoria.validate = false;
             // 
             // label1
             // 
@@ -197,14 +186,6 @@
             this.label7.TabIndex = 102;
             this.label7.Text = "Unidad";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 87);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(656, 451);
-            this.dataGridView1.TabIndex = 74;
-            // 
             // PMantArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,7 +202,6 @@
             this.tabplistado.ResumeLayout(false);
             this.tabplistado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errProv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,10 +217,9 @@
         public System.Windows.Forms.Label label5;
         private utils.ntextbox txtnombre;
         public System.Windows.Forms.Label label4;
-        private utils.ntextbox txtcategoria;
+        private utils.ntextbox txtidcategoria;
         public System.Windows.Forms.Label label1;
         private utils.ntextbox txtidarticulo;
         public System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

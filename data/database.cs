@@ -121,6 +121,7 @@ namespace data
             }
             catch (Exception ex)
             {
+                ds = null;
                 throw ex;
             }
             finally

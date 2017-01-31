@@ -37,28 +37,28 @@ namespace data
         public string insertCategoria(Categoria categoria)
         {
    
-           return  database.executeNonQuery("EXEC InsertCategoria @nombre, @descripcion",
-                                    new KeyValuePair<string, object>("@nombre", categoria.Nombre),
-                                    new KeyValuePair<string, object>("@descripcion", categoria.Descripcion));
+           return  database.executeNonQuery("EXEC InsertCategoria @Nombre, @Descripcion",
+                                    new KeyValuePair<string, object>("@Nombre", categoria.Nombre),
+                                    new KeyValuePair<string, object>("@Descripcion", categoria.Descripcion));
         }
 
         public string updateCategoria(Categoria categoria)
         {
 
-            return database.executeNonQuery("EXEC updateCategoria @idcategoria, @nombre, @descripcion",
-                new KeyValuePair<string, object>("@idcategoria", categoria.Idcategoria),
-                new KeyValuePair<string, object>("@nombre", categoria.Nombre),
-                new KeyValuePair<string, object>("@descripcion", categoria.Descripcion));
+            return database.executeNonQuery("EXEC updateCategoria @Idcategoria, @Nombre, @Descripcion",
+                new KeyValuePair<string, object>("@Idcategoria", categoria.Idcategoria),
+                new KeyValuePair<string, object>("@Nombre", categoria.Nombre),
+                new KeyValuePair<string, object>("@Descripcion", categoria.Descripcion));
                  
         }
 
         public string deleteCategoria(int idcategoria)
         {
-            return database.executeNonQuery("EXEC deleteCategoria @idcategoria",
-                                        new KeyValuePair<string, object>("@idcategoria", idcategoria));
+            return database.executeNonQuery("EXEC deleteCategoria @Idcategoria",
+                                        new KeyValuePair<string, object>("@Idcategoria", idcategoria));
         }
 
-        public DataSet getCategoria()
+        public DataSet getCategorias()
         {
             DataSet ds = new DataSet();
             try
@@ -74,32 +74,14 @@ namespace data
 
         public DataSet getCategoriaById(int idcategoria)
         {
-            DataSet ds = new DataSet();
-            try
-            {
-                ds = database.executeQuery("EXEC getCategoriaById",
-                                            new KeyValuePair<string, object>("@idcategoria", idcategoria));
-            }
-            catch(Exception ex)
-            {
-                ds = null;
-            }
-            return ds;
+            return database.executeQuery("EXEC getCategoriaById",
+                                            new KeyValuePair<string, object>("@Idcategoria", idcategoria));
         }
 
         public DataSet searchCategoriaByName(string nombre)
         {
-            DataSet ds = new DataSet();
-            try
-            {
-                ds = database.executeQuery("EXEC searchCategoriaByname @nombre",
-                                            new KeyValuePair<string, object>("@nombre", nombre));
-            }
-            catch(Exception ex)
-            {
-                ds = null;
-            }
-            return ds;
+            return database.executeQuery("EXEC searchCategoriaByname @Nombre",
+                                            new KeyValuePair<string, object>("@Nombre", nombre));
         }
 
     }

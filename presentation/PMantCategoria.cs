@@ -26,7 +26,7 @@ namespace presentation
         public override void fillDatagrid()
         {
             Categoria categoria = new Categoria();
-            this.dgvData.DataSource = categoria.getCategoria().Tables[0];
+            this.dgvData.DataSource = categoria.getCategorias().Tables[0];
         }
 
         // enable / disable Buttons
@@ -45,12 +45,14 @@ namespace presentation
             this.rchdescripcion.Text = string.Empty;
         }
 
+        // searchByName Override
         public override void searchByName()
         {
             Categoria categoria = new Categoria();
             this.dgvData.DataSource = categoria.searchCategoriaByName(this.txtbuscar.Text.Trim()).Tables[0];
         }
 
+        // save override
         public override void guardar()
         {
             string rpta = "";
@@ -85,6 +87,10 @@ namespace presentation
                         messages.successMessage(configuration.update_success);
                     }
                 }
+                else
+                {
+                    messages.errorMessage(rpta);
+                }
             }
             catch(Exception ex)
             {
@@ -92,11 +98,12 @@ namespace presentation
             }
         }
 
+        // fillTextBoxes from datagrid
         public override void fillTextBoxesFromDatagrid()
         {
-            this.txtidcategoria.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["idcategoria"].Value);
-            this.txtnombre.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["nombre"].Value);
-            this.rchdescripcion.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["descripcion"].Value);
+            this.txtidcategoria.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["Idcategoria"].Value);
+            this.txtnombre.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["Nombre"].Value);
+            this.rchdescripcion.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["Descripcion"].Value);
             this.tabControl1.SelectedIndex = 0;
         }
 

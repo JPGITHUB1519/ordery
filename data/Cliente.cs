@@ -66,9 +66,9 @@ namespace data
            string rpta = "";
             try
             {
-                database.executeQuery("EXEC ACTCLIENTE @idcliente, @nombre, @apellido, @direccion, @telefono, @email, @is_active",
+                database.executeQuery("EXEC ACTCLIENTE @idcliente, @Nombre, @apellido, @direccion, @telefono, @email, @is_active",
                                         new KeyValuePair<string,object>("@idcliente", cliente.Idcliente),
-                                        new KeyValuePair<string,object>("@nombre", cliente.Nombre),
+                                        new KeyValuePair<string,object>("@Nombre", cliente.Nombre),
                                         new KeyValuePair<string,object>("@apellido", cliente.Apellido),
                                         new KeyValuePair<string,object>("@direccion", cliente.Direccion),
                                         new KeyValuePair<string,object>("@telefono", cliente.Telefono),
@@ -117,8 +117,8 @@ namespace data
             DataSet ds = new DataSet();
             try
             {
-                ds = database.executeQuery("EXEC FILTERBYNAME_CLIENTE @nombre",
-                                            new KeyValuePair<string,object>("@nombre", name));
+                ds = database.executeQuery("EXEC FILTERBYNAME_CLIENTE @Nombre",
+                                            new KeyValuePair<string,object>("@Nombre", name));
             }
             catch(Exception ex)
             {
