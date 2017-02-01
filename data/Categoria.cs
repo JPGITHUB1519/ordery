@@ -60,16 +60,8 @@ namespace data
 
         public DataSet getCategorias()
         {
-            DataSet ds = new DataSet();
-            try
-            {
-                ds = database.executeQuery("EXEC getCategorias");
-            }
-            catch(Exception ex)
-            {
-                ds = null;
-            }
-            return ds;
+            return database.executeQuery("EXEC getCategorias");
+
         }
 
         public DataSet getCategoriaById(int idcategoria)

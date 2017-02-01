@@ -55,22 +55,22 @@ namespace data
         // database operations
         public string insertArticulo(Articulo articulo)
         {
-            return database.executeNonQuery("EXEC InsertArticulo @idcategoria, @nombre, @descripcion, @precio, @unidad",
+            return database.executeNonQuery("EXEC InsertArticulo @idcategoria, @Nombre, @Descripcion, @Precio, @unidad",
                                                 new KeyValuePair<string, object>("@idcategoria", articulo.Idcategoria),
-                                                new KeyValuePair<string, object>("@nombre", articulo.Nombre),
-                                                new KeyValuePair<string, object>("@descripcion", articulo.Descripcion),
-                                                new KeyValuePair<string, object>("@precio", articulo.Precio),
+                                                new KeyValuePair<string, object>("@Nombre", articulo.Nombre),
+                                                new KeyValuePair<string, object>("@Descripcion", articulo.Descripcion),
+                                                new KeyValuePair<string, object>("@Precio", articulo.Precio),
                                                 new KeyValuePair<string, object>("@unidad", articulo.Unidad));
         }
 
         public string updateArticulo(Articulo articulo)
         {
-            return database.executeNonQuery("EXEC updateArticulo @idarticulo, @idcategoria, @nombre, @descripcion, @precio, @unidad",
+            return database.executeNonQuery("EXEC updateArticulo @idarticulo, @idcategoria, @Nombre, @Descripcion, @Precio, @unidad",
                                                 new KeyValuePair<string, object>("@idarticulo", articulo.Idarticulo),
                                                 new KeyValuePair<string, object>("@idcategoria", articulo.Idcategoria),
-                                                new KeyValuePair<string, object>("@nombre", articulo.Nombre),
-                                                new KeyValuePair<string, object>("@descripcion", articulo.Descripcion),
-                                                new KeyValuePair<string, object>("@precio", articulo.Precio),
+                                                new KeyValuePair<string, object>("@Nombre", articulo.Nombre),
+                                                new KeyValuePair<string, object>("@Descripcion", articulo.Descripcion),
+                                                new KeyValuePair<string, object>("@Precio", articulo.Precio),
                                                 new KeyValuePair<string, object>("@unidad", articulo.Unidad));
         }
 
@@ -93,8 +93,8 @@ namespace data
 
         public DataSet searchArticuloByName(string nombre)
         {
-            return database.executeQuery("EXEC searchArticuloByName @nombre",
-                                            new KeyValuePair<string, object>("@nombre", nombre));
+            return database.executeQuery("EXEC searchArticuloByName @Nombre",
+                                            new KeyValuePair<string, object>("@Nombre", nombre));
         }
     }
 }

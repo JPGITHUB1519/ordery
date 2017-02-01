@@ -18,7 +18,7 @@ namespace presentation
         {
             InitializeComponent();
             this.ttpNotification.SetToolTip(this.txtidcategoria, "Ingrese Categoria");
-            this.ttpNotification.SetToolTip(this.txtnombre, "Ingrese nombre");
+            this.ttpNotification.SetToolTip(this.txtnombre, "Ingrese Nombre");
             this.ttpNotification.SetToolTip(this.txtprecio, "Ingrese Precio");
             this.ttpNotification.SetToolTip(this.txtunidad, "Ingrese Unidad");
             this.ttpNotification.SetToolTip(this.rchdescripcion, "Ingrese Descripcion");
@@ -116,10 +116,10 @@ namespace presentation
         {
             this.txtidarticulo.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["idarticulo"].Value);
             this.txtidcategoria.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["idcategoria"].Value);
-            this.txtnombre.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["nombre"].Value);
-            this.txtprecio.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["precio"].Value);
+            this.txtnombre.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["Nombre"].Value);
+            this.txtprecio.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["Precio"].Value);
             this.txtunidad.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["unidad"].Value);
-            this.rchdescripcion.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["descripcion"].Value);
+            this.rchdescripcion.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["Descripcion"].Value);
             this.tabControl1.SelectedIndex = 0;
         }
 
