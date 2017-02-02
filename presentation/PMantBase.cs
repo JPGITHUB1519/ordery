@@ -231,5 +231,10 @@ namespace presentation
             }
             
         }
+
+        private void tabplistado_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

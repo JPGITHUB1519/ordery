@@ -144,5 +144,24 @@ namespace presentation
         {
 
         }
+
+        private void btnArticuloInsert_Click(object sender, EventArgs e)
+        {
+            if(this.txtidcombo.Text.Trim() != string.Empty)
+            {
+                PMantComboArt doform = new PMantComboArt(Convert.ToInt32(this.txtidcombo.Text.Trim()));
+                doform.Show();
+            }
+            else
+            {
+                messages.errorMessage("Debe Seleccionar un combo");
+            }
+            
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

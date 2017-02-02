@@ -47,6 +47,14 @@ namespace data
                 new KeyValuePair<string, object>("@descripcion", combo.descripcion));
         }
 
+        // insertar articulo a combo
+        public string insertArticuloToCombo(int idcombo, int idarticulo)
+        {
+            return database.executeNonQuery("EXEC InsertArticuloToCombo @idcombo, @idarticulo",
+                                                new KeyValuePair<string, object>("@idcombo", idcombo),
+                                                new KeyValuePair<string, object>("@idarticulo", idarticulo));
+        }
+
         public string updateCombo(Combo combo)
         {
             return database.executeNonQuery("EXEC updateCombo @idcombo, @nombre, @precio, @descripcion",
@@ -62,6 +70,13 @@ namespace data
                                                 new KeyValuePair<string, object>("@idcombo", idcombo));
         }
 
+        public string deleteArticuloFromCombo(int idcombo, int idarticulo)
+        {
+            return database.executeNonQuery("EXEC DeleteArticuloFromCombo @idcombo, @idarticulo",
+                                                new KeyValuePair<string, object>("@idcombo", idcombo),
+                                                new KeyValuePair<string, object>("@idarticulo", idarticulo));
+        }
+
         public DataSet getCombos()
         {
             return database.executeQuery("EXEC getCombos");
@@ -73,10 +88,26 @@ namespace data
                                             new KeyValuePair<string, object>("@idcombo", idcombo));
         }
 
+        // get the articulos from the combo
+        public DataSet getComboDetails(int idcombo)
+        {
+            return database.executeQuery("EXEC GetCombosDetailsByCombo @idcombo",
+                                            new KeyValuePair<String, object>("@idcombo", idcombo));
+        }
+
         public DataSet searchComboByName(string nombre)
         {
             return database.executeQuery("EXEC searchComboByName @nombre",
                                             new KeyValuePair<string, object>("@nombre", nombre));
         }
+
+        public DataSet searchArticulosFromComboByName(int idcombo, string nombre_articulo)
+        {
+            return database.executeQuery("EXEC SearchArticuloFromComboByName @idcombo, @nombre_articulo",
+                                            new KeyValuePair<string, object>("@idcombo", idcombo),
+                                            new KeyValuePair<string, object>("@nombre_articulo", nombre_articulo));
+        }
+
+       
     }
 }

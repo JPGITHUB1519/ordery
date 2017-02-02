@@ -41,16 +41,16 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabplistado = new System.Windows.Forms.TabPage();
+            this.btnDelete2 = new System.Windows.Forms.Button();
+            this.chkeliminar = new System.Windows.Forms.CheckBox();
             this.dgvData = new System.Windows.Forms.DataGridView();
+            this.eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnimprimir = new System.Windows.Forms.Button();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_buscar2 = new System.Windows.Forms.Button();
             this.errProv = new System.Windows.Forms.ErrorProvider(this.components);
             this.ttpNotification = new System.Windows.Forms.ToolTip(this.components);
-            this.chkeliminar = new System.Windows.Forms.CheckBox();
-            this.eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.btnDelete2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabpmantenimiento.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -192,6 +192,28 @@
             this.tabplistado.TabIndex = 1;
             this.tabplistado.Text = "Listado";
             this.tabplistado.UseVisualStyleBackColor = true;
+            this.tabplistado.Click += new System.EventHandler(this.tabplistado_Click);
+            // 
+            // btnDelete2
+            // 
+            this.btnDelete2.Image = global::presentation.Properties.Resources.delete;
+            this.btnDelete2.Location = new System.Drawing.Point(168, 61);
+            this.btnDelete2.Name = "btnDelete2";
+            this.btnDelete2.Size = new System.Drawing.Size(106, 72);
+            this.btnDelete2.TabIndex = 77;
+            this.btnDelete2.UseVisualStyleBackColor = true;
+            this.btnDelete2.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // chkeliminar
+            // 
+            this.chkeliminar.AutoSize = true;
+            this.chkeliminar.Location = new System.Drawing.Point(60, 90);
+            this.chkeliminar.Name = "chkeliminar";
+            this.chkeliminar.Size = new System.Drawing.Size(62, 17);
+            this.chkeliminar.TabIndex = 76;
+            this.chkeliminar.Text = "Eliminar";
+            this.chkeliminar.UseVisualStyleBackColor = true;
+            this.chkeliminar.CheckedChanged += new System.EventHandler(this.chkeliminar_CheckedChanged);
             // 
             // dgvData
             // 
@@ -208,6 +230,14 @@
             this.dgvData.AllowUserToAddRowsChanged += new System.EventHandler(this.dgvData_AllowUserToAddRowsChanged);
             this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             this.dgvData.DoubleClick += new System.EventHandler(this.dgvData_DoubleClick);
+            // 
+            // eliminar
+            // 
+            this.eliminar.HeaderText = "eliminar";
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
+            this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // btnimprimir
             // 
@@ -248,35 +278,6 @@
             // errProv
             // 
             this.errProv.ContainerControl = this;
-            // 
-            // chkeliminar
-            // 
-            this.chkeliminar.AutoSize = true;
-            this.chkeliminar.Location = new System.Drawing.Point(60, 90);
-            this.chkeliminar.Name = "chkeliminar";
-            this.chkeliminar.Size = new System.Drawing.Size(62, 17);
-            this.chkeliminar.TabIndex = 76;
-            this.chkeliminar.Text = "Eliminar";
-            this.chkeliminar.UseVisualStyleBackColor = true;
-            this.chkeliminar.CheckedChanged += new System.EventHandler(this.chkeliminar_CheckedChanged);
-            // 
-            // eliminar
-            // 
-            this.eliminar.HeaderText = "eliminar";
-            this.eliminar.Name = "eliminar";
-            this.eliminar.ReadOnly = true;
-            this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // btnDelete2
-            // 
-            this.btnDelete2.Image = global::presentation.Properties.Resources.delete;
-            this.btnDelete2.Location = new System.Drawing.Point(168, 61);
-            this.btnDelete2.Name = "btnDelete2";
-            this.btnDelete2.Size = new System.Drawing.Size(106, 72);
-            this.btnDelete2.TabIndex = 77;
-            this.btnDelete2.UseVisualStyleBackColor = true;
-            this.btnDelete2.Click += new System.EventHandler(this.button1_Click);
             // 
             // PMantBase
             // 
