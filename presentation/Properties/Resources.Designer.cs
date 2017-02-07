@@ -103,6 +103,26 @@ namespace presentation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap picture_delete_icon {
+            get {
+                object obj = ResourceManager.GetObject("picture-delete-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pictures_icon {
+            get {
+                object obj = ResourceManager.GetObject("Pictures-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap print {
             get {
                 object obj = ResourceManager.GetObject("print", resourceCulture);
@@ -126,6 +146,16 @@ namespace presentation.Properties {
         internal static System.Drawing.Bitmap search {
             get {
                 object obj = ResourceManager.GetObject("search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transparent {
+            get {
+                object obj = ResourceManager.GetObject("transparent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

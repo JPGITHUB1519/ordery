@@ -1,0 +1,8 @@
+C:\Users\JPNESS\Desktop\Universidad\ordery\data\bin\Release\data.dll.config
+C:\Users\JPNESS\Desktop\Universidad\ordery\data\bin\Release\data.dll
+C:\Users\JPNESS\Desktop\Universidad\ordery\data\bin\Release\data.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\data\bin\Release\utils.dll
+C:\Users\JPNESS\Desktop\Universidad\ordery\data\bin\Release\utils.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\data\obj\Release\data.csprojResolveAssemblyReference.cache
+C:\Users\JPNESS\Desktop\Universidad\ordery\data\obj\Release\data.dll
+C:\Users\JPNESS\Desktop\Universidad\ordery\data\obj\Release\data.pdb

@@ -42,6 +42,8 @@ namespace presentation
         public virtual void deleteRecord(){}
         // delete multiple for datagridview
         public virtual string deleteMultipleFromDatagridView(int codigo){ return "";}
+        // set images buttons enable/disable
+        public virtual void setImageButtons() {}
         public void setButtons()
         {
             if(this.isNew || this.isEdit)
@@ -70,6 +72,7 @@ namespace presentation
             this.fillDatagrid();
             this.enable(false);
             this.setButtons();
+            this.setImageButtons();
             this.dgvData.AllowUserToAddRows = false;
             this.dgvData.Columns[0].Visible = false;
         }
@@ -79,6 +82,8 @@ namespace presentation
             this.isNew = true;
             this.isEdit = false;
             this.setButtons();
+            // will only execute for forms that have this method
+            this.setImageButtons();
             this.clearTextBoxes();
             this.enable(true);
         }
@@ -89,6 +94,7 @@ namespace presentation
             this.isNew = false;
             this.isEdit = false;
             this.setButtons();
+            this.setImageButtons();
             this.clearTextBoxes();
             this.fillDatagrid();
         }
@@ -110,6 +116,7 @@ namespace presentation
             {
                 this.isEdit = true;
                 this.setButtons();
+                this.setImageButtons();
                 this.enable(true);
             }
             else

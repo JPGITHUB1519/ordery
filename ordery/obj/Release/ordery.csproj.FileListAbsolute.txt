@@ -1,0 +1,15 @@
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Release\ordery.exe.config
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Release\ordery.exe
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Release\ordery.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Release\data.dll
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Release\presentation.dll
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Release\utils.dll
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Release\data.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Release\presentation.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Release\utils.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\obj\Release\ordery.csprojResolveAssemblyReference.cache
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\obj\Release\ordery.mdiPrincipal.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\obj\Release\ordery.Properties.Resources.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\obj\Release\ordery.csproj.GenerateResource.Cache
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\obj\Release\ordery.exe
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\obj\Release\ordery.pdb

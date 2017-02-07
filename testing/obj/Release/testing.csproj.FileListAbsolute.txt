@@ -1,0 +1,5 @@
+C:\Users\JPNESS\Desktop\Universidad\ordery\testing\bin\Release\testing.exe.config
+C:\Users\JPNESS\Desktop\Universidad\ordery\testing\bin\Release\testing.exe
+C:\Users\JPNESS\Desktop\Universidad\ordery\testing\bin\Release\testing.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\testing\obj\Release\testing.exe
+C:\Users\JPNESS\Desktop\Universidad\ordery\testing\obj\Release\testing.pdb

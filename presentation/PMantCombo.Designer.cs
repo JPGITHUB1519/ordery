@@ -38,12 +38,16 @@
             this.rchdescripcion = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnArticuloInsert = new System.Windows.Forms.Button();
+            this.picPicture = new System.Windows.Forms.PictureBox();
+            this.btnLoadimage = new System.Windows.Forms.Button();
+            this.btnQuitImage = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabpmantenimiento.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabplistado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errProv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -91,6 +95,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnQuitImage);
+            this.groupBox1.Controls.Add(this.btnLoadimage);
+            this.groupBox1.Controls.Add(this.picPicture);
             this.groupBox1.Controls.Add(this.rchdescripcion);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtprecio);
@@ -108,7 +115,7 @@
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(330, 89);
+            this.txtnombre.Location = new System.Drawing.Point(151, 90);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(193, 20);
             this.txtnombre.TabIndex = 98;
@@ -116,7 +123,7 @@
             // 
             // txtidcombo
             // 
-            this.txtidcombo.Location = new System.Drawing.Point(330, 48);
+            this.txtidcombo.Location = new System.Drawing.Point(151, 49);
             this.txtidcombo.Name = "txtidcombo";
             this.txtidcombo.Size = new System.Drawing.Size(193, 20);
             this.txtidcombo.TabIndex = 97;
@@ -126,7 +133,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(241, 89);
+            this.label1.Location = new System.Drawing.Point(62, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 96;
@@ -136,7 +143,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(234, 46);
+            this.label3.Location = new System.Drawing.Point(55, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 20);
             this.label3.TabIndex = 95;
@@ -144,7 +151,7 @@
             // 
             // txtprecio
             // 
-            this.txtprecio.Location = new System.Drawing.Point(330, 134);
+            this.txtprecio.Location = new System.Drawing.Point(151, 135);
             this.txtprecio.Name = "txtprecio";
             this.txtprecio.Size = new System.Drawing.Size(193, 20);
             this.txtprecio.TabIndex = 100;
@@ -154,7 +161,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(241, 134);
+            this.label4.Location = new System.Drawing.Point(62, 135);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 20);
             this.label4.TabIndex = 99;
@@ -162,7 +169,7 @@
             // 
             // rchdescripcion
             // 
-            this.rchdescripcion.Location = new System.Drawing.Point(330, 189);
+            this.rchdescripcion.Location = new System.Drawing.Point(151, 190);
             this.rchdescripcion.Name = "rchdescripcion";
             this.rchdescripcion.Size = new System.Drawing.Size(204, 122);
             this.rchdescripcion.TabIndex = 107;
@@ -172,7 +179,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(214, 189);
+            this.label5.Location = new System.Drawing.Point(35, 190);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 20);
             this.label5.TabIndex = 106;
@@ -187,6 +194,35 @@
             this.btnArticuloInsert.TabIndex = 14;
             this.btnArticuloInsert.UseVisualStyleBackColor = true;
             this.btnArticuloInsert.Click += new System.EventHandler(this.btnArticuloInsert_Click);
+            // 
+            // picPicture
+            // 
+            this.picPicture.BackgroundImage = global::presentation.Properties.Resources.transparent;
+            this.picPicture.Location = new System.Drawing.Point(389, 47);
+            this.picPicture.Name = "picPicture";
+            this.picPicture.Size = new System.Drawing.Size(158, 150);
+            this.picPicture.TabIndex = 108;
+            this.picPicture.TabStop = false;
+            // 
+            // btnLoadimage
+            // 
+            this.btnLoadimage.Image = global::presentation.Properties.Resources.Pictures_icon;
+            this.btnLoadimage.Location = new System.Drawing.Point(554, 47);
+            this.btnLoadimage.Name = "btnLoadimage";
+            this.btnLoadimage.Size = new System.Drawing.Size(106, 72);
+            this.btnLoadimage.TabIndex = 109;
+            this.btnLoadimage.UseVisualStyleBackColor = true;
+            this.btnLoadimage.Click += new System.EventHandler(this.btnLoadimage_Click);
+            // 
+            // btnQuitImage
+            // 
+            this.btnQuitImage.Image = global::presentation.Properties.Resources.picture_delete_icon;
+            this.btnQuitImage.Location = new System.Drawing.Point(554, 125);
+            this.btnQuitImage.Name = "btnQuitImage";
+            this.btnQuitImage.Size = new System.Drawing.Size(106, 72);
+            this.btnQuitImage.TabIndex = 110;
+            this.btnQuitImage.UseVisualStyleBackColor = true;
+            this.btnQuitImage.Click += new System.EventHandler(this.btnQuitImage_Click);
             // 
             // PMantCombo
             // 
@@ -204,6 +240,7 @@
             this.tabplistado.ResumeLayout(false);
             this.tabplistado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errProv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,5 +257,8 @@
         private System.Windows.Forms.RichTextBox rchdescripcion;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Button btnArticuloInsert;
+        public System.Windows.Forms.Button btnQuitImage;
+        public System.Windows.Forms.Button btnLoadimage;
+        private System.Windows.Forms.PictureBox picPicture;
     }
 }
