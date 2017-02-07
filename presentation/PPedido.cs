@@ -127,6 +127,7 @@ namespace presentation
             trigger_button_name = trigger.Name;
             Combo combo = new Combo();
             this.dgvpedido.DataSource = combo.getComboDetails(this.combosDic[trigger_button_name]).Tables[0];
+            this.lbltotalcant.Text = DGV.sumColumnFromDatagridView(this.dgvpedido, "precio").ToString() + " $";
         }
 
         public PPedido()
@@ -207,6 +208,11 @@ namespace presentation
         private void btncombo12_Click(object sender, EventArgs e)
         {
             this.addComboDetailToPedido(sender);
+        }
+
+        private void dgvpedido_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
