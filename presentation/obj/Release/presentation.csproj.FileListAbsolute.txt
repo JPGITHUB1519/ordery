@@ -16,3 +16,4 @@ C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.csproj.GenerateResource.Cache
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.dll
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.PPedido.resources

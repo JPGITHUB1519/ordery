@@ -106,6 +106,12 @@ namespace data
                                             new KeyValuePair<String, object>("@idcombo", idcombo));
         }
 
+        // get the Todays Combos
+        public DataSet getCombosTodays()
+        {
+            return database.executeQuery("EXEC getCombosToday");
+        }
+
         public DataSet searchComboByName(string nombre)
         {
             return database.executeQuery("EXEC searchComboByName @nombre",

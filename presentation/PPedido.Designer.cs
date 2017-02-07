@@ -41,6 +41,9 @@
             this.btncombo11 = new System.Windows.Forms.Button();
             this.btncombo10 = new System.Windows.Forms.Button();
             this.btncombo9 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dgvpedido = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvpedido)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -70,6 +73,7 @@
             this.btncombo2.Size = new System.Drawing.Size(123, 107);
             this.btncombo2.TabIndex = 50;
             this.btncombo2.UseVisualStyleBackColor = true;
+            this.btncombo2.Click += new System.EventHandler(this.btncombo2_Click);
             // 
             // btncombo3
             // 
@@ -78,6 +82,7 @@
             this.btncombo3.Size = new System.Drawing.Size(123, 107);
             this.btncombo3.TabIndex = 51;
             this.btncombo3.UseVisualStyleBackColor = true;
+            this.btncombo3.Click += new System.EventHandler(this.btncombo3_Click);
             // 
             // btncombo4
             // 
@@ -86,6 +91,7 @@
             this.btncombo4.Size = new System.Drawing.Size(123, 107);
             this.btncombo4.TabIndex = 52;
             this.btncombo4.UseVisualStyleBackColor = true;
+            this.btncombo4.Click += new System.EventHandler(this.btncombo4_Click);
             // 
             // btncombo8
             // 
@@ -94,6 +100,7 @@
             this.btncombo8.Size = new System.Drawing.Size(123, 107);
             this.btncombo8.TabIndex = 56;
             this.btncombo8.UseVisualStyleBackColor = true;
+            this.btncombo8.Click += new System.EventHandler(this.btncombo8_Click);
             // 
             // btncombo7
             // 
@@ -102,6 +109,7 @@
             this.btncombo7.Size = new System.Drawing.Size(123, 107);
             this.btncombo7.TabIndex = 55;
             this.btncombo7.UseVisualStyleBackColor = true;
+            this.btncombo7.Click += new System.EventHandler(this.btncombo7_Click);
             // 
             // btncombo6
             // 
@@ -110,6 +118,7 @@
             this.btncombo6.Size = new System.Drawing.Size(123, 107);
             this.btncombo6.TabIndex = 54;
             this.btncombo6.UseVisualStyleBackColor = true;
+            this.btncombo6.Click += new System.EventHandler(this.btncombo6_Click);
             // 
             // btncombo5
             // 
@@ -118,6 +127,7 @@
             this.btncombo5.Size = new System.Drawing.Size(123, 107);
             this.btncombo5.TabIndex = 53;
             this.btncombo5.UseVisualStyleBackColor = true;
+            this.btncombo5.Click += new System.EventHandler(this.btncombo5_Click);
             // 
             // btncombo12
             // 
@@ -126,6 +136,7 @@
             this.btncombo12.Size = new System.Drawing.Size(123, 107);
             this.btncombo12.TabIndex = 60;
             this.btncombo12.UseVisualStyleBackColor = true;
+            this.btncombo12.Click += new System.EventHandler(this.btncombo12_Click);
             // 
             // btncombo11
             // 
@@ -134,6 +145,7 @@
             this.btncombo11.Size = new System.Drawing.Size(123, 107);
             this.btncombo11.TabIndex = 59;
             this.btncombo11.UseVisualStyleBackColor = true;
+            this.btncombo11.Click += new System.EventHandler(this.btncombo11_Click);
             // 
             // btncombo10
             // 
@@ -142,6 +154,7 @@
             this.btncombo10.Size = new System.Drawing.Size(123, 107);
             this.btncombo10.TabIndex = 58;
             this.btncombo10.UseVisualStyleBackColor = true;
+            this.btncombo10.Click += new System.EventHandler(this.btncombo10_Click);
             // 
             // btncombo9
             // 
@@ -150,12 +163,34 @@
             this.btncombo9.Size = new System.Drawing.Size(123, 107);
             this.btncombo9.TabIndex = 57;
             this.btncombo9.UseVisualStyleBackColor = true;
+            this.btncombo9.Click += new System.EventHandler(this.btncombo9_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(460, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 49);
+            this.button1.TabIndex = 61;
+            this.button1.Text = "Test Buttons";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // dgvpedido
+            // 
+            this.dgvpedido.AllowUserToAddRows = false;
+            this.dgvpedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvpedido.Location = new System.Drawing.Point(70, 504);
+            this.dgvpedido.Name = "dgvpedido";
+            this.dgvpedido.Size = new System.Drawing.Size(557, 213);
+            this.dgvpedido.TabIndex = 62;
             // 
             // PPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(652, 528);
+            this.ClientSize = new System.Drawing.Size(652, 750);
+            this.Controls.Add(this.dgvpedido);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btncombo12);
             this.Controls.Add(this.btncombo11);
             this.Controls.Add(this.btncombo10);
@@ -172,6 +207,7 @@
             this.Name = "PPedido";
             this.Text = "PPedido";
             this.Load += new System.EventHandler(this.PPedido_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvpedido)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,5 +228,7 @@
         private System.Windows.Forms.Button btncombo11;
         private System.Windows.Forms.Button btncombo10;
         private System.Windows.Forms.Button btncombo9;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvpedido;
     }
 }
