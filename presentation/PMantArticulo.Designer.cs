@@ -41,6 +41,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtunidad = new utils.ntextbox(this.components);
             this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabpmantenimiento.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -56,6 +57,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.txtunidad);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtprecio);
@@ -186,6 +188,16 @@
             this.label7.TabIndex = 102;
             this.label7.Text = "Unidad";
             // 
+            // button1
+            // 
+            this.button1.Image = global::presentation.Properties.Resources.search;
+            this.button1.Location = new System.Drawing.Point(523, 60);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(79, 45);
+            this.button1.TabIndex = 104;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // PMantArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,5 +233,6 @@
         public System.Windows.Forms.Label label1;
         private utils.ntextbox txtidarticulo;
         public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Button button1;
     }
 }

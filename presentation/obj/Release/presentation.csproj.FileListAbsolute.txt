@@ -5,7 +5,6 @@ C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\bin\Release\utils.dll
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\bin\Release\data.pdb
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\bin\Release\utils.pdb
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.csprojResolveAssemblyReference.cache
-C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.PConsBase.resources
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.PMantArticulo.resources
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.PMantBase.resources
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.PMantCategoria.resources
@@ -17,3 +16,6 @@ C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.dll
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.pdb
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.PPedido.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.testing.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.PVistaBase.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.PVistaCategoria.resources

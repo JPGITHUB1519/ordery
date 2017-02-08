@@ -154,5 +154,15 @@ namespace presentation
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PVistaCategoria doform = new PVistaCategoria();
+            if(doform.ShowDialog() == DialogResult.OK)
+            {
+                int pos = doform.dgvData.CurrentCell.RowIndex;
+                this.txtidcategoria.Text = doform.dgvData.Rows[pos].Cells["idcategoria"].Value.ToString();
+            }
+        }
     }
 }

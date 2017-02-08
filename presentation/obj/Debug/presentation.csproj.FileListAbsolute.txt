@@ -3,7 +3,6 @@ C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\bin\Debug\presentation.p
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.csprojResolveAssemblyReference.cache
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.dll
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.pdb
-C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.PConsBase.resources
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.PMantBase.resources
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.PMantCliente.resources
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.Properties.Resources.resources
@@ -18,3 +17,5 @@ C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.P
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.PMantComboArt.resources
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.PPedido.resources
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.testing.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.PVistaBase.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.PVistaCategoria.resources

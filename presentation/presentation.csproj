@@ -41,11 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PConsBase.cs">
+    <Compile Include="PVistaBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PConsBase.Designer.cs">
-      <DependentUpon>PConsBase.cs</DependentUpon>
+    <Compile Include="PVistaBase.Designer.cs">
+      <DependentUpon>PVistaBase.cs</DependentUpon>
     </Compile>
     <Compile Include="PMantArticulo.cs">
       <SubType>Form</SubType>
@@ -95,6 +95,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="PVistaCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVistaCategoria.Designer.cs">
+      <DependentUpon>PVistaCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="testing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,8 +109,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="PConsBase.resx">
-      <DependentUpon>PConsBase.cs</DependentUpon>
+    <EmbeddedResource Include="PVistaBase.resx">
+      <DependentUpon>PVistaBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PMantArticulo.resx">
       <DependentUpon>PMantArticulo.cs</DependentUpon>
@@ -130,6 +136,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PVistaCategoria.resx">
+      <DependentUpon>PVistaCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="testing.resx">
       <DependentUpon>testing.cs</DependentUpon>
