@@ -17,7 +17,7 @@ namespace ordery
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PMantArticulo());
+            Application.Run(new PPedido());
         }
     }
 }

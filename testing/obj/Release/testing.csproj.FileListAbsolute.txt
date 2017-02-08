@@ -3,3 +3,4 @@ C:\Users\JPNESS\Desktop\Universidad\ordery\testing\bin\Release\testing.exe
 C:\Users\JPNESS\Desktop\Universidad\ordery\testing\bin\Release\testing.pdb
 C:\Users\JPNESS\Desktop\Universidad\ordery\testing\obj\Release\testing.exe
 C:\Users\JPNESS\Desktop\Universidad\ordery\testing\obj\Release\testing.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\testing\obj\Release\testing.csprojResolveAssemblyReference.cache

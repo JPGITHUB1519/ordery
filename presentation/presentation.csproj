@@ -41,6 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PVistaArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVistaArticulos.Designer.cs">
+      <DependentUpon>PVistaArticulos.cs</DependentUpon>
+    </Compile>
     <Compile Include="PVistaBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="PVistaArticulos.resx">
+      <DependentUpon>PVistaArticulos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PVistaBase.resx">
       <DependentUpon>PVistaBase.cs</DependentUpon>
     </EmbeddedResource>

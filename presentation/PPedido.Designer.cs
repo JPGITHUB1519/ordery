@@ -45,7 +45,16 @@
             this.dgvpedido = new System.Windows.Forms.DataGridView();
             this.lbltotal = new System.Windows.Forms.Label();
             this.lbltotalcant = new System.Windows.Forms.Label();
+            this.dgvExtras = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.idarticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpedido)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExtras)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -183,7 +192,7 @@
             this.dgvpedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvpedido.Location = new System.Drawing.Point(600, 74);
             this.dgvpedido.Name = "dgvpedido";
-            this.dgvpedido.Size = new System.Drawing.Size(398, 360);
+            this.dgvpedido.Size = new System.Drawing.Size(398, 178);
             this.dgvpedido.TabIndex = 62;
             this.dgvpedido.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvpedido_CellContentClick);
             // 
@@ -191,7 +200,7 @@
             // 
             this.lbltotal.AutoSize = true;
             this.lbltotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltotal.Location = new System.Drawing.Point(781, 447);
+            this.lbltotal.Location = new System.Drawing.Point(825, 491);
             this.lbltotal.Name = "lbltotal";
             this.lbltotal.Size = new System.Drawing.Size(68, 24);
             this.lbltotal.TabIndex = 63;
@@ -202,17 +211,85 @@
             this.lbltotalcant.AutoSize = true;
             this.lbltotalcant.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltotalcant.ForeColor = System.Drawing.Color.Red;
-            this.lbltotalcant.Location = new System.Drawing.Point(855, 447);
+            this.lbltotalcant.Location = new System.Drawing.Point(899, 491);
             this.lbltotalcant.Name = "lbltotalcant";
             this.lbltotalcant.Size = new System.Drawing.Size(59, 24);
             this.lbltotalcant.TabIndex = 64;
             this.lbltotalcant.Text = "Valor";
+            // 
+            // dgvExtras
+            // 
+            this.dgvExtras.AllowUserToAddRows = false;
+            this.dgvExtras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExtras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idarticulo,
+            this.nombre,
+            this.descripcion,
+            this.precio});
+            this.dgvExtras.Location = new System.Drawing.Point(600, 349);
+            this.dgvExtras.Name = "dgvExtras";
+            this.dgvExtras.Size = new System.Drawing.Size(398, 139);
+            this.dgvExtras.TabIndex = 65;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(787, 255);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 24);
+            this.label1.TabIndex = 66;
+            this.label1.Text = "Extras:";
+            // 
+            // btnNew
+            // 
+            this.btnNew.Image = global::presentation.Properties.Resources.add_icon;
+            this.btnNew.Location = new System.Drawing.Point(660, 282);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(128, 61);
+            this.btnNew.TabIndex = 67;
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // idarticulo
+            // 
+            this.idarticulo.HeaderText = "idarticulo";
+            this.idarticulo.Name = "idarticulo";
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "nombre";
+            this.nombre.Name = "nombre";
+            // 
+            // descripcion
+            // 
+            this.descripcion.HeaderText = "descripcion";
+            this.descripcion.Name = "descripcion";
+            // 
+            // precio
+            // 
+            this.precio.HeaderText = "precio";
+            this.precio.Name = "precio";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Image = global::presentation.Properties.Resources.delete;
+            this.btnDelete.Location = new System.Drawing.Point(814, 282);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(135, 61);
+            this.btnDelete.TabIndex = 69;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // PPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 524);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnNew);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvExtras);
             this.Controls.Add(this.lbltotalcant);
             this.Controls.Add(this.lbltotal);
             this.Controls.Add(this.dgvpedido);
@@ -234,6 +311,7 @@
             this.Text = "PPedido";
             this.Load += new System.EventHandler(this.PPedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvpedido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExtras)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,5 +336,13 @@
         private System.Windows.Forms.DataGridView dgvpedido;
         private System.Windows.Forms.Label lbltotal;
         private System.Windows.Forms.Label lbltotalcant;
+        private System.Windows.Forms.DataGridView dgvExtras;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idarticulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
+        public System.Windows.Forms.Button btnDelete;
     }
 }

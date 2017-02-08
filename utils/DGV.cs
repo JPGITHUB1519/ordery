@@ -20,5 +20,15 @@ namespace utils
             }
             return total;
         }
+
+        // delete selected item FROM DATAGRIDview
+        public static void deleteSelectedRowFromDatagridView(DataGridView dgv)
+        {
+            if (dgv.Rows.Count != 0)
+            {
+                dgv.Rows.Remove(dgv.CurrentRow);
+
+            }
+        }
     }
 }

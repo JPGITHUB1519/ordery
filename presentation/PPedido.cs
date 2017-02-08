@@ -130,6 +130,13 @@ namespace presentation
             this.lbltotalcant.Text = DGV.sumColumnFromDatagridView(this.dgvpedido, "precio").ToString() + " $";
         }
 
+        // add a row to Extras DatagridView
+        public void addRowToExtraDagridView(int idarticulo, string nombre, string descripcion, double precio)
+        {
+            this.dgvExtras.Rows.Add(idarticulo, nombre, descripcion, precio);
+            
+        }
+
         public PPedido()
         {
             InitializeComponent();
@@ -213,6 +220,29 @@ namespace presentation
         private void dgvpedido_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            PVistaArticulos doform = new PVistaArticulos();
+            if (doform.ShowDialog() == DialogResult.OK)
+            {
+                int pos = doform.dgvData.CurrentCell.RowIndex;
+                // add row to extra datagridview with the articulo selected
+                int idarticulo = Convert.ToInt32(doform.dgvData.Rows[pos].Cells["idarticulo"].Value);
+                string nombre = doform.dgvData.Rows[pos].Cells["nombre"].Value.ToString();
+                string descripcion = doform.dgvData.Rows[pos].Cells["descripcion"].Value.ToString();
+                double precio = Convert.ToDouble(doform.dgvData.Rows[pos].Cells["precio"].Value);
+                this.addRowToExtraDagridView(idarticulo, nombre, descripcion, precio);
+                
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            // deleted selected from datagridView
+            DGV.deleteSelectedRowFromDatagridView(this.dgvExtras);
         }
     }
 }

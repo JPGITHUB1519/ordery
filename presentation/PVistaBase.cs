@@ -25,7 +25,7 @@ namespace presentation
 
         private void PConsBase_Load(object sender, EventArgs e)
         {
-            this.dgvData.DataSource = this.getAll().Tables[0];
+            //this.dgvData.DataSource = this.getAll().Tables[0];
         }
 
         private void txtbuscar_TextChanged(object sender, EventArgs e)
