@@ -16,3 +16,4 @@ C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.P
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.PMantCategoria.resources
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.PMantCombo.resources
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.PMantComboArt.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.PPedido.resources
