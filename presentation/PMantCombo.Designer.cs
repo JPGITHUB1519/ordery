@@ -33,8 +33,6 @@
             this.txtidcombo = new utils.ntextbox(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtprecio = new utils.ntextbox(this.components);
-            this.label4 = new System.Windows.Forms.Label();
             this.rchdescripcion = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnArticuloInsert = new System.Windows.Forms.Button();
@@ -100,8 +98,6 @@
             this.groupBox1.Controls.Add(this.picPicture);
             this.groupBox1.Controls.Add(this.rchdescripcion);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtprecio);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtnombre);
             this.groupBox1.Controls.Add(this.txtidcombo);
             this.groupBox1.Controls.Add(this.label1);
@@ -149,27 +145,9 @@
             this.label3.TabIndex = 95;
             this.label3.Text = "IdCombo";
             // 
-            // txtprecio
-            // 
-            this.txtprecio.Location = new System.Drawing.Point(151, 135);
-            this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(193, 20);
-            this.txtprecio.TabIndex = 100;
-            this.txtprecio.validate = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(62, 135);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 20);
-            this.label4.TabIndex = 99;
-            this.label4.Text = "Precio";
-            // 
             // rchdescripcion
             // 
-            this.rchdescripcion.Location = new System.Drawing.Point(151, 190);
+            this.rchdescripcion.Location = new System.Drawing.Point(151, 152);
             this.rchdescripcion.Name = "rchdescripcion";
             this.rchdescripcion.Size = new System.Drawing.Size(204, 122);
             this.rchdescripcion.TabIndex = 107;
@@ -179,7 +157,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(35, 190);
+            this.label5.Location = new System.Drawing.Point(35, 152);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 20);
             this.label5.TabIndex = 106;
@@ -248,8 +226,6 @@
 
         #endregion
 
-        private utils.ntextbox txtprecio;
-        public System.Windows.Forms.Label label4;
         private utils.ntextbox txtnombre;
         private utils.ntextbox txtidcombo;
         public System.Windows.Forms.Label label1;
@@ -257,8 +233,8 @@
         private System.Windows.Forms.RichTextBox rchdescripcion;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Button btnArticuloInsert;
-        public System.Windows.Forms.Button btnQuitImage;
         public System.Windows.Forms.Button btnLoadimage;
         private System.Windows.Forms.PictureBox picPicture;
+        public System.Windows.Forms.Button btnQuitImage;
     }
 }

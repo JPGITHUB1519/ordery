@@ -11,7 +11,7 @@ namespace data
     {
         int idcombo;
         string nombre;
-        double precio;
+        //double precio;
         string descripcion;
         byte[] image;
 
@@ -29,11 +29,13 @@ namespace data
             set { nombre = value; }
         }
         
+        /*
         public double Precio
         {
             get { return precio; }
             set { precio = value; }
         }
+        */
 
         public string Descripcion
         {
@@ -50,9 +52,9 @@ namespace data
         // database operations
         public string insertCombo(Combo combo)
         {
-            return database.executeNonQuery("EXEC insertCombo @nombre, @precio, @descripcion, @image",
+            return database.executeNonQuery("EXEC insertCombo @nombre, @descripcion, @image",
                 new KeyValuePair<string, object>("@nombre", combo.nombre),
-                new KeyValuePair<string, object>("@precio", combo.precio),
+                //new KeyValuePair<string, object>("@precio", combo.precio),
                 new KeyValuePair<string, object>("@descripcion", combo.descripcion),
                 new KeyValuePair<string, object>("@image", combo.image));
         }
@@ -67,10 +69,10 @@ namespace data
 
         public string updateCombo(Combo combo)
         {
-            return database.executeNonQuery("EXEC updateCombo @idcombo, @nombre, @precio, @descripcion, @image",
+            return database.executeNonQuery("EXEC updateCombo @idcombo, @nombre,  @descripcion, @image",
                 new KeyValuePair<string, object>("@idcombo", combo.idcombo),
                 new KeyValuePair<string, object>("@nombre", combo.nombre),
-                new KeyValuePair<string, object>("@precio", combo.precio),
+                //new KeyValuePair<string, object>("@precio", combo.precio),
                 new KeyValuePair<string, object>("@descripcion", combo.descripcion),
                 new KeyValuePair<string, object>("@image", combo.image));
         }

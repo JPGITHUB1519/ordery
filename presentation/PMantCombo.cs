@@ -19,7 +19,7 @@ namespace presentation
             InitializeComponent();
             this.ttpNotification.SetToolTip(this.txtidcombo, "Ingrese Combo");
             this.ttpNotification.SetToolTip(this.txtnombre, "Ingrese Nombre");
-            this.ttpNotification.SetToolTip(this.txtprecio, "Ingrese Precio");
+            //this.ttpNotification.SetToolTip(this.txtprecio, "Ingrese Precio");
             this.ttpNotification.SetToolTip(this.rchdescripcion, "Ingrese Descripcion");
         }
 
@@ -35,7 +35,7 @@ namespace presentation
         {
             this.txtidcombo.ReadOnly = !cond;
             this.txtnombre.ReadOnly = !cond;
-            this.txtprecio.ReadOnly = !cond;
+            //this.txtprecio.ReadOnly = !cond;
             this.rchdescripcion.ReadOnly = !cond;
         }
 
@@ -44,7 +44,7 @@ namespace presentation
         {
             this.txtidcombo.Text = string.Empty;
             this.txtnombre.Text = string.Empty;
-            this.txtprecio.Text = string.Empty;
+            //this.txtprecio.Text = string.Empty;
             this.rchdescripcion.Text = string.Empty;
             this.picPicture.Image = presentation.Properties.Resources.transparent;
         }
@@ -72,7 +72,7 @@ namespace presentation
                 {
                     // creating combo
                     combo.Nombre = this.txtnombre.Text.Trim();
-                    combo.Precio = Convert.ToDouble(this.txtprecio.Text.Trim());
+                    //combo.Precio = Convert.ToDouble(this.txtprecio.Text.Trim());
                     combo.Descripcion = this.rchdescripcion.Text.Trim();
                     combo.Image = image;
                     rpta = combo.insertCombo(combo);
@@ -82,7 +82,7 @@ namespace presentation
                     //editing combo
                     combo.Idcombo = Convert.ToInt32(this.txtidcombo.Text.Trim());
                     combo.Nombre = this.txtnombre.Text.Trim();
-                    combo.Precio = Convert.ToDouble(this.txtidcombo.Text.Trim());
+                    //combo.Precio = Convert.ToDouble(this.txtidcombo.Text.Trim());
                     combo.Descripcion = this.rchdescripcion.Text.Trim();
                     combo.Image = image;
                     rpta = combo.updateCombo(combo);
@@ -115,7 +115,7 @@ namespace presentation
         {
             this.txtidcombo.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["idcombo"].Value);
             this.txtnombre.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["nombre"].Value);
-            this.txtprecio.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["precio"].Value);
+            //this.txtprecio.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["precio"].Value);
             this.rchdescripcion.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["descripcion"].Value);
             
             // load image from datagridview to picture box
