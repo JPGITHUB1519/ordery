@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using presentation;
 
 namespace ordery
 {
@@ -102,6 +103,34 @@ namespace ordery
             {
                 childForm.Close();
             }
+        }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PMantCategoria doform = new PMantCategoria();
+            doform.MdiParent = this;
+            doform.Show();
+        }
+
+        private void articulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PMantArticulo doform = new PMantArticulo();
+            doform.MdiParent = this;
+            doform.Show();
+        }
+
+        private void combosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PMantCombo doform = new PMantCombo();
+            doform.MdiParent = this;
+            doform.Show();
+        }
+
+        private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PPedido doform = new PPedido();
+            doform.MdiParent = this;
+            doform.Show();
         }
     }
 }

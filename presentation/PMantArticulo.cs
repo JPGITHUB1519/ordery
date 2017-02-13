@@ -150,6 +150,12 @@ namespace presentation
             }
         }
 
+        public override void callReport()
+        {
+            Articulo articulo = new Articulo();
+            this.generateReport("presentation.Reports.RArticulo.rdlc", articulo.getArticulos());
+        }
+
         private void PMantArticulo_Load(object sender, EventArgs e)
         {
 
@@ -163,6 +169,11 @@ namespace presentation
                 int pos = doform.dgvData.CurrentCell.RowIndex;
                 this.txtidcategoria.Text = doform.dgvData.Rows[pos].Cells["idcategoria"].Value.ToString();
             }
+        }
+
+        private void btnimprimir_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -247,6 +247,7 @@
             this.btnimprimir.Size = new System.Drawing.Size(106, 72);
             this.btnimprimir.TabIndex = 73;
             this.btnimprimir.UseVisualStyleBackColor = true;
+            this.btnimprimir.Click += new System.EventHandler(this.btnimprimir_Click);
             // 
             // txtbuscar
             // 

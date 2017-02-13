@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using data;
 using utils;
+using presentation.Reports;
 
 
 namespace presentation
@@ -32,6 +33,8 @@ namespace presentation
         public virtual void guardar(){}
         // fill datagrid
         public virtual void fillDatagrid(){}
+        // call generateReportFunction
+        public virtual void callReport(){}
         // datagrid filted by na,e
         public virtual void searchByName(){}
         // fill textboxes from datagrid
@@ -63,6 +66,13 @@ namespace presentation
                 this.btnCancel.Enabled = false;
             }
             
+        }
+
+        // call reportForm
+        public void generateReport(string reportName, DataSet ds)
+        {
+            PReport frmreport = new PReport(reportName, ds);
+            frmreport.Show();
         }
 
         private void PMantBase_Load(object sender, EventArgs e)
@@ -242,6 +252,11 @@ namespace presentation
         private void tabplistado_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnimprimir_Click(object sender, EventArgs e)
+        {
+            this.callReport();
         }
     }
 }

@@ -72,6 +72,10 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Text = "Articulos";
             // 
+            // btnimprimir
+            // 
+            this.btnimprimir.Click += new System.EventHandler(this.btnimprimir_Click);
+            // 
             // txtbuscar
             // 
             this.txtbuscar.Location = new System.Drawing.Point(159, 33);

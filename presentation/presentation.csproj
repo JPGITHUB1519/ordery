@@ -30,9 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,6 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dsPrincipal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPrincipal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="PVistaArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +120,12 @@
     <Compile Include="PVistaCategoria.Designer.cs">
       <DependentUpon>PVistaCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PReport.Designer.cs">
+      <DependentUpon>PReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="testing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,11 +168,31 @@
     <EmbeddedResource Include="PVistaCategoria.resx">
       <DependentUpon>PVistaCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PReport.resx">
+      <DependentUpon>PReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RArticulo.rdlc" />
     <EmbeddedResource Include="testing.resx">
       <DependentUpon>testing.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="dsPrincipal.xsc">
+      <DependentUpon>dsPrincipal.xsd</DependentUpon>
+    </None>
+    <None Include="dsPrincipal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPrincipal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsPrincipal.xss">
+      <DependentUpon>dsPrincipal.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\save.png" />
   </ItemGroup>
   <ItemGroup>
