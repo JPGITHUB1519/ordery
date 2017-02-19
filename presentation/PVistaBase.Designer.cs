@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.tabplistado = new System.Windows.Forms.TabPage();
-            this.dgvData = new System.Windows.Forms.DataGridView();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_buscar2 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.label8 = new System.Windows.Forms.Label();
+            this.dgvData = new System.Windows.Forms.DataGridView();
             this.tabplistado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
             // 
             // tabplistado
@@ -53,18 +53,6 @@
             this.tabplistado.TabIndex = 1;
             this.tabplistado.Text = "Listado";
             this.tabplistado.UseVisualStyleBackColor = true;
-            // 
-            // dgvData
-            // 
-            this.dgvData.AllowUserToAddRows = false;
-            this.dgvData.AllowUserToDeleteRows = false;
-            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(45, 104);
-            this.dgvData.Name = "dgvData";
-            this.dgvData.ReadOnly = true;
-            this.dgvData.Size = new System.Drawing.Size(656, 361);
-            this.dgvData.TabIndex = 75;
-            this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             // 
             // txtbuscar
             // 
@@ -114,6 +102,18 @@
             this.label8.TabIndex = 50;
             this.label8.Text = "Vista de <cambiar>";
             // 
+            // dgvData
+            // 
+            this.dgvData.AllowUserToAddRows = false;
+            this.dgvData.AllowUserToDeleteRows = false;
+            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvData.Location = new System.Drawing.Point(45, 104);
+            this.dgvData.Name = "dgvData";
+            this.dgvData.ReadOnly = true;
+            this.dgvData.Size = new System.Drawing.Size(656, 361);
+            this.dgvData.TabIndex = 75;
+            this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
+            // 
             // PVistaBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,8 +126,8 @@
             this.Load += new System.EventHandler(this.PConsBase_Load);
             this.tabplistado.ResumeLayout(false);
             this.tabplistado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,11 +136,11 @@
         #endregion
 
         public System.Windows.Forms.TabPage tabplistado;
-        public System.Windows.Forms.DataGridView dgvData;
         public System.Windows.Forms.TextBox txtbuscar;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Button btn_buscar2;
         public System.Windows.Forms.TabControl tabControl1;
         public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.DataGridView dgvData;
     }
 }

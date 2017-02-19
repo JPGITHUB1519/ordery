@@ -22,10 +22,11 @@ namespace presentation
         public virtual DataSet getAll() { return null; }
         // get record by name
         public virtual DataSet getByName() { return null; }
-
+        // fill dataset
+        public virtual void fillDatagrid() { }
         private void PConsBase_Load(object sender, EventArgs e)
         {
-            //this.dgvData.DataSource = this.getAll().Tables[0];
+            this.fillDatagrid();
         }
 
         private void txtbuscar_TextChanged(object sender, EventArgs e)

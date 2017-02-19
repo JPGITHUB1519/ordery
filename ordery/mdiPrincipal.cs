@@ -132,5 +132,12 @@ namespace ordery
             doform.MdiParent = this;
             doform.Show();
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PMantCliente doform = new PMantCliente();
+            doform.MdiParent = this;
+            doform.Show();
+        }
     }
 }

@@ -20,3 +20,8 @@ C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.PVistaBase.resources
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.PVistaCategoria.resources
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.PVistaArticulos.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\bin\Release\presentation.dll.config
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.PVistaCliente.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.Reports.PReport.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\RdlCompile.cache
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\RdlCompile.compiled

@@ -29,6 +29,10 @@ namespace presentation
             Categoria categoria = new Categoria();
             return categoria.searchCategoriaByName(this.txtbuscar.Text.Trim());
         }
+        public override void fillDatagrid()
+        {
+            this.dgvData.DataSource = this.getAll().Tables[0];
+        }
         private void PVistaCategoria_Load(object sender, EventArgs e)
         {
             

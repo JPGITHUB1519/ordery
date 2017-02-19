@@ -29,9 +29,14 @@ namespace presentation
             return articulo.searchArticuloByName(this.txtbuscar.Text.Trim());
         }
 
+        public override void fillDatagrid()
+        {
+            this.dgvData.DataSource = this.getAll().Tables[0];
+        }
+
         private void frmVistaArticulos_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

@@ -120,6 +120,12 @@
     <Compile Include="PVistaCategoria.Designer.cs">
       <DependentUpon>PVistaCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="PVistaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVistaCliente.Designer.cs">
+      <DependentUpon>PVistaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PVistaCategoria.resx">
       <DependentUpon>PVistaCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PVistaCliente.resx">
+      <DependentUpon>PVistaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PReport.resx">
       <DependentUpon>PReport.cs</DependentUpon>
@@ -237,6 +246,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

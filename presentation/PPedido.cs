@@ -17,7 +17,7 @@ namespace presentation
         // dataStructure to save buttons vs combos relations
         // keys <button_name> = idcombo
         Dictionary<string, int> combosDic = new Dictionary<string, int>();
-        
+
         // put an image from database to a button
         public void setImageToButtonFromDatabase(Button button, DataRow dr)
         {
@@ -33,97 +33,46 @@ namespace presentation
             Combo combo = new Combo();
             DataTable dt = new DataTable();
             dt = combo.getCombosTodays().Tables[0];
-            int cont = 0;
+            int cont = 1;
             foreach (DataRow dr in dt.Rows)
             {
-                cont++;
-                switch (cont)
+                Button btn = this.Controls.Find("btncombo" + cont.ToString(), true).FirstOrDefault() as Button;
+                this.setImageToButtonFromDatabase(btn, dr);
+                // save in the DataStructure the combo with the button
+                combosDic[btn.Name] = Convert.ToInt32(dr["idcombo"]);
+                cont++;     
+            }
+            // disable buttons that do not have combos
+            foreach (Control control in this.Controls)
+            {
+                if (control is Button && control.Name.Contains("btncombo"))
                 {
-                    case 1:
-                        {
-                            this.setImageToButtonFromDatabase(this.btncombo1, dr);
-                            // save in the DataStructure the combo with the button
-                            combosDic[this.btncombo1.Name] = Convert.ToInt32(dr["idcombo"]); 
-                            break;
-                        }
-                    case 2:
-                        {
-                            this.setImageToButtonFromDatabase(this.btncombo2, dr);
-                            combosDic[this.btncombo2.Name] = Convert.ToInt32(dr["idcombo"]); 
-                            break;
-                        }
-                    case 3:
-                        {
-                            this.setImageToButtonFromDatabase(this.btncombo3, dr);
-                            combosDic[this.btncombo3.Name] = Convert.ToInt32(dr["idcombo"]); 
-                            break;
-                        }
-                    case 4:
-                        {
-                            this.setImageToButtonFromDatabase(this.btncombo4, dr);
-                            combosDic[this.btncombo4.Name] = Convert.ToInt32(dr["idcombo"]); 
-                            break;
-                        }
-                    case 5:
-                        {
-                            this.setImageToButtonFromDatabase(this.btncombo5, dr);
-                            combosDic[this.btncombo5.Name] = Convert.ToInt32(dr["idcombo"]); 
-                            break;
-                        }
-                    case 6:
-                        {
-                            this.setImageToButtonFromDatabase(this.btncombo6, dr);
-                            combosDic[this.btncombo6.Name] = Convert.ToInt32(dr["idcombo"]); 
-                            break;
-                        }
-                    case 7:
-                        {
-                            this.setImageToButtonFromDatabase(this.btncombo7, dr);
-                            combosDic[this.btncombo7.Name] = Convert.ToInt32(dr["idcombo"]); 
-                            break;
-                        }
-                    case 8:
-                        {
-                            this.setImageToButtonFromDatabase(this.btncombo8, dr);
-                            combosDic[this.btncombo8.Name] = Convert.ToInt32(dr["idcombo"]); 
-                            break;
-                        }
-                    case 9:
-                        {
-                            this.setImageToButtonFromDatabase(this.btncombo9, dr);
-                            combosDic[this.btncombo9.Name] = Convert.ToInt32(dr["idcombo"]); 
-                            break;
-                        }
-                    case 10:
-                        {
-                            this.setImageToButtonFromDatabase(this.btncombo10, dr);
-                            combosDic[this.btncombo10.Name] = Convert.ToInt32(dr["idcombo"]); 
-                            break;
-                        }
-                    case 11:
-                        {
-                            this.setImageToButtonFromDatabase(this.btncombo11, dr);
-                            combosDic[this.btncombo11.Name] = Convert.ToInt32(dr["idcombo"]); 
-                            break;
-                        }
-                    case 12:
-                        {
-                            this.setImageToButtonFromDatabase(this.btncombo12, dr);
-                            combosDic[this.btncombo12.Name] = Convert.ToInt32(dr["idcombo"]); 
-                            break;
-                        }
-
+                    if(!combosDic.ContainsKey(control.Name))
+                    {
+                        control.Enabled = false;
+                    }   
                 }
 
             }
+
+            /*
+            foreach (Control control in this.Controls)
+            {
+                if (control is Button)
+                {
+                    messages.successMessage(control.Name);
+                }
+
+            }
+             * */
         }
 
         // add items from buttons to pedidos
         public void addComboDetailToPedido(object sender)
         {
-             // getting the trigger button name
+            // getting the trigger button name
             string trigger_button_name;
-            var trigger =  (Button) sender;
+            var trigger = (Button)sender;
             trigger_button_name = trigger.Name;
             Combo combo = new Combo();
             this.dgvpedido.DataSource = combo.getComboDetails(this.combosDic[trigger_button_name]).Tables[0];
@@ -134,7 +83,7 @@ namespace presentation
         public void addRowToExtraDagridView(int idarticulo, string nombre, string descripcion, double precio)
         {
             this.dgvExtras.Rows.Add(idarticulo, nombre, descripcion, precio);
-            
+
         }
 
         public PPedido()
@@ -235,7 +184,7 @@ namespace presentation
                 string descripcion = doform.dgvData.Rows[pos].Cells["descripcion"].Value.ToString();
                 double precio = Convert.ToDouble(doform.dgvData.Rows[pos].Cells["precio"].Value);
                 this.addRowToExtraDagridView(idarticulo, nombre, descripcion, precio);
-                
+
             }
         }
 
@@ -243,6 +192,21 @@ namespace presentation
         {
             // deleted selected from datagridView
             DGV.deleteSelectedRowFromDatagridView(this.dgvExtras);
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            PVistaCliente doform = new PVistaCliente();
+            if (doform.ShowDialog() == DialogResult.OK)
+            {
+                int pos = doform.dgvData.CurrentCell.RowIndex;
+                // add row to extra datagridview with the articulo selected
+                this.txtidcliente.Text = doform.dgvData.Rows[pos].Cells["idcliente"].Value.ToString();
+                this.txtnombre_cliente.Text = doform.dgvData.Rows[pos].Cells["nombre"].Value.ToString();
+                this.txtdireccion.Text = doform.dgvData.Rows[pos].Cells["direccion"].Value.ToString();
+
+
+            }
         }
     }
 }
