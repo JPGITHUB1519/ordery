@@ -49,6 +49,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsPrincipal.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PMantCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PMantCliente.Designer.cs">
+      <DependentUpon>PMantCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -83,12 +89,6 @@
     </Compile>
     <Compile Include="PMantCategoria.Designer.cs">
       <DependentUpon>PMantCategoria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PMantCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PMantCliente.Designer.cs">
-      <DependentUpon>PMantCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="PMantCombo.cs">
       <SubType>Form</SubType>
@@ -134,6 +134,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="PMantCliente.resx">
+      <DependentUpon>PMantCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PVistaArticulos.resx">
       <DependentUpon>PVistaArticulos.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,9 +151,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PMantCategoria.resx">
       <DependentUpon>PMantCategoria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PMantCliente.resx">
-      <DependentUpon>PMantCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PMantCombo.resx">
       <DependentUpon>PMantCombo.cs</DependentUpon>
