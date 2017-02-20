@@ -55,6 +55,12 @@
     <Compile Include="PMantCliente.Designer.cs">
       <DependentUpon>PMantCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="PMantUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PMantUsuario.Designer.cs">
+      <DependentUpon>PMantUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -142,6 +148,9 @@
   <ItemGroup>
     <EmbeddedResource Include="PMantCliente.resx">
       <DependentUpon>PMantCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PMantUsuario.resx">
+      <DependentUpon>PMantUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PVistaArticulos.resx">
       <DependentUpon>PVistaArticulos.cs</DependentUpon>

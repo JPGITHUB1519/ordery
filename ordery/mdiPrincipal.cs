@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using presentation;
+using utils;
 
 namespace ordery
 {
@@ -138,6 +139,10 @@ namespace ordery
             PMantCliente doform = new PMantCliente();
             doform.MdiParent = this;
             doform.Show();
+        }
+
+        private void mdiPrincipal_Load(object sender, EventArgs e)
+        {
         }
     }
 }

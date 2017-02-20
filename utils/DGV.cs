@@ -30,5 +30,15 @@ namespace utils
 
             }
         }
+
+        // check if a datagridview is empty. return True if so
+        public static bool checkIfEmptyDgv(DataGridView dgv)
+        {
+            if (dgv.Rows.Count != 0 && dgv.Rows != null)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

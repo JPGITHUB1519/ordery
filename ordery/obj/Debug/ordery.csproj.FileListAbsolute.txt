@@ -11,5 +11,6 @@ C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Debug\data.dll
 C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Debug\presentation.dll
 C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Debug\utils.dll
 C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Debug\data.pdb
-C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Debug\presentation.pdb
 C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Debug\utils.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\bin\Debug\presentation.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\obj\Debug\ordery.PLogin.resources

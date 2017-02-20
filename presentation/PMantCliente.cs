@@ -123,7 +123,7 @@ namespace presentation
             this.txttelefono.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["telefono"].Value);
             this.txtdireccion.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["direccion"].Value);
             this.txtemail.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["email"].Value);
-            this.chkis_active.Checked = Convert.ToBoolean(this.dgvData.CurrentRow.Cells["is_active"].Value);
+            this.chkis_active.Checked = Convert.ToBoolean(this.dgvData.CurrentRow.Cells["Is_active"].Value);
             this.tabControl1.SelectedIndex = 0;
         }
 

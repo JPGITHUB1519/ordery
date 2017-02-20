@@ -25,3 +25,4 @@ C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\RdlCompile.cac
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\RdlCompile.compiled
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\bin\Debug\presentation.dll.config
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.PVistaCliente.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Debug\presentation.PMantUsuario.resources

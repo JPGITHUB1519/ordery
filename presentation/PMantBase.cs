@@ -18,6 +18,8 @@ namespace presentation
     {
         public bool isNew = false;
         public bool isEdit = false;
+        // variable for validations during Mantenimiento
+        public bool validated = true;
 
         public string idrecord = "";
         public PMantBase()
@@ -101,16 +103,21 @@ namespace presentation
         private void btnSave_Click(object sender, EventArgs e)
         {
             this.guardar();
-            this.isNew = false;
-            this.isEdit = false;
-            this.setButtons();
-            this.setImageButtons();
-            this.clearTextBoxes();
-            this.fillDatagrid();
+            // si esta todo correcto
+            if (this.validated)
+            {
+                this.isNew = false;
+                this.isEdit = false;
+                this.setButtons();
+                this.setImageButtons();
+                this.clearTextBoxes();
+                this.fillDatagrid();
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            
             this.isNew = false;
             this.isEdit = false;
             this.setButtons();

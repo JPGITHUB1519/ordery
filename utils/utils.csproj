@@ -53,6 +53,7 @@
     </Compile>
     <Compile Include="print.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="session.cs" />
     <Compile Include="test.cs" />
     <Compile Include="validations.cs" />
   </ItemGroup>

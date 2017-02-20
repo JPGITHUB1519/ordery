@@ -64,25 +64,25 @@ namespace data
        // DATABASE OPERATIONS
         public string insertCliente(Cliente cliente)
         {
-            return database.executeNonQuery("EXEC insertCliente @nombre, @apellido, @direccion, @telefono, @email, @is_active",
+            return database.executeNonQuery("EXEC insertCliente @nombre, @apellido, @direccion, @telefono, @email, @Is_active",
                 new KeyValuePair<string, object>("@nombre", cliente.Nombre),
                 new KeyValuePair<string, object>("@apellido", cliente.Apellido),
                 new KeyValuePair<string, object>("@direccion", cliente.Direccion),
                 new KeyValuePair<string, object>("@telefono", cliente.Telefono),
                 new KeyValuePair<string, object>("@email", cliente.Email),
-                new KeyValuePair<string, object>("@is_active", cliente.Is_active));
+                new KeyValuePair<string, object>("@Is_active", cliente.Is_active));
         }
 
         public string updateCliente(Cliente cliente)
         {
-            return database.executeNonQuery("EXEC updateCliente @idcliente, @nombre, @apellido, @direccion, @telefono, @email, @is_active",
+            return database.executeNonQuery("EXEC updateCliente @idcliente, @nombre, @apellido, @direccion, @telefono, @email, @Is_active",
                 new KeyValuePair<string, object>("@idcliente", cliente.Idcliente),
                 new KeyValuePair<string, object>("@nombre", cliente.Nombre),
                 new KeyValuePair<string, object>("@apellido", cliente.Apellido),
                 new KeyValuePair<string, object>("@direccion", cliente.Direccion),
                 new KeyValuePair<string, object>("@telefono", cliente.Telefono),
                 new KeyValuePair<string, object>("@email", cliente.Email),
-                new KeyValuePair<string, object>("@is_active", cliente.Is_active));
+                new KeyValuePair<string, object>("@Is_active", cliente.Is_active));
         }
 
         public string deleteCliente(int idcliente)
