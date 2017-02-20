@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="configuration.cs" />
     <Compile Include="DGV.cs" />
+    <Compile Include="Security.cs" />
     <Compile Include="images.cs" />
     <Compile Include="messages.cs" />
     <Compile Include="ntextbox.cs">
