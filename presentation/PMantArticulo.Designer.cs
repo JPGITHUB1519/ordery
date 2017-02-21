@@ -42,6 +42,8 @@
             this.txtunidad = new utils.ntextbox(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtstock = new utils.ntextbox(this.components);
+            this.label9 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabpmantenimiento.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -57,6 +59,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtstock);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.txtunidad);
             this.groupBox1.Controls.Add(this.label7);
@@ -71,6 +75,7 @@
             this.groupBox1.Controls.Add(this.txtidarticulo);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Text = "Articulos";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnimprimir
             // 
@@ -142,7 +147,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(196, 244);
+            this.label5.Location = new System.Drawing.Point(196, 289);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 20);
             this.label5.TabIndex = 98;
@@ -150,9 +155,9 @@
             // 
             // rchdescripcion
             // 
-            this.rchdescripcion.Location = new System.Drawing.Point(312, 244);
+            this.rchdescripcion.Location = new System.Drawing.Point(312, 289);
             this.rchdescripcion.Name = "rchdescripcion";
-            this.rchdescripcion.Size = new System.Drawing.Size(204, 122);
+            this.rchdescripcion.Size = new System.Drawing.Size(204, 71);
             this.rchdescripcion.TabIndex = 99;
             this.rchdescripcion.Text = "";
             // 
@@ -202,6 +207,24 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // txtstock
+            // 
+            this.txtstock.Location = new System.Drawing.Point(312, 240);
+            this.txtstock.Name = "txtstock";
+            this.txtstock.Size = new System.Drawing.Size(193, 20);
+            this.txtstock.TabIndex = 106;
+            this.txtstock.validate = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(223, 238);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 20);
+            this.label9.TabIndex = 105;
+            this.label9.Text = "Stock";
+            // 
             // PMantArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,5 +261,7 @@
         private utils.ntextbox txtidarticulo;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Button button1;
+        private utils.ntextbox txtstock;
+        public System.Windows.Forms.Label label9;
     }
 }

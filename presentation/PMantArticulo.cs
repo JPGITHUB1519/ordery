@@ -39,6 +39,7 @@ namespace presentation
             this.txtnombre.ReadOnly = !cond;
             this.txtprecio.ReadOnly = !cond;
             this.txtunidad.ReadOnly = !cond;
+            this.txtstock.ReadOnly = !cond;
             this.rchdescripcion.ReadOnly = !cond;
         }
 
@@ -50,6 +51,7 @@ namespace presentation
             this.txtnombre.Text = string.Empty;
             this.txtprecio.Text = string.Empty;
             this.txtunidad.Text = string.Empty;
+            this.txtstock.Text = string.Empty;
             this.rchdescripcion.Text = string.Empty;
         }
 
@@ -75,6 +77,7 @@ namespace presentation
                     articulo.Precio = Convert.ToDouble(this.txtprecio.Text.Trim());
                     articulo.Unidad = Convert.ToDouble(this.txtunidad.Text.Trim());
                     articulo.Descripcion = this.rchdescripcion.Text.Trim();
+                    articulo.Stock = Convert.ToInt32(this.txtstock.Text.Trim());
                     rpta = articulo.insertArticulo(articulo);
                 }
                 else
@@ -86,6 +89,7 @@ namespace presentation
                     articulo.Precio = Convert.ToDouble(this.txtprecio.Text.Trim());
                     articulo.Unidad = Convert.ToDouble(this.txtunidad.Text.Trim());
                     articulo.Descripcion = this.rchdescripcion.Text.Trim();
+                    articulo.Stock = Convert.ToInt32(this.txtstock.Text.Trim());
                     rpta = articulo.updateArticulo(articulo);
                 }
 
@@ -172,6 +176,11 @@ namespace presentation
         }
 
         private void btnimprimir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

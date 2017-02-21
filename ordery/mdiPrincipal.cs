@@ -144,5 +144,12 @@ namespace ordery
         private void mdiPrincipal_Load(object sender, EventArgs e)
         {
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PMantUsuario doform = new PMantUsuario();
+            doform.MdiParent = this;
+            doform.Show();
+        }
     }
 }

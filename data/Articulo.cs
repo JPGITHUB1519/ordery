@@ -15,6 +15,7 @@ namespace data
         string descripcion;
         double precio;
         double unidad;
+        int stock;
 
         public int Idarticulo
         {
@@ -51,27 +52,34 @@ namespace data
             get { return unidad; }
             set { unidad = value; }
         }
+        public int Stock
+        {
+            get { return stock; }
+            set { stock = value; }
+        }
 
         // database operations
         public string insertArticulo(Articulo articulo)
         {
-            return database.executeNonQuery("EXEC InsertArticulo @idcategoria, @Nombre, @Descripcion, @Precio, @unidad",
+            return database.executeNonQuery("EXEC InsertArticulo @idcategoria, @Nombre, @Descripcion, @Precio, @unidad, @stock",
                                                 new KeyValuePair<string, object>("@idcategoria", articulo.Idcategoria),
                                                 new KeyValuePair<string, object>("@Nombre", articulo.Nombre),
                                                 new KeyValuePair<string, object>("@Descripcion", articulo.Descripcion),
                                                 new KeyValuePair<string, object>("@Precio", articulo.Precio),
-                                                new KeyValuePair<string, object>("@unidad", articulo.Unidad));
+                                                new KeyValuePair<string, object>("@unidad", articulo.Unidad),
+                                                new KeyValuePair<string, object>("@stock", articulo.stock));
         }
 
         public string updateArticulo(Articulo articulo)
         {
-            return database.executeNonQuery("EXEC updateArticulo @idarticulo, @idcategoria, @Nombre, @Descripcion, @Precio, @unidad",
+            return database.executeNonQuery("EXEC updateArticulo @idarticulo, @idcategoria, @Nombre, @Descripcion, @Precio, @unidad, @stock",
                                                 new KeyValuePair<string, object>("@idarticulo", articulo.Idarticulo),
                                                 new KeyValuePair<string, object>("@idcategoria", articulo.Idcategoria),
                                                 new KeyValuePair<string, object>("@Nombre", articulo.Nombre),
                                                 new KeyValuePair<string, object>("@Descripcion", articulo.Descripcion),
                                                 new KeyValuePair<string, object>("@Precio", articulo.Precio),
-                                                new KeyValuePair<string, object>("@unidad", articulo.Unidad));
+                                                new KeyValuePair<string, object>("@unidad", articulo.Unidad),
+                                                new KeyValuePair<string, object>("@stock", articulo.stock));
         }
 
         public string deleteArticulo(int idarticulo)
