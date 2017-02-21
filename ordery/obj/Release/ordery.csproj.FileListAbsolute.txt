@@ -13,3 +13,4 @@ C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\obj\Release\ordery.Properties.
 C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\obj\Release\ordery.csproj.GenerateResource.Cache
 C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\obj\Release\ordery.exe
 C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\obj\Release\ordery.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\ordery\obj\Release\ordery.PLogin.resources

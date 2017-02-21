@@ -62,6 +62,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtdireccion = new utils.ntextbox(this.components);
+            this.idcombo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpedido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExtras)).BeginInit();
             this.SuspendLayout();
@@ -189,6 +192,10 @@
             // 
             this.dgvpedido.AllowUserToAddRows = false;
             this.dgvpedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvpedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idcombo,
+            this.name,
+            this.cantidad});
             this.dgvpedido.Location = new System.Drawing.Point(602, 154);
             this.dgvpedido.Name = "dgvpedido";
             this.dgvpedido.Size = new System.Drawing.Size(398, 178);
@@ -362,6 +369,21 @@
             this.txtdireccion.TabIndex = 107;
             this.txtdireccion.validate = false;
             // 
+            // idcombo
+            // 
+            this.idcombo.HeaderText = "idcombo";
+            this.idcombo.Name = "idcombo";
+            // 
+            // name
+            // 
+            this.name.HeaderText = "nombre";
+            this.name.Name = "name";
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "cantidad";
+            this.cantidad.Name = "cantidad";
+            // 
             // PPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -441,5 +463,8 @@
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label label5;
         private utils.ntextbox txtdireccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcombo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
     }
 }

@@ -75,8 +75,29 @@ namespace presentation
             var trigger = (Button)sender;
             trigger_button_name = trigger.Name;
             Combo combo = new Combo();
-            this.dgvpedido.DataSource = combo.getComboDetails(this.combosDic[trigger_button_name]).Tables[0];
-            this.lbltotalcant.Text = DGV.sumColumnFromDatagridView(this.dgvpedido, "precio").ToString() + " $";
+            //this.dgvpedido.DataSource = combo.getComboDetails(this.combosDic[trigger_button_name]).Tables[0];
+            //this.dgvpedido.DataSource = combo.getComboById(this.combosDic[trigger_button_name]).Tables[0];
+            //this.lbltotalcant.Text = DGV.sumColumnFromDatagridView(this.dgvpedido, "precio").ToString() + " $";
+            
+            DataTable dt = combo.getComboById(this.combosDic[trigger_button_name]).Tables[0];
+            bool founded = false;
+            if(dt != null && dt.Rows.Count != 0)
+            {
+                foreach (DataGridViewRow row in dgvpedido.Rows)
+                {
+                    // si encontro el combo, sumale uno al existente
+                    if (Convert.ToInt32(row.Cells["idcombo"].Value) == this.combosDic[trigger_button_name])
+                    {
+                       row.Cells["cantidad"].Value = Convert.ToInt32(row.Cells["cantidad"].Value) + 1;
+                       founded = true;
+                    }  
+                }
+                // si no encontro el combo en la lista añadelo
+                if (!founded)
+                {
+                    dgvpedido.Rows.Add(dt.Rows[0]["idcombo"], dt.Rows[0]["nombre"], 1);
+                }
+            }
         }
 
         // add a row to Extras DatagridView
