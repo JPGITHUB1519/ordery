@@ -75,8 +75,8 @@ namespace data
 
         public string updateCliente(Cliente cliente)
         {
-            return database.executeNonQuery("EXEC updateCliente @idcliente, @nombre, @apellido, @direccion, @telefono, @email, @Is_active",
-                new KeyValuePair<string, object>("@idcliente", cliente.Idcliente),
+            return database.executeNonQuery("EXEC updateCliente @Idcliente, @nombre, @apellido, @direccion, @telefono, @email, @Is_active",
+                new KeyValuePair<string, object>("@Idcliente", cliente.Idcliente),
                 new KeyValuePair<string, object>("@nombre", cliente.Nombre),
                 new KeyValuePair<string, object>("@apellido", cliente.Apellido),
                 new KeyValuePair<string, object>("@direccion", cliente.Direccion),
@@ -87,8 +87,8 @@ namespace data
 
         public string deleteCliente(int idcliente)
         {
-            return database.executeNonQuery("EXEC deleteCliente @idcliente",
-                new KeyValuePair<string, object>("@idcliente", idcliente));
+            return database.executeNonQuery("EXEC deleteCliente @Idcliente",
+                new KeyValuePair<string, object>("@Idcliente", idcliente));
         }
 
         public DataSet getClientes()

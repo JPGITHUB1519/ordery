@@ -117,7 +117,7 @@ namespace presentation
         // fill textboxes from datagrid
         public override void fillTextBoxesFromDatagrid()
         {
-            this.txtidcliente.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["idcliente"].Value);
+            this.txtidcliente.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["Idcliente"].Value);
             this.txtnombre.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["nombre"].Value);
             this.txtapellido.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["apellido"].Value);
             this.txttelefono.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["telefono"].Value);

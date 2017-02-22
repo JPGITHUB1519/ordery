@@ -53,8 +53,8 @@ namespace data
 
         public string updateUsuario(Usuario usuario)
         {
-            return database.executeNonQuery("EXEC updateUsuario @idusuario, @username, @password, @is_active",
-                                                new KeyValuePair<string, object>("@idusuario", usuario.Idusuario),
+            return database.executeNonQuery("EXEC updateUsuario @Idusuario, @username, @password, @is_active",
+                                                new KeyValuePair<string, object>("@Idusuario", usuario.Idusuario),
                                                 new KeyValuePair<string, object>("@username", usuario.username),
                                                 new KeyValuePair<string, object>("@password", Security.Encrypt(usuario.Password)),
                                                 new KeyValuePair<string, object>("@is_active", usuario.is_active));
@@ -62,8 +62,8 @@ namespace data
 
         public string deleteUsuario(int idusuario)
         {
-            return database.executeNonQuery("EXEC deleteUsuario @idusuario",
-                                                new KeyValuePair<string, object>("@idusuario", idusuario));
+            return database.executeNonQuery("EXEC deleteUsuario @Idusuario",
+                                                new KeyValuePair<string, object>("@Idusuario", idusuario));
         }
 
         public DataSet getUsuarios()
@@ -73,8 +73,8 @@ namespace data
 
         public DataSet getUsuarioById(int idusuario)
         {
-            return database.executeQuery("EXEC getUsuarioById @idusuario",
-                                            new KeyValuePair<string, object>("@idusuario", idusuario));
+            return database.executeQuery("EXEC getUsuarioById @Idusuario",
+                                            new KeyValuePair<string, object>("@Idusuario", idusuario));
         }
 
         public DataSet getUsuarioByName(string username)

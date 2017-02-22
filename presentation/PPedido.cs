@@ -15,7 +15,7 @@ namespace presentation
     public partial class PPedido : Form
     {
         // dataStructure to save buttons vs combos relations
-        // keys <button_name> = idcombo
+        // keys <button_name> = Idcombo
         Dictionary<string, int> combosDic = new Dictionary<string, int>();
 
         // put an image from database to a button
@@ -39,7 +39,7 @@ namespace presentation
                 Button btn = this.Controls.Find("btncombo" + cont.ToString(), true).FirstOrDefault() as Button;
                 this.setImageToButtonFromDatabase(btn, dr);
                 // save in the DataStructure the combo with the button
-                combosDic[btn.Name] = Convert.ToInt32(dr["idcombo"]);
+                combosDic[btn.Name] = Convert.ToInt32(dr["Idcombo"]);
                 cont++;     
             }
             // disable buttons that do not have combos
@@ -77,7 +77,7 @@ namespace presentation
             Combo combo = new Combo();
             //this.dgvpedido.DataSource = combo.getComboDetails(this.combosDic[trigger_button_name]).Tables[0];
             //this.dgvpedido.DataSource = combo.getComboById(this.combosDic[trigger_button_name]).Tables[0];
-            //this.lbltotalcant.Text = DGV.sumColumnFromDatagridView(this.dgvpedido, "precio").ToString() + " $";
+            //this.lbltotalcant.Text = DGV.sumColumnFromDatagridView(this.dgvpedido, "Precio").ToString() + " $";
             
             DataTable dt = combo.getComboById(this.combosDic[trigger_button_name]).Tables[0];
             bool founded = false;
@@ -86,16 +86,17 @@ namespace presentation
                 foreach (DataGridViewRow row in dgvpedido.Rows)
                 {
                     // si encontro el combo, sumale uno al existente
-                    if (Convert.ToInt32(row.Cells["idcombo"].Value) == this.combosDic[trigger_button_name])
+                    if (Convert.ToInt32(row.Cells["Idcombo"].Value) == this.combosDic[trigger_button_name])
                     {
-                       row.Cells["cantidad"].Value = Convert.ToInt32(row.Cells["cantidad"].Value) + 1;
+                       row.Cells["Cantidad"].Value = Convert.ToInt32(row.Cells["Cantidad"].Value) + 1;
                        founded = true;
                     }  
                 }
                 // si no encontro el combo en la lista añadelo
                 if (!founded)
                 {
-                    dgvpedido.Rows.Add(dt.Rows[0]["idcombo"], dt.Rows[0]["nombre"], 1);
+                    double precio_combo = combo.getPrice(Convert.ToInt32(dt.Rows[0]["Idcombo"]));
+                    dgvpedido.Rows.Add(dt.Rows[0]["Idcombo"], dt.Rows[0]["nombre"], 1, precio_combo);
                 }
             }
         }
@@ -203,7 +204,7 @@ namespace presentation
                 int idarticulo = Convert.ToInt32(doform.dgvData.Rows[pos].Cells["idarticulo"].Value);
                 string nombre = doform.dgvData.Rows[pos].Cells["nombre"].Value.ToString();
                 string descripcion = doform.dgvData.Rows[pos].Cells["descripcion"].Value.ToString();
-                double precio = Convert.ToDouble(doform.dgvData.Rows[pos].Cells["precio"].Value);
+                double precio = Convert.ToDouble(doform.dgvData.Rows[pos].Cells["Precio"].Value);
                 this.addRowToExtraDagridView(idarticulo, nombre, descripcion, precio);
 
             }
@@ -222,11 +223,32 @@ namespace presentation
             {
                 int pos = doform.dgvData.CurrentCell.RowIndex;
                 // add row to extra datagridview with the articulo selected
-                this.txtidcliente.Text = doform.dgvData.Rows[pos].Cells["idcliente"].Value.ToString();
+                this.txtidcliente.Text = doform.dgvData.Rows[pos].Cells["Idcliente"].Value.ToString();
                 this.txtnombre_cliente.Text = doform.dgvData.Rows[pos].Cells["nombre"].Value.ToString();
                 this.txtdireccion.Text = doform.dgvData.Rows[pos].Cells["direccion"].Value.ToString();
 
 
+            }
+        }
+
+        private void btnFacturar_Click(object sender, EventArgs e)
+        {
+            Pedido pedido = new Pedido();
+            int idpedido;
+            // creando pedido
+            pedido.Idcliente = Convert.ToInt32(this.txtidcliente.Text.Trim());
+            pedido.Tipo_pedido = "local";
+            pedido.Idusuario = session.userId;
+            // getting the idpedido and create pedido
+            idpedido = pedido.createPedido(pedido);
+            // creando detalle de pedido
+            foreach(DataGridViewRow row in dgvpedido.Rows)
+            {
+                pedido.Idpedido = idpedido;
+                pedido.Idcombo = Convert.ToInt32(row.Cells["idcombo"].Value);
+                pedido.Cantidad = Convert.ToInt32(row.Cells["cantidad"].Value);
+                pedido.Precio = Convert.ToDouble(row.Cells["price"].Value);
+                pedido.insertDetailToPedido(pedido);
             }
         }
     }

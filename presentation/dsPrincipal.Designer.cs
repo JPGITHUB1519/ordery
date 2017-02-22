@@ -451,7 +451,7 @@ namespace presentation {
                 this.columnidcategoria = base.Columns["idcategoria"];
                 this.columnnombre = base.Columns["nombre"];
                 this.columndescripcion = base.Columns["descripcion"];
-                this.columnprecio = base.Columns["precio"];
+                this.columnprecio = base.Columns["Precio"];
                 this.columnunidad = base.Columns["unidad"];
             }
             
@@ -466,7 +466,7 @@ namespace presentation {
                 base.Columns.Add(this.columnnombre);
                 this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescripcion);
-                this.columnprecio = new global::System.Data.DataColumn("precio", typeof(decimal), null, global::System.Data.MappingType.Element);
+                this.columnprecio = new global::System.Data.DataColumn("Precio", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprecio);
                 this.columnunidad = new global::System.Data.DataColumn("unidad", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnunidad);
@@ -681,7 +681,7 @@ namespace presentation {
                         return ((decimal)(this[this.tablegetArticulos.precioColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'precio\' in table \'getArticulos\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Precio\' in table \'getArticulos\' is DBNull.", e);
                     }
                 }
                 set {
@@ -917,7 +917,7 @@ namespace presentation.dsPrincipalTableAdapters {
             tableMapping.ColumnMappings.Add("idcategoria", "idcategoria");
             tableMapping.ColumnMappings.Add("nombre", "nombre");
             tableMapping.ColumnMappings.Add("descripcion", "descripcion");
-            tableMapping.ColumnMappings.Add("precio", "precio");
+            tableMapping.ColumnMappings.Add("Precio", "Precio");
             tableMapping.ColumnMappings.Add("unidad", "unidad");
             this._adapter.TableMappings.Add(tableMapping);
         }

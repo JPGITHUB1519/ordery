@@ -113,9 +113,9 @@ namespace presentation
         // fill textBoxes from datagrid
         public override void fillTextBoxesFromDatagrid()
         {
-            this.txtidcombo.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["idcombo"].Value);
+            this.txtidcombo.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["Idcombo"].Value);
             this.txtnombre.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["nombre"].Value);
-            //this.txtprecio.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["precio"].Value);
+            //this.txtprecio.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["Precio"].Value);
             this.rchdescripcion.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["descripcion"].Value);
             
             // load image from datagridview to picture box

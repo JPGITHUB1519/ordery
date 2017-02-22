@@ -11,7 +11,7 @@ namespace data
     {
         int idcombo;
         string nombre;
-        //double precio;
+        //double Precio;
         string descripcion;
         byte[] image;
 
@@ -32,8 +32,8 @@ namespace data
         /*
         public double Precio
         {
-            get { return precio; }
-            set { precio = value; }
+            get { return Precio; }
+            set { Precio = value; }
         }
         */
 
@@ -54,7 +54,7 @@ namespace data
         {
             return database.executeNonQuery("EXEC insertCombo @nombre, @descripcion, @image",
                 new KeyValuePair<string, object>("@nombre", combo.nombre),
-                //new KeyValuePair<string, object>("@precio", combo.precio),
+                //new KeyValuePair<string, object>("@Precio", combo.Precio),
                 new KeyValuePair<string, object>("@descripcion", combo.descripcion),
                 new KeyValuePair<string, object>("@image", combo.image));
         }
@@ -62,31 +62,31 @@ namespace data
         // insertar articulo a combo
         public string insertArticuloToCombo(int idcombo, int idarticulo)
         {
-            return database.executeNonQuery("EXEC InsertArticuloToCombo @idcombo, @idarticulo",
-                                                new KeyValuePair<string, object>("@idcombo", idcombo),
+            return database.executeNonQuery("EXEC InsertArticuloToCombo @Idcombo, @idarticulo",
+                                                new KeyValuePair<string, object>("@Idcombo", idcombo),
                                                 new KeyValuePair<string, object>("@idarticulo", idarticulo));
         }
 
         public string updateCombo(Combo combo)
         {
-            return database.executeNonQuery("EXEC updateCombo @idcombo, @nombre,  @descripcion, @image",
-                new KeyValuePair<string, object>("@idcombo", combo.idcombo),
+            return database.executeNonQuery("EXEC updateCombo @Idcombo, @nombre,  @descripcion, @image",
+                new KeyValuePair<string, object>("@Idcombo", combo.idcombo),
                 new KeyValuePair<string, object>("@nombre", combo.nombre),
-                //new KeyValuePair<string, object>("@precio", combo.precio),
+                //new KeyValuePair<string, object>("@Precio", combo.Precio),
                 new KeyValuePair<string, object>("@descripcion", combo.descripcion),
                 new KeyValuePair<string, object>("@image", combo.image));
         }
 
         public string deleteCombo(int idcombo)
         {
-            return database.executeNonQuery("EXEC deleteCombo @idcombo",
-                                                new KeyValuePair<string, object>("@idcombo", idcombo));
+            return database.executeNonQuery("EXEC deleteCombo @Idcombo",
+                                                new KeyValuePair<string, object>("@Idcombo", idcombo));
         }
 
         public string deleteArticuloFromCombo(int idcombo, int idarticulo)
         {
-            return database.executeNonQuery("EXEC DeleteArticuloFromCombo @idcombo, @idarticulo",
-                                                new KeyValuePair<string, object>("@idcombo", idcombo),
+            return database.executeNonQuery("EXEC DeleteArticuloFromCombo @Idcombo, @idarticulo",
+                                                new KeyValuePair<string, object>("@Idcombo", idcombo),
                                                 new KeyValuePair<string, object>("@idarticulo", idarticulo));
         }
 
@@ -97,15 +97,15 @@ namespace data
 
         public DataSet getComboById(int idcombo)
         {
-            return database.executeQuery("EXEC getComboById @idcombo",
-                                            new KeyValuePair<string, object>("@idcombo", idcombo));
+            return database.executeQuery("EXEC getComboById @Idcombo",
+                                            new KeyValuePair<string, object>("@Idcombo", idcombo));
         }
 
         // get the articulos from the combo
         public DataSet getComboDetails(int idcombo)
         {
-            return database.executeQuery("EXEC GetCombosDetailsByCombo @idcombo",
-                                            new KeyValuePair<String, object>("@idcombo", idcombo));
+            return database.executeQuery("EXEC GetCombosDetailsByCombo @Idcombo",
+                                            new KeyValuePair<String, object>("@Idcombo", idcombo));
         }
 
         // get the Todays Combos
@@ -122,9 +122,22 @@ namespace data
 
         public DataSet searchArticulosFromComboByName(int idcombo, string nombre_articulo)
         {
-            return database.executeQuery("EXEC SearchArticuloFromComboByName @idcombo, @nombre_articulo",
-                                            new KeyValuePair<string, object>("@idcombo", idcombo),
+            return database.executeQuery("EXEC SearchArticuloFromComboByName @Idcombo, @nombre_articulo",
+                                            new KeyValuePair<string, object>("@Idcombo", idcombo),
                                             new KeyValuePair<string, object>("@nombre_articulo", nombre_articulo));
+        }
+
+        public double getPrice(int idcombo)
+        {
+            double precio = -1;
+            DataTable dt = database.executeQuery("EXEC getPriceOfCombo @Idcombo",
+                                                    new KeyValuePair<string, object>("@Idcombo", idcombo)).Tables[0];
+            
+            if(dt != null && dt.Rows.Count != 0)
+            {
+                precio = Convert.ToDouble(dt.Rows[0]["Precio"]);
+            }
+            return precio;
         }
 
        

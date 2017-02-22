@@ -20,7 +20,7 @@ namespace presentation
             InitializeComponent();
         }
 
-        // new constructor to set the idcombo property
+        // new constructor to set the Idcombo property
         public PMantComboArt(int idcombo)
         {
             this.idcombo = idcombo;

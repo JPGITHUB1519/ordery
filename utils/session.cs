@@ -8,6 +8,6 @@ namespace utils
 {
     public class session
     {
-        public static int userId;
+        public static int userId = 7;
     }
 }

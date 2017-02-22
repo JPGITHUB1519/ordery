@@ -43,6 +43,9 @@
             this.btncombo10 = new System.Windows.Forms.Button();
             this.btncombo9 = new System.Windows.Forms.Button();
             this.dgvpedido = new System.Windows.Forms.DataGridView();
+            this.idcombo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbltotal = new System.Windows.Forms.Label();
             this.lbltotalcant = new System.Windows.Forms.Label();
             this.dgvExtras = new System.Windows.Forms.DataGridView();
@@ -55,16 +58,15 @@
             this.txtnombre_cliente = new utils.ntextbox(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnNew = new System.Windows.Forms.Button();
             this.txtidcliente = new utils.ntextbox(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtdireccion = new utils.ntextbox(this.components);
-            this.idcombo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnFacturar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpedido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExtras)).BeginInit();
             this.SuspendLayout();
@@ -195,12 +197,28 @@
             this.dgvpedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idcombo,
             this.name,
-            this.cantidad});
-            this.dgvpedido.Location = new System.Drawing.Point(602, 154);
+            this.cantidad,
+            this.price});
+            this.dgvpedido.Location = new System.Drawing.Point(612, 154);
             this.dgvpedido.Name = "dgvpedido";
             this.dgvpedido.Size = new System.Drawing.Size(398, 178);
             this.dgvpedido.TabIndex = 62;
             this.dgvpedido.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvpedido_CellContentClick);
+            // 
+            // Idcombo
+            // 
+            this.idcombo.HeaderText = "Idcombo";
+            this.idcombo.Name = "Idcombo";
+            // 
+            // name
+            // 
+            this.name.HeaderText = "nombre";
+            this.name.Name = "name";
+            // 
+            // Cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "Cantidad";
             // 
             // lbltotal
             // 
@@ -252,10 +270,10 @@
             this.descripcion.HeaderText = "descripcion";
             this.descripcion.Name = "descripcion";
             // 
-            // precio
+            // Precio
             // 
-            this.precio.HeaderText = "precio";
-            this.precio.Name = "precio";
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "Precio";
             // 
             // label1
             // 
@@ -303,36 +321,6 @@
             this.comboBox1.Size = new System.Drawing.Size(170, 21);
             this.comboBox1.TabIndex = 104;
             // 
-            // button1
-            // 
-            this.button1.Image = global::presentation.Properties.Resources.customer;
-            this.button1.Location = new System.Drawing.Point(612, 54);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 61);
-            this.button1.TabIndex = 70;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Image = global::presentation.Properties.Resources.delete;
-            this.btnDelete.Location = new System.Drawing.Point(816, 362);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(135, 61);
-            this.btnDelete.TabIndex = 69;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnNew
-            // 
-            this.btnNew.Image = global::presentation.Properties.Resources.add_icon;
-            this.btnNew.Location = new System.Drawing.Point(662, 362);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(128, 61);
-            this.btnNew.TabIndex = 67;
-            this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
             // txtidcliente
             // 
             this.txtidcliente.Location = new System.Drawing.Point(68, 86);
@@ -369,26 +357,57 @@
             this.txtdireccion.TabIndex = 107;
             this.txtdireccion.validate = false;
             // 
-            // idcombo
+            // btnFacturar
             // 
-            this.idcombo.HeaderText = "idcombo";
-            this.idcombo.Name = "idcombo";
+            this.btnFacturar.Image = global::presentation.Properties.Resources.cash_icon;
+            this.btnFacturar.Location = new System.Drawing.Point(793, 65);
+            this.btnFacturar.Name = "btnFacturar";
+            this.btnFacturar.Size = new System.Drawing.Size(75, 61);
+            this.btnFacturar.TabIndex = 109;
+            this.btnFacturar.UseVisualStyleBackColor = true;
+            this.btnFacturar.Click += new System.EventHandler(this.btnFacturar_Click);
             // 
-            // name
+            // button1
             // 
-            this.name.HeaderText = "nombre";
-            this.name.Name = "name";
+            this.button1.Image = global::presentation.Properties.Resources.customer;
+            this.button1.Location = new System.Drawing.Point(612, 54);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 61);
+            this.button1.TabIndex = 70;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
-            // cantidad
+            // btnDelete
             // 
-            this.cantidad.HeaderText = "cantidad";
-            this.cantidad.Name = "cantidad";
+            this.btnDelete.Image = global::presentation.Properties.Resources.delete;
+            this.btnDelete.Location = new System.Drawing.Point(816, 362);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(135, 61);
+            this.btnDelete.TabIndex = 69;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnNew
+            // 
+            this.btnNew.Image = global::presentation.Properties.Resources.add_icon;
+            this.btnNew.Location = new System.Drawing.Point(662, 362);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(128, 61);
+            this.btnNew.TabIndex = 67;
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // price
+            // 
+            this.price.HeaderText = "Precio";
+            this.price.Name = "price";
             // 
             // PPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 600);
+            this.Controls.Add(this.btnFacturar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtdireccion);
             this.Controls.Add(this.label4);
@@ -466,5 +485,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idcombo;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
+        private System.Windows.Forms.Button btnFacturar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
     }
 }

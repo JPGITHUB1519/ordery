@@ -115,7 +115,7 @@ namespace presentation
         // fill textboxes on doubleClickDatgrid
         public override void fillTextBoxesFromDatagrid()
         {
-            this.txtidusuario.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["idusuario"].Value);
+            this.txtidusuario.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["Idusuario"].Value);
             this.txtusername.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["username"].Value);
             this.txtpassword.Text = Convert.ToString(this.dgvData.CurrentRow.Cells["password"].Value);
             this.tabControl1.SelectedIndex = 0;
