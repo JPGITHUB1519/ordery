@@ -43,21 +43,22 @@
             this.btncombo10 = new System.Windows.Forms.Button();
             this.btncombo9 = new System.Windows.Forms.Button();
             this.dgvpedido = new System.Windows.Forms.DataGridView();
-            this.idcombo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Idcombo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbltotal = new System.Windows.Forms.Label();
             this.lbltotalcant = new System.Windows.Forms.Label();
             this.dgvExtras = new System.Windows.Forms.DataGridView();
             this.idarticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtnombre_cliente = new utils.ntextbox(this.components);
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbTipoPedido = new System.Windows.Forms.ComboBox();
             this.txtidcliente = new utils.ntextbox(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -66,7 +67,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpedido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExtras)).BeginInit();
             this.SuspendLayout();
@@ -195,9 +195,9 @@
             this.dgvpedido.AllowUserToAddRows = false;
             this.dgvpedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvpedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idcombo,
+            this.Idcombo,
             this.name,
-            this.cantidad,
+            this.Cantidad,
             this.price});
             this.dgvpedido.Location = new System.Drawing.Point(612, 154);
             this.dgvpedido.Name = "dgvpedido";
@@ -207,8 +207,8 @@
             // 
             // Idcombo
             // 
-            this.idcombo.HeaderText = "Idcombo";
-            this.idcombo.Name = "Idcombo";
+            this.Idcombo.HeaderText = "Idcombo";
+            this.Idcombo.Name = "Idcombo";
             // 
             // name
             // 
@@ -217,8 +217,13 @@
             // 
             // Cantidad
             // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.Name = "Cantidad";
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // price
+            // 
+            this.price.HeaderText = "Precio";
+            this.price.Name = "price";
             // 
             // lbltotal
             // 
@@ -249,7 +254,7 @@
             this.idarticulo,
             this.nombre,
             this.descripcion,
-            this.precio});
+            this.Precio});
             this.dgvExtras.Location = new System.Drawing.Point(602, 429);
             this.dgvExtras.Name = "dgvExtras";
             this.dgvExtras.Size = new System.Drawing.Size(398, 139);
@@ -272,8 +277,8 @@
             // 
             // Precio
             // 
-            this.precio.HeaderText = "Precio";
-            this.precio.Name = "Precio";
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
             // 
             // label1
             // 
@@ -313,13 +318,13 @@
             this.label3.TabIndex = 103;
             this.label3.Text = "Tipo Pedido";
             // 
-            // comboBox1
+            // cmbTipoPedido
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(350, 131);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(170, 21);
-            this.comboBox1.TabIndex = 104;
+            this.cmbTipoPedido.FormattingEnabled = true;
+            this.cmbTipoPedido.Location = new System.Drawing.Point(350, 131);
+            this.cmbTipoPedido.Name = "cmbTipoPedido";
+            this.cmbTipoPedido.Size = new System.Drawing.Size(170, 21);
+            this.cmbTipoPedido.TabIndex = 104;
             // 
             // txtidcliente
             // 
@@ -397,11 +402,6 @@
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // price
-            // 
-            this.price.HeaderText = "Precio";
-            this.price.Name = "price";
-            // 
             // PPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,7 +412,7 @@
             this.Controls.Add(this.txtdireccion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtidcliente);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbTipoPedido);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtnombre_cliente);
             this.Controls.Add(this.label2);
@@ -477,7 +477,7 @@
         public System.Windows.Forms.Label label2;
         private utils.ntextbox txtnombre_cliente;
         public System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbTipoPedido;
         private utils.ntextbox txtidcliente;
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label label5;
@@ -487,5 +487,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.Button btnFacturar;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Idcombo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
     }
 }

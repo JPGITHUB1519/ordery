@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using presentation.Reports;
 using data;
 using utils;
 
@@ -121,6 +122,9 @@ namespace presentation
         private void PPedido_Load(object sender, EventArgs e)
         {
             this.setImagesButtons();
+            // añadir tipos de pedidos a combo
+
+            cmbTipoPedido.Items.AddRange(configuration.tipos_pedidos.ToArray());
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -237,7 +241,7 @@ namespace presentation
             int idpedido;
             // creando pedido
             pedido.Idcliente = Convert.ToInt32(this.txtidcliente.Text.Trim());
-            pedido.Tipo_pedido = "local";
+            pedido.Tipo_pedido = cmbTipoPedido.Text.Trim();
             pedido.Idusuario = session.userId;
             // getting the idpedido and create pedido
             idpedido = pedido.createPedido(pedido);
@@ -250,6 +254,12 @@ namespace presentation
                 pedido.Precio = Convert.ToDouble(row.Cells["price"].Value);
                 pedido.insertDetailToPedido(pedido);
             }
+
+            // generar reporte
+            DataSet ds = pedido.getPedidoDetailsById(idpedido);
+            PReport frmreport = new PReport("presentation.Reports.RPedido.rdlc", ds);
+            frmreport.Show();
+           
         }
     }
 }

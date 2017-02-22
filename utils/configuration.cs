@@ -22,5 +22,11 @@ namespace utils
         public static string update_success = "Exito al Editar";
         public static string delete_success = "Exito al eliminar";
 
+        public static List<string> tipos_pedidos = new List<string>()
+        {
+            "local",
+            "domicilio"
+        };
+
     }
 }

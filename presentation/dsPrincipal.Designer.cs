@@ -26,6 +26,8 @@ namespace presentation {
         
         private getArticulosDataTable tablegetArticulos;
         
+        private getPedidosDetailsByIdDataTable tablegetPedidosDetailsById;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -57,6 +59,9 @@ namespace presentation {
                 if ((ds.Tables["getArticulos"] != null)) {
                     base.Tables.Add(new getArticulosDataTable(ds.Tables["getArticulos"]));
                 }
+                if ((ds.Tables["getPedidosDetailsById"] != null)) {
+                    base.Tables.Add(new getPedidosDetailsByIdDataTable(ds.Tables["getPedidosDetailsById"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -82,6 +87,16 @@ namespace presentation {
         public getArticulosDataTable getArticulos {
             get {
                 return this.tablegetArticulos;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public getPedidosDetailsByIdDataTable getPedidosDetailsById {
+            get {
+                return this.tablegetPedidosDetailsById;
             }
         }
         
@@ -155,6 +170,9 @@ namespace presentation {
                 if ((ds.Tables["getArticulos"] != null)) {
                     base.Tables.Add(new getArticulosDataTable(ds.Tables["getArticulos"]));
                 }
+                if ((ds.Tables["getPedidosDetailsById"] != null)) {
+                    base.Tables.Add(new getPedidosDetailsByIdDataTable(ds.Tables["getPedidosDetailsById"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -194,6 +212,12 @@ namespace presentation {
                     this.tablegetArticulos.InitVars();
                 }
             }
+            this.tablegetPedidosDetailsById = ((getPedidosDetailsByIdDataTable)(base.Tables["getPedidosDetailsById"]));
+            if ((initTable == true)) {
+                if ((this.tablegetPedidosDetailsById != null)) {
+                    this.tablegetPedidosDetailsById.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -206,11 +230,19 @@ namespace presentation {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablegetArticulos = new getArticulosDataTable();
             base.Tables.Add(this.tablegetArticulos);
+            this.tablegetPedidosDetailsById = new getPedidosDetailsByIdDataTable();
+            base.Tables.Add(this.tablegetPedidosDetailsById);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializegetArticulos() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializegetPedidosDetailsById() {
             return false;
         }
         
@@ -271,6 +303,9 @@ namespace presentation {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void getArticulosRowChangeEventHandler(object sender, getArticulosRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void getPedidosDetailsByIdRowChangeEventHandler(object sender, getPedidosDetailsByIdRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -451,7 +486,7 @@ namespace presentation {
                 this.columnidcategoria = base.Columns["idcategoria"];
                 this.columnnombre = base.Columns["nombre"];
                 this.columndescripcion = base.Columns["descripcion"];
-                this.columnprecio = base.Columns["Precio"];
+                this.columnprecio = base.Columns["precio"];
                 this.columnunidad = base.Columns["unidad"];
             }
             
@@ -466,7 +501,7 @@ namespace presentation {
                 base.Columns.Add(this.columnnombre);
                 this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescripcion);
-                this.columnprecio = new global::System.Data.DataColumn("Precio", typeof(decimal), null, global::System.Data.MappingType.Element);
+                this.columnprecio = new global::System.Data.DataColumn("precio", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprecio);
                 this.columnunidad = new global::System.Data.DataColumn("unidad", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnunidad);
@@ -606,6 +641,352 @@ namespace presentation {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class getPedidosDetailsByIdDataTable : global::System.Data.TypedTableBase<getPedidosDetailsByIdRow> {
+            
+            private global::System.Data.DataColumn columnpedido_id;
+            
+            private global::System.Data.DataColumn columnpedido_fecha;
+            
+            private global::System.Data.DataColumn columnpedido_tipo;
+            
+            private global::System.Data.DataColumn columncombo_nombre;
+            
+            private global::System.Data.DataColumn columndetalle_cantidad;
+            
+            private global::System.Data.DataColumn columndetalle_precio;
+            
+            private global::System.Data.DataColumn columncliente_nombre;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public getPedidosDetailsByIdDataTable() {
+                this.TableName = "getPedidosDetailsById";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal getPedidosDetailsByIdDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected getPedidosDetailsByIdDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn pedido_idColumn {
+                get {
+                    return this.columnpedido_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn pedido_fechaColumn {
+                get {
+                    return this.columnpedido_fecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn pedido_tipoColumn {
+                get {
+                    return this.columnpedido_tipo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn combo_nombreColumn {
+                get {
+                    return this.columncombo_nombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn detalle_cantidadColumn {
+                get {
+                    return this.columndetalle_cantidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn detalle_precioColumn {
+                get {
+                    return this.columndetalle_precio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cliente_nombreColumn {
+                get {
+                    return this.columncliente_nombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public getPedidosDetailsByIdRow this[int index] {
+                get {
+                    return ((getPedidosDetailsByIdRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event getPedidosDetailsByIdRowChangeEventHandler getPedidosDetailsByIdRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event getPedidosDetailsByIdRowChangeEventHandler getPedidosDetailsByIdRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event getPedidosDetailsByIdRowChangeEventHandler getPedidosDetailsByIdRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event getPedidosDetailsByIdRowChangeEventHandler getPedidosDetailsByIdRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddgetPedidosDetailsByIdRow(getPedidosDetailsByIdRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public getPedidosDetailsByIdRow AddgetPedidosDetailsByIdRow(int pedido_id, System.DateTime pedido_fecha, string pedido_tipo, string combo_nombre, int detalle_cantidad, decimal detalle_precio, string cliente_nombre) {
+                getPedidosDetailsByIdRow rowgetPedidosDetailsByIdRow = ((getPedidosDetailsByIdRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        pedido_id,
+                        pedido_fecha,
+                        pedido_tipo,
+                        combo_nombre,
+                        detalle_cantidad,
+                        detalle_precio,
+                        cliente_nombre};
+                rowgetPedidosDetailsByIdRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowgetPedidosDetailsByIdRow);
+                return rowgetPedidosDetailsByIdRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public getPedidosDetailsByIdRow FindBypedido_id(int pedido_id) {
+                return ((getPedidosDetailsByIdRow)(this.Rows.Find(new object[] {
+                            pedido_id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                getPedidosDetailsByIdDataTable cln = ((getPedidosDetailsByIdDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new getPedidosDetailsByIdDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnpedido_id = base.Columns["pedido_id"];
+                this.columnpedido_fecha = base.Columns["pedido_fecha"];
+                this.columnpedido_tipo = base.Columns["pedido_tipo"];
+                this.columncombo_nombre = base.Columns["combo_nombre"];
+                this.columndetalle_cantidad = base.Columns["detalle_cantidad"];
+                this.columndetalle_precio = base.Columns["detalle_precio"];
+                this.columncliente_nombre = base.Columns["cliente_nombre"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnpedido_id = new global::System.Data.DataColumn("pedido_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpedido_id);
+                this.columnpedido_fecha = new global::System.Data.DataColumn("pedido_fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpedido_fecha);
+                this.columnpedido_tipo = new global::System.Data.DataColumn("pedido_tipo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpedido_tipo);
+                this.columncombo_nombre = new global::System.Data.DataColumn("combo_nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncombo_nombre);
+                this.columndetalle_cantidad = new global::System.Data.DataColumn("detalle_cantidad", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndetalle_cantidad);
+                this.columndetalle_precio = new global::System.Data.DataColumn("detalle_precio", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndetalle_precio);
+                this.columncliente_nombre = new global::System.Data.DataColumn("cliente_nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncliente_nombre);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnpedido_id}, true));
+                this.columnpedido_id.AllowDBNull = false;
+                this.columnpedido_id.Unique = true;
+                this.columnpedido_tipo.MaxLength = 50;
+                this.columncombo_nombre.AllowDBNull = false;
+                this.columncombo_nombre.MaxLength = 50;
+                this.columncliente_nombre.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public getPedidosDetailsByIdRow NewgetPedidosDetailsByIdRow() {
+                return ((getPedidosDetailsByIdRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new getPedidosDetailsByIdRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(getPedidosDetailsByIdRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.getPedidosDetailsByIdRowChanged != null)) {
+                    this.getPedidosDetailsByIdRowChanged(this, new getPedidosDetailsByIdRowChangeEvent(((getPedidosDetailsByIdRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.getPedidosDetailsByIdRowChanging != null)) {
+                    this.getPedidosDetailsByIdRowChanging(this, new getPedidosDetailsByIdRowChangeEvent(((getPedidosDetailsByIdRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.getPedidosDetailsByIdRowDeleted != null)) {
+                    this.getPedidosDetailsByIdRowDeleted(this, new getPedidosDetailsByIdRowChangeEvent(((getPedidosDetailsByIdRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.getPedidosDetailsByIdRowDeleting != null)) {
+                    this.getPedidosDetailsByIdRowDeleting(this, new getPedidosDetailsByIdRowChangeEvent(((getPedidosDetailsByIdRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemovegetPedidosDetailsByIdRow(getPedidosDetailsByIdRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsPrincipal ds = new dsPrincipal();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "getPedidosDetailsByIdDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class getArticulosRow : global::System.Data.DataRow {
@@ -681,7 +1062,7 @@ namespace presentation {
                         return ((decimal)(this[this.tablegetArticulos.precioColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Precio\' in table \'getArticulos\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'precio\' in table \'getArticulos\' is DBNull.", e);
                     }
                 }
                 set {
@@ -755,6 +1136,186 @@ namespace presentation {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class getPedidosDetailsByIdRow : global::System.Data.DataRow {
+            
+            private getPedidosDetailsByIdDataTable tablegetPedidosDetailsById;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal getPedidosDetailsByIdRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablegetPedidosDetailsById = ((getPedidosDetailsByIdDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int pedido_id {
+                get {
+                    return ((int)(this[this.tablegetPedidosDetailsById.pedido_idColumn]));
+                }
+                set {
+                    this[this.tablegetPedidosDetailsById.pedido_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime pedido_fecha {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablegetPedidosDetailsById.pedido_fechaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'pedido_fecha\' in table \'getPedidosDetailsById\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablegetPedidosDetailsById.pedido_fechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string pedido_tipo {
+                get {
+                    try {
+                        return ((string)(this[this.tablegetPedidosDetailsById.pedido_tipoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'pedido_tipo\' in table \'getPedidosDetailsById\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablegetPedidosDetailsById.pedido_tipoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string combo_nombre {
+                get {
+                    return ((string)(this[this.tablegetPedidosDetailsById.combo_nombreColumn]));
+                }
+                set {
+                    this[this.tablegetPedidosDetailsById.combo_nombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int detalle_cantidad {
+                get {
+                    try {
+                        return ((int)(this[this.tablegetPedidosDetailsById.detalle_cantidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'detalle_cantidad\' in table \'getPedidosDetailsById\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablegetPedidosDetailsById.detalle_cantidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal detalle_precio {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablegetPedidosDetailsById.detalle_precioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'detalle_precio\' in table \'getPedidosDetailsById\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablegetPedidosDetailsById.detalle_precioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cliente_nombre {
+                get {
+                    try {
+                        return ((string)(this[this.tablegetPedidosDetailsById.cliente_nombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cliente_nombre\' in table \'getPedidosDetailsById\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablegetPedidosDetailsById.cliente_nombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ispedido_fechaNull() {
+                return this.IsNull(this.tablegetPedidosDetailsById.pedido_fechaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setpedido_fechaNull() {
+                this[this.tablegetPedidosDetailsById.pedido_fechaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ispedido_tipoNull() {
+                return this.IsNull(this.tablegetPedidosDetailsById.pedido_tipoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setpedido_tipoNull() {
+                this[this.tablegetPedidosDetailsById.pedido_tipoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdetalle_cantidadNull() {
+                return this.IsNull(this.tablegetPedidosDetailsById.detalle_cantidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdetalle_cantidadNull() {
+                this[this.tablegetPedidosDetailsById.detalle_cantidadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdetalle_precioNull() {
+                return this.IsNull(this.tablegetPedidosDetailsById.detalle_precioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdetalle_precioNull() {
+                this[this.tablegetPedidosDetailsById.detalle_precioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscliente_nombreNull() {
+                return this.IsNull(this.tablegetPedidosDetailsById.cliente_nombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcliente_nombreNull() {
+                this[this.tablegetPedidosDetailsById.cliente_nombreColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -774,6 +1335,40 @@ namespace presentation {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public getArticulosRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class getPedidosDetailsByIdRowChangeEvent : global::System.EventArgs {
+            
+            private getPedidosDetailsByIdRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public getPedidosDetailsByIdRowChangeEvent(getPedidosDetailsByIdRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public getPedidosDetailsByIdRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -917,7 +1512,7 @@ namespace presentation.dsPrincipalTableAdapters {
             tableMapping.ColumnMappings.Add("idcategoria", "idcategoria");
             tableMapping.ColumnMappings.Add("nombre", "nombre");
             tableMapping.ColumnMappings.Add("descripcion", "descripcion");
-            tableMapping.ColumnMappings.Add("Precio", "Precio");
+            tableMapping.ColumnMappings.Add("precio", "precio");
             tableMapping.ColumnMappings.Add("unidad", "unidad");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -960,6 +1555,193 @@ namespace presentation.dsPrincipalTableAdapters {
         public virtual dsPrincipal.getArticulosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             dsPrincipal.getArticulosDataTable dataTable = new dsPrincipal.getArticulosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class getPedidosDetailsByIdTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public getPedidosDetailsByIdTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "getPedidosDetailsById";
+            tableMapping.ColumnMappings.Add("pedido_id", "pedido_id");
+            tableMapping.ColumnMappings.Add("pedido_fecha", "pedido_fecha");
+            tableMapping.ColumnMappings.Add("pedido_tipo", "pedido_tipo");
+            tableMapping.ColumnMappings.Add("combo_nombre", "combo_nombre");
+            tableMapping.ColumnMappings.Add("detalle_cantidad", "detalle_cantidad");
+            tableMapping.ColumnMappings.Add("detalle_precio", "detalle_precio");
+            tableMapping.ColumnMappings.Add("cliente_nombre", "cliente_nombre");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::presentation.Properties.Settings.Default.orderyConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.getPedidosDetailsById";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idpedido", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsPrincipal.getPedidosDetailsByIdDataTable dataTable, global::System.Nullable<int> idpedido) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((idpedido.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idpedido.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsPrincipal.getPedidosDetailsByIdDataTable GetData(global::System.Nullable<int> idpedido) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((idpedido.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idpedido.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            dsPrincipal.getPedidosDetailsByIdDataTable dataTable = new dsPrincipal.getPedidosDetailsByIdDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

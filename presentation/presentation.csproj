@@ -44,6 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dsPrincipal.cs">
+      <DependentUpon>dsPrincipal.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="dsPrincipal.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -190,6 +194,7 @@
       <DependentUpon>PReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RArticulo.rdlc" />
+    <EmbeddedResource Include="Reports\RPedido.rdlc" />
     <EmbeddedResource Include="testing.resx">
       <DependentUpon>testing.cs</DependentUpon>
     </EmbeddedResource>
