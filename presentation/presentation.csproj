@@ -53,6 +53,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsPrincipal.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dstester.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstester.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PCobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCobrar.Designer.cs">
+      <DependentUpon>PCobrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="PMantCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +161,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="PCobrar.resx">
+      <DependentUpon>PCobrar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PMantCliente.resx">
       <DependentUpon>PMantCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +225,17 @@
     </None>
     <None Include="dsPrincipal.xss">
       <DependentUpon>dsPrincipal.xsd</DependentUpon>
+    </None>
+    <None Include="dstester.xsc">
+      <DependentUpon>dstester.xsd</DependentUpon>
+    </None>
+    <None Include="dstester.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstester.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dstester.xss">
+      <DependentUpon>dstester.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

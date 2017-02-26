@@ -653,11 +653,15 @@ namespace presentation {
             
             private global::System.Data.DataColumn columnpedido_tipo;
             
+            private global::System.Data.DataColumn columnpedido_pago_con;
+            
             private global::System.Data.DataColumn columncombo_nombre;
             
             private global::System.Data.DataColumn columndetalle_cantidad;
             
             private global::System.Data.DataColumn columndetalle_precio;
+            
+            private global::System.Data.DataColumn columndetalle_importe;
             
             private global::System.Data.DataColumn columncliente_nombre;
             
@@ -720,6 +724,14 @@ namespace presentation {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn pedido_pago_conColumn {
+                get {
+                    return this.columnpedido_pago_con;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn combo_nombreColumn {
                 get {
                     return this.columncombo_nombre;
@@ -739,6 +751,14 @@ namespace presentation {
             public global::System.Data.DataColumn detalle_precioColumn {
                 get {
                     return this.columndetalle_precio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn detalle_importeColumn {
+                get {
+                    return this.columndetalle_importe;
                 }
             }
             
@@ -787,15 +807,17 @@ namespace presentation {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public getPedidosDetailsByIdRow AddgetPedidosDetailsByIdRow(int pedido_id, System.DateTime pedido_fecha, string pedido_tipo, string combo_nombre, int detalle_cantidad, decimal detalle_precio, string cliente_nombre) {
+            public getPedidosDetailsByIdRow AddgetPedidosDetailsByIdRow(int pedido_id, System.DateTime pedido_fecha, string pedido_tipo, decimal pedido_pago_con, string combo_nombre, int detalle_cantidad, decimal detalle_precio, decimal detalle_importe, string cliente_nombre) {
                 getPedidosDetailsByIdRow rowgetPedidosDetailsByIdRow = ((getPedidosDetailsByIdRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         pedido_id,
                         pedido_fecha,
                         pedido_tipo,
+                        pedido_pago_con,
                         combo_nombre,
                         detalle_cantidad,
                         detalle_precio,
+                        detalle_importe,
                         cliente_nombre};
                 rowgetPedidosDetailsByIdRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowgetPedidosDetailsByIdRow);
@@ -829,9 +851,11 @@ namespace presentation {
                 this.columnpedido_id = base.Columns["pedido_id"];
                 this.columnpedido_fecha = base.Columns["pedido_fecha"];
                 this.columnpedido_tipo = base.Columns["pedido_tipo"];
+                this.columnpedido_pago_con = base.Columns["pedido_pago_con"];
                 this.columncombo_nombre = base.Columns["combo_nombre"];
                 this.columndetalle_cantidad = base.Columns["detalle_cantidad"];
                 this.columndetalle_precio = base.Columns["detalle_precio"];
+                this.columndetalle_importe = base.Columns["detalle_importe"];
                 this.columncliente_nombre = base.Columns["cliente_nombre"];
             }
             
@@ -844,12 +868,16 @@ namespace presentation {
                 base.Columns.Add(this.columnpedido_fecha);
                 this.columnpedido_tipo = new global::System.Data.DataColumn("pedido_tipo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpedido_tipo);
+                this.columnpedido_pago_con = new global::System.Data.DataColumn("pedido_pago_con", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpedido_pago_con);
                 this.columncombo_nombre = new global::System.Data.DataColumn("combo_nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncombo_nombre);
                 this.columndetalle_cantidad = new global::System.Data.DataColumn("detalle_cantidad", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndetalle_cantidad);
                 this.columndetalle_precio = new global::System.Data.DataColumn("detalle_precio", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndetalle_precio);
+                this.columndetalle_importe = new global::System.Data.DataColumn("detalle_importe", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndetalle_importe);
                 this.columncliente_nombre = new global::System.Data.DataColumn("cliente_nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncliente_nombre);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -859,6 +887,7 @@ namespace presentation {
                 this.columnpedido_tipo.MaxLength = 50;
                 this.columncombo_nombre.AllowDBNull = false;
                 this.columncombo_nombre.MaxLength = 50;
+                this.columndetalle_importe.ReadOnly = true;
                 this.columncliente_nombre.MaxLength = 50;
             }
             
@@ -1194,6 +1223,23 @@ namespace presentation {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal pedido_pago_con {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablegetPedidosDetailsById.pedido_pago_conColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'pedido_pago_con\' in table \'getPedidosDetailsById\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablegetPedidosDetailsById.pedido_pago_conColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string combo_nombre {
                 get {
                     return ((string)(this[this.tablegetPedidosDetailsById.combo_nombreColumn]));
@@ -1234,6 +1280,23 @@ namespace presentation {
                 }
                 set {
                     this[this.tablegetPedidosDetailsById.detalle_precioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal detalle_importe {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablegetPedidosDetailsById.detalle_importeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'detalle_importe\' in table \'getPedidosDetailsById\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablegetPedidosDetailsById.detalle_importeColumn] = value;
                 }
             }
             
@@ -1280,6 +1343,18 @@ namespace presentation {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ispedido_pago_conNull() {
+                return this.IsNull(this.tablegetPedidosDetailsById.pedido_pago_conColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setpedido_pago_conNull() {
+                this[this.tablegetPedidosDetailsById.pedido_pago_conColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isdetalle_cantidadNull() {
                 return this.IsNull(this.tablegetPedidosDetailsById.detalle_cantidadColumn);
             }
@@ -1300,6 +1375,18 @@ namespace presentation {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setdetalle_precioNull() {
                 this[this.tablegetPedidosDetailsById.detalle_precioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdetalle_importeNull() {
+                return this.IsNull(this.tablegetPedidosDetailsById.detalle_importeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdetalle_importeNull() {
+                this[this.tablegetPedidosDetailsById.detalle_importeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1684,9 +1771,11 @@ namespace presentation.dsPrincipalTableAdapters {
             tableMapping.ColumnMappings.Add("pedido_id", "pedido_id");
             tableMapping.ColumnMappings.Add("pedido_fecha", "pedido_fecha");
             tableMapping.ColumnMappings.Add("pedido_tipo", "pedido_tipo");
+            tableMapping.ColumnMappings.Add("pedido_pago_con", "pedido_pago_con");
             tableMapping.ColumnMappings.Add("combo_nombre", "combo_nombre");
             tableMapping.ColumnMappings.Add("detalle_cantidad", "detalle_cantidad");
             tableMapping.ColumnMappings.Add("detalle_precio", "detalle_precio");
+            tableMapping.ColumnMappings.Add("detalle_importe", "detalle_importe");
             tableMapping.ColumnMappings.Add("cliente_nombre", "cliente_nombre");
             this._adapter.TableMappings.Add(tableMapping);
         }

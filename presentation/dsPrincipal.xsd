@@ -48,9 +48,11 @@
               <Mapping SourceColumn="pedido_id" DataSetColumn="pedido_id" />
               <Mapping SourceColumn="pedido_fecha" DataSetColumn="pedido_fecha" />
               <Mapping SourceColumn="pedido_tipo" DataSetColumn="pedido_tipo" />
+              <Mapping SourceColumn="pedido_pago_con" DataSetColumn="pedido_pago_con" />
               <Mapping SourceColumn="combo_nombre" DataSetColumn="combo_nombre" />
               <Mapping SourceColumn="detalle_cantidad" DataSetColumn="detalle_cantidad" />
               <Mapping SourceColumn="detalle_precio" DataSetColumn="detalle_precio" />
+              <Mapping SourceColumn="detalle_importe" DataSetColumn="detalle_importe" />
               <Mapping SourceColumn="cliente_nombre" DataSetColumn="cliente_nombre" />
             </Mappings>
             <Sources />
@@ -99,6 +101,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="pedido_pago_con" msprop:Generator_ColumnVarNameInTable="columnpedido_pago_con" msprop:Generator_ColumnPropNameInRow="pedido_pago_con" msprop:Generator_ColumnPropNameInTable="pedido_pago_conColumn" msprop:Generator_UserColumnName="pedido_pago_con" type="xs:decimal" minOccurs="0" />
               <xs:element name="combo_nombre" msprop:Generator_ColumnVarNameInTable="columncombo_nombre" msprop:Generator_ColumnPropNameInRow="combo_nombre" msprop:Generator_ColumnPropNameInTable="combo_nombreColumn" msprop:Generator_UserColumnName="combo_nombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -108,6 +111,7 @@
               </xs:element>
               <xs:element name="detalle_cantidad" msprop:Generator_ColumnVarNameInTable="columndetalle_cantidad" msprop:Generator_ColumnPropNameInRow="detalle_cantidad" msprop:Generator_ColumnPropNameInTable="detalle_cantidadColumn" msprop:Generator_UserColumnName="detalle_cantidad" type="xs:int" minOccurs="0" />
               <xs:element name="detalle_precio" msprop:Generator_ColumnVarNameInTable="columndetalle_precio" msprop:Generator_ColumnPropNameInRow="detalle_precio" msprop:Generator_ColumnPropNameInTable="detalle_precioColumn" msprop:Generator_UserColumnName="detalle_precio" type="xs:decimal" minOccurs="0" />
+              <xs:element name="detalle_importe" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndetalle_importe" msprop:Generator_ColumnPropNameInRow="detalle_importe" msprop:Generator_ColumnPropNameInTable="detalle_importeColumn" msprop:Generator_UserColumnName="detalle_importe" type="xs:decimal" minOccurs="0" />
               <xs:element name="cliente_nombre" msprop:Generator_ColumnVarNameInTable="columncliente_nombre" msprop:Generator_ColumnPropNameInRow="cliente_nombre" msprop:Generator_ColumnPropNameInTable="cliente_nombreColumn" msprop:Generator_UserColumnName="cliente_nombre" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

@@ -13,6 +13,7 @@ namespace data
         int idcliente;
         int idusuario;
         string tipo_pedido;
+        double pago_con;
 
         public int Idpedido
         {
@@ -37,6 +38,11 @@ namespace data
             get { return tipo_pedido; }
             set { tipo_pedido = value; }
         }
+        public double Pago_con
+        {
+            get { return pago_con; }
+            set { pago_con = value; }
+        }
 
         // attributes for details
         int idcombo;
@@ -60,6 +66,8 @@ namespace data
             set { precio = value; }
         }
 
+        
+
         // database Operations
 
         // create pedido
@@ -67,10 +75,11 @@ namespace data
         public int createPedido(Pedido pedido)
         {
             DataTable dt = new DataTable();
-            dt = database.executeQuery("EXEC createPedido  @idcliente, @idusuario, @tipo_pedido",
+            dt = database.executeQuery("EXEC createPedido  @idcliente, @idusuario, @tipo_pedido, @pago_con",
                                                 new KeyValuePair<string, object>("@idcliente", pedido.idcliente),
                                                 new KeyValuePair<string, object>("@idusuario", pedido.idusuario),
-                                                new KeyValuePair<string, object>("@tipo_pedido", pedido.tipo_pedido)).Tables[0];
+                                                new KeyValuePair<string, object>("@tipo_pedido", pedido.tipo_pedido),
+                                                new KeyValuePair<string, object>("@pago_con", pedido.pago_con)).Tables[0];
             // return the id of the created pedido
             return Convert.ToInt32(dt.Rows[0]["idpedido"]);
         }

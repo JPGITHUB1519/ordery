@@ -60,10 +60,6 @@
             this.cmbTipoPedido = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnFacturar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnNew = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.lblfecha = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -71,6 +67,17 @@
             this.txtdireccion = new utils.ntextbox(this.components);
             this.txtidcliente = new utils.ntextbox(this.components);
             this.txtnombre_cliente = new utils.ntextbox(this.components);
+            this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnFacturar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.txtcambio = new utils.ntextbox(this.components);
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtPagarCon = new utils.ntextbox(this.components);
+            this.label9 = new System.Windows.Forms.Label();
+            this.txttotal = new utils.ntextbox(this.components);
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpedido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExtras)).BeginInit();
             this.SuspendLayout();
@@ -202,10 +209,11 @@
             this.Idcombo,
             this.name,
             this.Cantidad,
-            this.price});
+            this.price,
+            this.importe});
             this.dgvpedido.Location = new System.Drawing.Point(608, 195);
             this.dgvpedido.Name = "dgvpedido";
-            this.dgvpedido.Size = new System.Drawing.Size(398, 178);
+            this.dgvpedido.Size = new System.Drawing.Size(365, 178);
             this.dgvpedido.TabIndex = 62;
             this.dgvpedido.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvpedido_CellContentClick);
             // 
@@ -342,46 +350,6 @@
             this.label5.TabIndex = 108;
             this.label5.Text = "Direccion";
             // 
-            // btnFacturar
-            // 
-            this.btnFacturar.Image = global::presentation.Properties.Resources.cash_icon;
-            this.btnFacturar.Location = new System.Drawing.Point(789, 106);
-            this.btnFacturar.Name = "btnFacturar";
-            this.btnFacturar.Size = new System.Drawing.Size(75, 61);
-            this.btnFacturar.TabIndex = 109;
-            this.btnFacturar.UseVisualStyleBackColor = true;
-            this.btnFacturar.Click += new System.EventHandler(this.btnFacturar_Click);
-            // 
-            // button1
-            // 
-            this.button1.Image = global::presentation.Properties.Resources.customer;
-            this.button1.Location = new System.Drawing.Point(608, 95);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 61);
-            this.button1.TabIndex = 70;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Image = global::presentation.Properties.Resources.delete;
-            this.btnDelete.Location = new System.Drawing.Point(812, 403);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(135, 61);
-            this.btnDelete.TabIndex = 69;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnNew
-            // 
-            this.btnNew.Image = global::presentation.Properties.Resources.add_icon;
-            this.btnNew.Location = new System.Drawing.Point(658, 403);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(128, 61);
-            this.btnNew.TabIndex = 67;
-            this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -441,11 +409,119 @@
             this.txtnombre_cliente.TabIndex = 102;
             this.txtnombre_cliente.validate = false;
             // 
+            // importe
+            // 
+            this.importe.HeaderText = "importe";
+            this.importe.Name = "importe";
+            // 
+            // btnFacturar
+            // 
+            this.btnFacturar.Image = global::presentation.Properties.Resources.cash_icon;
+            this.btnFacturar.Location = new System.Drawing.Point(863, 123);
+            this.btnFacturar.Name = "btnFacturar";
+            this.btnFacturar.Size = new System.Drawing.Size(75, 52);
+            this.btnFacturar.TabIndex = 109;
+            this.btnFacturar.UseVisualStyleBackColor = true;
+            this.btnFacturar.Click += new System.EventHandler(this.btnFacturar_Click);
+            // 
+            // button1
+            // 
+            this.button1.Image = global::presentation.Properties.Resources.customer;
+            this.button1.Location = new System.Drawing.Point(608, 95);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 61);
+            this.button1.TabIndex = 70;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Image = global::presentation.Properties.Resources.delete;
+            this.btnDelete.Location = new System.Drawing.Point(812, 403);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(135, 61);
+            this.btnDelete.TabIndex = 69;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnNew
+            // 
+            this.btnNew.Image = global::presentation.Properties.Resources.add_icon;
+            this.btnNew.Location = new System.Drawing.Point(658, 403);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(128, 61);
+            this.btnNew.TabIndex = 67;
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // txtcambio
+            // 
+            this.txtcambio.Enabled = false;
+            this.txtcambio.Location = new System.Drawing.Point(812, 97);
+            this.txtcambio.Name = "txtcambio";
+            this.txtcambio.Size = new System.Drawing.Size(193, 20);
+            this.txtcambio.TabIndex = 118;
+            this.txtcambio.validate = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(717, 97);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 20);
+            this.label7.TabIndex = 117;
+            this.label7.Text = "Cambio";
+            // 
+            // txtPagarCon
+            // 
+            this.txtPagarCon.Location = new System.Drawing.Point(812, 58);
+            this.txtPagarCon.Name = "txtPagarCon";
+            this.txtPagarCon.Size = new System.Drawing.Size(193, 20);
+            this.txtPagarCon.TabIndex = 116;
+            this.txtPagarCon.validate = false;
+            this.txtPagarCon.TextChanged += new System.EventHandler(this.txtPagarCon_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(696, 56);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 20);
+            this.label9.TabIndex = 115;
+            this.label9.Text = "Pagar Con";
+            // 
+            // txttotal
+            // 
+            this.txttotal.Enabled = false;
+            this.txttotal.Location = new System.Drawing.Point(812, 18);
+            this.txttotal.Name = "txttotal";
+            this.txttotal.Size = new System.Drawing.Size(193, 20);
+            this.txttotal.TabIndex = 114;
+            this.txttotal.validate = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(685, 18);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(103, 20);
+            this.label10.TabIndex = 113;
+            this.label10.Text = "Total a Pagar";
+            // 
             // PPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 645);
+            this.Controls.Add(this.txtcambio);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtPagarCon);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txttotal);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.lblfecha);
             this.Controls.Add(this.txtNombreCajero);
             this.Controls.Add(this.label6);
@@ -536,5 +612,12 @@
         private utils.ntextbox txtNombreCajero;
         public System.Windows.Forms.Label lblfecha;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn importe;
+        private utils.ntextbox txtcambio;
+        public System.Windows.Forms.Label label7;
+        private utils.ntextbox txtPagarCon;
+        public System.Windows.Forms.Label label9;
+        private utils.ntextbox txttotal;
+        public System.Windows.Forms.Label label10;
     }
 }

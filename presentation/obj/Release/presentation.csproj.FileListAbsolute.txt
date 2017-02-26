@@ -26,3 +26,4 @@ C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\RdlCompile.cache
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\RdlCompile.compiled
 C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.PMantUsuario.resources
+C:\Users\JPNESS\Desktop\Universidad\ordery\presentation\obj\Release\presentation.PCobrar.resources

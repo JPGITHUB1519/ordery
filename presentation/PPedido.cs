@@ -90,6 +90,7 @@ namespace presentation
                     if (Convert.ToInt32(row.Cells["Idcombo"].Value) == this.combosDic[trigger_button_name])
                     {
                        row.Cells["Cantidad"].Value = Convert.ToInt32(row.Cells["Cantidad"].Value) + 1;
+                       row.Cells["importe"].Value = Convert.ToInt32(row.Cells["Cantidad"].Value) * Convert.ToDouble(row.Cells["price"].Value); 
                        founded = true;
                     }  
                 }
@@ -97,9 +98,12 @@ namespace presentation
                 if (!founded)
                 {
                     double precio_combo = combo.getPrice(Convert.ToInt32(dt.Rows[0]["Idcombo"]));
-                    dgvpedido.Rows.Add(dt.Rows[0]["Idcombo"], dt.Rows[0]["nombre"], 1, precio_combo);
+                    dgvpedido.Rows.Add(dt.Rows[0]["Idcombo"], dt.Rows[0]["nombre"], 1, precio_combo, precio_combo);
+                                    
                 }
             }
+            // sum total
+            this.txttotal.Text = DGV.sumColumnFromDatagridView(this.dgvpedido, "importe").ToString();
         }
 
         // add a row to Extras DatagridView
@@ -135,6 +139,9 @@ namespace presentation
             cmbTipoPedido.Items.AddRange(configuration.tipos_pedidos.ToArray());
             // fill username
             this.fillUsernameToTextbox();
+
+            // set total a pagar to 0
+            this.txttotal.Text = Convert.ToString(0);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -240,7 +247,7 @@ namespace presentation
                 this.txtidcliente.Text = doform.dgvData.Rows[pos].Cells["Idcliente"].Value.ToString();
                 this.txtnombre_cliente.Text = doform.dgvData.Rows[pos].Cells["nombre"].Value.ToString();
                 this.txtdireccion.Text = doform.dgvData.Rows[pos].Cells["direccion"].Value.ToString();
-
+                
 
             }
         }
@@ -253,6 +260,7 @@ namespace presentation
             pedido.Idcliente = Convert.ToInt32(this.txtidcliente.Text.Trim());
             pedido.Tipo_pedido = cmbTipoPedido.Text.Trim();
             pedido.Idusuario = session.userId;
+            pedido.Pago_con = Convert.ToDouble(this.txtPagarCon.Text.Trim());
             // getting the idpedido and create pedido
             idpedido = pedido.createPedido(pedido);
             // creando detalle de pedido
@@ -275,6 +283,23 @@ namespace presentation
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.lblfecha.Text = DateTime.Now.ToString();
+        }
+
+        private void txtPagarCon_TextChanged(object sender, EventArgs e)
+        {
+            // total, pagar con, cambio
+            double pagar_con = 0;
+            if(this.txttotal.Text == string.Empty) this.txttotal.Text = Convert.ToString(0);
+            if(txtPagarCon.Text.Trim() != string.Empty)
+            {
+                pagar_con = Convert.ToDouble(this.txtPagarCon.Text.Trim());
+            }
+
+            this.txtcambio.Text = (pagar_con - Convert.ToDouble(this.txttotal.Text.Trim())).ToString();
+            if(Convert.ToDouble(txtcambio.Text.Trim()) < 0)
+            {
+                this.txtcambio.Text = Convert.ToString(0);
+            }
         }
     }
 }
