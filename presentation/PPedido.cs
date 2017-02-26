@@ -109,6 +109,14 @@ namespace presentation
 
         }
 
+        // Fill Cajero Username to the gridview
+        public void fillUsernameToTextbox()
+        {
+            Usuario usuario = new Usuario();
+            this.txtNombreCajero.Text = usuario.getUsuarioById(session.userId).Tables[0].Rows[0]["username"].ToString();
+        
+        }
+
         public PPedido()
         {
             InitializeComponent();
@@ -125,6 +133,8 @@ namespace presentation
             // añadir tipos de pedidos a combo
 
             cmbTipoPedido.Items.AddRange(configuration.tipos_pedidos.ToArray());
+            // fill username
+            this.fillUsernameToTextbox();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -260,6 +270,11 @@ namespace presentation
             PReport frmreport = new PReport("presentation.Reports.RPedido.rdlc", ds);
             frmreport.Show();
            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.lblfecha.Text = DateTime.Now.ToString();
         }
     }
 }

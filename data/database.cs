@@ -122,7 +122,9 @@ namespace data
             catch (Exception ex)
             {
                 ds = null;
-                throw ex;
+                //throw ex;
+                messages.errorMessage(ex.Message);
+
             }
             finally
             {

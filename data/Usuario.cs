@@ -73,7 +73,7 @@ namespace data
 
         public DataSet getUsuarioById(int idusuario)
         {
-            return database.executeQuery("EXEC getUsuarioById @Idusuario",
+            return database.executeQuery("EXEC getUsuariosById @Idusuario",
                                             new KeyValuePair<string, object>("@Idusuario", idusuario));
         }
 
