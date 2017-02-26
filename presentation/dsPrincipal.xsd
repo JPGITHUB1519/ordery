@@ -54,6 +54,7 @@
               <Mapping SourceColumn="detalle_precio" DataSetColumn="detalle_precio" />
               <Mapping SourceColumn="detalle_importe" DataSetColumn="detalle_importe" />
               <Mapping SourceColumn="cliente_nombre" DataSetColumn="cliente_nombre" />
+              <Mapping SourceColumn="username" DataSetColumn="username" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -65,7 +66,7 @@
   <xs:element name="dsPrincipal" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsPrincipal" msprop:Generator_UserDSName="dsPrincipal">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="getArticulos" msprop:Generator_TableClassName="getArticulosDataTable" msprop:Generator_TableVarName="tablegetArticulos" msprop:Generator_RowChangedName="getArticulosRowChanged" msprop:Generator_TablePropName="getArticulos" msprop:Generator_RowDeletingName="getArticulosRowDeleting" msprop:Generator_RowChangingName="getArticulosRowChanging" msprop:Generator_RowEvHandlerName="getArticulosRowChangeEventHandler" msprop:Generator_RowDeletedName="getArticulosRowDeleted" msprop:Generator_RowClassName="getArticulosRow" msprop:Generator_UserTableName="getArticulos" msprop:Generator_RowEvArgName="getArticulosRowChangeEvent">
+        <xs:element name="getArticulos" msprop:Generator_TableClassName="getArticulosDataTable" msprop:Generator_TableVarName="tablegetArticulos" msprop:Generator_TablePropName="getArticulos" msprop:Generator_RowDeletingName="getArticulosRowDeleting" msprop:Generator_RowChangingName="getArticulosRowChanging" msprop:Generator_RowEvHandlerName="getArticulosRowChangeEventHandler" msprop:Generator_RowDeletedName="getArticulosRowDeleted" msprop:Generator_UserTableName="getArticulos" msprop:Generator_RowChangedName="getArticulosRowChanged" msprop:Generator_RowEvArgName="getArticulosRowChangeEvent" msprop:Generator_RowClassName="getArticulosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idarticulo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnidarticulo" msprop:Generator_ColumnPropNameInRow="idarticulo" msprop:Generator_ColumnPropNameInTable="idarticuloColumn" msprop:Generator_UserColumnName="idarticulo" type="xs:int" />
@@ -113,6 +114,13 @@
               <xs:element name="detalle_precio" msprop:Generator_ColumnVarNameInTable="columndetalle_precio" msprop:Generator_ColumnPropNameInRow="detalle_precio" msprop:Generator_ColumnPropNameInTable="detalle_precioColumn" msprop:Generator_UserColumnName="detalle_precio" type="xs:decimal" minOccurs="0" />
               <xs:element name="detalle_importe" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndetalle_importe" msprop:Generator_ColumnPropNameInRow="detalle_importe" msprop:Generator_ColumnPropNameInTable="detalle_importeColumn" msprop:Generator_UserColumnName="detalle_importe" type="xs:decimal" minOccurs="0" />
               <xs:element name="cliente_nombre" msprop:Generator_ColumnVarNameInTable="columncliente_nombre" msprop:Generator_ColumnPropNameInRow="cliente_nombre" msprop:Generator_ColumnPropNameInTable="cliente_nombreColumn" msprop:Generator_UserColumnName="cliente_nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="username" msprop:Generator_ColumnVarNameInTable="columnusername" msprop:Generator_ColumnPropNameInRow="username" msprop:Generator_ColumnPropNameInTable="usernameColumn" msprop:Generator_UserColumnName="username" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />

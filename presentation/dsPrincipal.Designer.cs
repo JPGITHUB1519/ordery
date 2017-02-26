@@ -665,6 +665,8 @@ namespace presentation {
             
             private global::System.Data.DataColumn columncliente_nombre;
             
+            private global::System.Data.DataColumn columnusername;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public getPedidosDetailsByIdDataTable() {
@@ -772,6 +774,14 @@ namespace presentation {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn usernameColumn {
+                get {
+                    return this.columnusername;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -807,7 +817,7 @@ namespace presentation {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public getPedidosDetailsByIdRow AddgetPedidosDetailsByIdRow(int pedido_id, System.DateTime pedido_fecha, string pedido_tipo, decimal pedido_pago_con, string combo_nombre, int detalle_cantidad, decimal detalle_precio, decimal detalle_importe, string cliente_nombre) {
+            public getPedidosDetailsByIdRow AddgetPedidosDetailsByIdRow(int pedido_id, System.DateTime pedido_fecha, string pedido_tipo, decimal pedido_pago_con, string combo_nombre, int detalle_cantidad, decimal detalle_precio, decimal detalle_importe, string cliente_nombre, string username) {
                 getPedidosDetailsByIdRow rowgetPedidosDetailsByIdRow = ((getPedidosDetailsByIdRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         pedido_id,
@@ -818,7 +828,8 @@ namespace presentation {
                         detalle_cantidad,
                         detalle_precio,
                         detalle_importe,
-                        cliente_nombre};
+                        cliente_nombre,
+                        username};
                 rowgetPedidosDetailsByIdRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowgetPedidosDetailsByIdRow);
                 return rowgetPedidosDetailsByIdRow;
@@ -857,6 +868,7 @@ namespace presentation {
                 this.columndetalle_precio = base.Columns["detalle_precio"];
                 this.columndetalle_importe = base.Columns["detalle_importe"];
                 this.columncliente_nombre = base.Columns["cliente_nombre"];
+                this.columnusername = base.Columns["username"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -880,6 +892,8 @@ namespace presentation {
                 base.Columns.Add(this.columndetalle_importe);
                 this.columncliente_nombre = new global::System.Data.DataColumn("cliente_nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncliente_nombre);
+                this.columnusername = new global::System.Data.DataColumn("username", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnusername);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnpedido_id}, true));
                 this.columnpedido_id.AllowDBNull = false;
@@ -889,6 +903,7 @@ namespace presentation {
                 this.columncombo_nombre.MaxLength = 50;
                 this.columndetalle_importe.ReadOnly = true;
                 this.columncliente_nombre.MaxLength = 50;
+                this.columnusername.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1319,6 +1334,22 @@ namespace presentation {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string username {
+                get {
+                    try {
+                        return ((string)(this[this.tablegetPedidosDetailsById.usernameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'username\' in table \'getPedidosDetailsById\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablegetPedidosDetailsById.usernameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Ispedido_fechaNull() {
                 return this.IsNull(this.tablegetPedidosDetailsById.pedido_fechaColumn);
             }
@@ -1399,6 +1430,18 @@ namespace presentation {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setcliente_nombreNull() {
                 this[this.tablegetPedidosDetailsById.cliente_nombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsusernameNull() {
+                return this.IsNull(this.tablegetPedidosDetailsById.usernameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetusernameNull() {
+                this[this.tablegetPedidosDetailsById.usernameColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1777,6 +1820,7 @@ namespace presentation.dsPrincipalTableAdapters {
             tableMapping.ColumnMappings.Add("detalle_precio", "detalle_precio");
             tableMapping.ColumnMappings.Add("detalle_importe", "detalle_importe");
             tableMapping.ColumnMappings.Add("cliente_nombre", "cliente_nombre");
+            tableMapping.ColumnMappings.Add("username", "username");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

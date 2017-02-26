@@ -106,8 +106,8 @@
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>3.29186cm</Top>
-        <Left>2.73844cm</Left>
+        <Top>3.95332cm</Top>
+        <Left>2.78129cm</Left>
         <Height>2.14313cm</Height>
         <Width>12.54125cm</Width>
         <ZIndex>1</ZIndex>
@@ -405,8 +405,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>6.25202cm</Top>
-        <Left>2.73844cm</Left>
+        <Top>6.91348cm</Top>
+        <Left>2.78129cm</Left>
         <Height>2.77812cm</Height>
         <Width>15.0841cm</Width>
         <ZIndex>2</ZIndex>
@@ -431,8 +431,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>pedido_fecha</rd:DefaultName>
-        <Top>2.08016cm</Top>
-        <Left>11.85788cm</Left>
+        <Top>2.74162cm</Top>
+        <Left>11.90073cm</Left>
         <Height>0.96573cm</Height>
         <Width>2.34125cm</Width>
         <ZIndex>3</ZIndex>
@@ -471,8 +471,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox18</rd:DefaultName>
-        <Top>2.14974cm</Top>
-        <Left>8.90323cm</Left>
+        <Top>2.8112cm</Top>
+        <Left>8.94608cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>4</ZIndex>
@@ -510,8 +510,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox18</rd:DefaultName>
-        <Top>2.14974cm</Top>
-        <Left>2.73844cm</Left>
+        <Top>2.8112cm</Top>
+        <Left>2.78129cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>5</ZIndex>
@@ -540,8 +540,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>pedido_id</rd:DefaultName>
-        <Top>2.08016cm</Top>
-        <Left>5.69531cm</Left>
+        <Top>2.74162cm</Top>
+        <Left>5.73816cm</Left>
         <Height>0.84694cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>6</ZIndex>
@@ -580,8 +580,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox18</rd:DefaultName>
-        <Top>2.14974cm</Top>
-        <Left>14.7176cm</Left>
+        <Top>2.8112cm</Top>
+        <Left>14.76045cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>7</ZIndex>
@@ -610,8 +610,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>pedido_tipo</rd:DefaultName>
-        <Top>2.08016cm</Top>
-        <Left>17.62802cm</Left>
+        <Top>2.74162cm</Top>
+        <Left>17.67087cm</Left>
         <Height>0.66958cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>8</ZIndex>
@@ -641,8 +641,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>9.65412cm</Top>
-        <Left>8.27828cm</Left>
+        <Top>10.31558cm</Top>
+        <Left>8.32113cm</Left>
         <Height>0.79375cm</Height>
         <Width>2.56646cm</Width>
         <ZIndex>9</ZIndex>
@@ -670,8 +670,8 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>9.65412cm</Top>
-        <Left>11.12784cm</Left>
+        <Top>10.31558cm</Top>
+        <Left>11.17069cm</Left>
         <Height>0.79375cm</Height>
         <Width>2.56646cm</Width>
         <ZIndex>10</ZIndex>
@@ -700,8 +700,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>11.16542cm</Top>
-        <Left>8.27828cm</Left>
+        <Top>11.82688cm</Top>
+        <Left>8.32113cm</Left>
         <Height>0.79375cm</Height>
         <Width>2.56646cm</Width>
         <ZIndex>11</ZIndex>
@@ -729,8 +729,8 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>10.89545cm</Top>
-        <Left>11.02113cm</Left>
+        <Top>11.55691cm</Top>
+        <Left>11.06398cm</Left>
         <Height>1.06371cm</Height>
         <Width>2.67317cm</Width>
         <ZIndex>12</ZIndex>
@@ -760,8 +760,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>12.82176cm</Top>
-        <Left>8.27828cm</Left>
+        <Top>13.48322cm</Top>
+        <Left>8.32113cm</Left>
         <Height>0.79375cm</Height>
         <Width>2.56646cm</Width>
         <ZIndex>13</ZIndex>
@@ -789,11 +789,81 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>12.55179cm</Top>
-        <Left>11.02113cm</Left>
+        <Top>13.21325cm</Top>
+        <Left>11.06398cm</Left>
         <Height>1.06371cm</Height>
         <Width>2.67317cm</Width>
         <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>Solid</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox20">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Le Atendio :</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox18</rd:DefaultName>
+        <Top>1.78787cm</Top>
+        <Left>2.78129cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="pedido_id2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!username.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>pedido_id</rd:DefaultName>
+        <Top>1.71829cm</Top>
+        <Left>5.73816cm</Left>
+        <Height>0.84694cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>16</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
@@ -871,6 +941,10 @@
         </Field>
         <Field Name="cliente_nombre">
           <DataField>cliente_nombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="username">
+          <DataField>username</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
