@@ -106,13 +106,6 @@ namespace presentation
             this.txttotal.Text = DGV.sumColumnFromDatagridView(this.dgvpedido, "importe").ToString();
         }
 
-        // add a row to Extras DatagridView
-        public void addRowToExtraDagridView(int idarticulo, string nombre, string descripcion, double precio)
-        {
-            this.dgvExtras.Rows.Add(idarticulo, nombre, descripcion, precio);
-
-        }
-
         // Fill Cajero Username to the gridview
         public void fillUsernameToTextbox()
         {
@@ -220,14 +213,28 @@ namespace presentation
             PVistaArticulos doform = new PVistaArticulos();
             if (doform.ShowDialog() == DialogResult.OK)
             {
+                bool found = false; // flag to see ifthe article selected exits 
                 int pos = doform.dgvData.CurrentCell.RowIndex;
                 // add row to extra datagridview with the articulo selected
                 int idarticulo = Convert.ToInt32(doform.dgvData.Rows[pos].Cells["idarticulo"].Value);
                 string nombre = doform.dgvData.Rows[pos].Cells["nombre"].Value.ToString();
-                string descripcion = doform.dgvData.Rows[pos].Cells["descripcion"].Value.ToString();
+                //string descripcion = doform.dgvData.Rows[pos].Cells["descripcion"].Value.ToString();
                 double precio = Convert.ToDouble(doform.dgvData.Rows[pos].Cells["Precio"].Value);
-                this.addRowToExtraDagridView(idarticulo, nombre, descripcion, precio);
-
+                // look if exits in dgv the article selected
+                foreach (DataGridViewRow row in this.dgvExtras.Rows)
+                {
+                    if (Convert.ToInt32(row.Cells["artidarticulo"].Value) == idarticulo)
+                    {
+                        row.Cells["artCantidad"].Value = Convert.ToInt32(row.Cells["artCantidad"].Value) + 1;
+                        row.Cells["artImporte"].Value = Convert.ToDouble( Convert.ToInt32(row.Cells["artCantidad"].Value) * Convert.ToDouble(row.Cells["artPUnitario"].Value));
+                        found = true;
+                    }
+                }
+                // si no encontro el articulo, añadelo como nuevo
+                if(!found)
+                {
+                    this.dgvExtras.Rows.Add(idarticulo, nombre, precio, 1, precio);
+                }
             }
         }
 
@@ -263,14 +270,24 @@ namespace presentation
             pedido.Pago_con = Convert.ToDouble(this.txtPagarCon.Text.Trim());
             // getting the idpedido and create pedido
             idpedido = pedido.createPedido(pedido);
-            // creando detalle de pedido
+            // creando detalle de pedido para combos
             foreach(DataGridViewRow row in dgvpedido.Rows)
             {
                 pedido.Idpedido = idpedido;
                 pedido.Idcombo = Convert.ToInt32(row.Cells["idcombo"].Value);
                 pedido.Cantidad = Convert.ToInt32(row.Cells["cantidad"].Value);
                 pedido.Precio = Convert.ToDouble(row.Cells["price"].Value);
-                pedido.insertDetailToPedido(pedido);
+                pedido.insertDetailToPedidoCombo(pedido);
+            }
+
+            // crear detalle de pedido para articulos
+            foreach (DataGridViewRow row in dgvExtras.Rows)
+            {
+                pedido.Idpedido = idpedido;
+                pedido.Idcombo = Convert.ToInt32(row.Cells["idcombo"].Value);
+                pedido.Cantidad = Convert.ToInt32(row.Cells["cantidad"].Value);
+                pedido.Precio = Convert.ToDouble(row.Cells["price"].Value);
+                pedido.insertDetailToPedidoCombo(pedido);
             }
 
             // generar reporte
@@ -300,6 +317,11 @@ namespace presentation
             {
                 this.txtcambio.Text = Convert.ToString(0);
             }
+        }
+
+        private void dgvExtras_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

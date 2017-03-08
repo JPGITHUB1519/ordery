@@ -40,5 +40,20 @@ namespace utils
             }
             return true;
         }
+
+        // check if a exits a value in a datagridview in a specified column
+        // return True if so
+        public static bool checkIfExitsValueInColumn(DataGridView dgv, string column, object value)
+        {
+            foreach(DataGridViewRow row in dgv.Rows)
+            {
+                if(row.Cells[column].Value == value)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }

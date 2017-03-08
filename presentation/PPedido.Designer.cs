@@ -50,10 +50,6 @@
             this.lbltotal = new System.Windows.Forms.Label();
             this.lbltotalcant = new System.Windows.Forms.Label();
             this.dgvExtras = new System.Windows.Forms.DataGridView();
-            this.idarticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -78,6 +74,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txttotal = new utils.ntextbox(this.components);
             this.label10 = new System.Windows.Forms.Label();
+            this.idarticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.artidarticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.artnombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.artPUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.artCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.artImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpedido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExtras)).BeginInit();
             this.SuspendLayout();
@@ -263,34 +266,16 @@
             this.dgvExtras.AllowUserToAddRows = false;
             this.dgvExtras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvExtras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idarticulo,
-            this.nombre,
-            this.descripcion,
-            this.Precio});
+            this.artidarticulo,
+            this.artnombre,
+            this.artPUnitario,
+            this.artCantidad,
+            this.artImporte});
             this.dgvExtras.Location = new System.Drawing.Point(598, 470);
             this.dgvExtras.Name = "dgvExtras";
             this.dgvExtras.Size = new System.Drawing.Size(398, 139);
             this.dgvExtras.TabIndex = 65;
-            // 
-            // idarticulo
-            // 
-            this.idarticulo.HeaderText = "idarticulo";
-            this.idarticulo.Name = "idarticulo";
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "nombre";
-            this.nombre.Name = "nombre";
-            // 
-            // descripcion
-            // 
-            this.descripcion.HeaderText = "descripcion";
-            this.descripcion.Name = "descripcion";
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
+            this.dgvExtras.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExtras_CellContentClick);
             // 
             // label1
             // 
@@ -511,6 +496,41 @@
             this.label10.TabIndex = 113;
             this.label10.Text = "Total a Pagar";
             // 
+            // idarticulo
+            // 
+            this.idarticulo.HeaderText = "IdArticulo";
+            this.idarticulo.Name = "idarticulo";
+            // 
+            // anombre
+            // 
+            this.anombre.HeaderText = "Nombre";
+            this.anombre.Name = "anombre";
+            // 
+            // artidarticulo
+            // 
+            this.artidarticulo.HeaderText = "idarticulo";
+            this.artidarticulo.Name = "artidarticulo";
+            // 
+            // artnombre
+            // 
+            this.artnombre.HeaderText = "Nombre";
+            this.artnombre.Name = "artnombre";
+            // 
+            // artPUnitario
+            // 
+            this.artPUnitario.HeaderText = "PrecioUnitario";
+            this.artPUnitario.Name = "artPUnitario";
+            // 
+            // artCantidad
+            // 
+            this.artCantidad.HeaderText = "Cantidad";
+            this.artCantidad.Name = "artCantidad";
+            // 
+            // artImporte
+            // 
+            this.artImporte.HeaderText = "Importe";
+            this.artImporte.Name = "artImporte";
+            // 
             // PPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -586,9 +606,6 @@
         private System.Windows.Forms.DataGridView dgvExtras;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idarticulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         public System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button button1;
@@ -607,7 +624,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Idcombo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         public System.Windows.Forms.Label label6;
         private utils.ntextbox txtNombreCajero;
         public System.Windows.Forms.Label lblfecha;
@@ -619,5 +635,12 @@
         public System.Windows.Forms.Label label9;
         private utils.ntextbox txttotal;
         public System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idarticulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn anombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn artidarticulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn artnombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn artPUnitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn artCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn artImporte;
     }
 }

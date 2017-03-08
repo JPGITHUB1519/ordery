@@ -85,9 +85,9 @@ namespace data
         }
 
         // insert a detail to a pedido
-        public string insertDetailToPedido(Pedido pedido)
+        public string insertDetailToPedidoCombo(Pedido pedido)
         {
-            return database.executeNonQuery("EXEC insertDetailToPedido  @Idpedido, @Idcombo, @Cantidad, @Precio",
+            return database.executeNonQuery("EXEC insertDetailToPedidoCombo  @Idpedido, @Idcombo, @Cantidad, @Precio",
                                                 new KeyValuePair<string, object>("@Idpedido", pedido.idpedido),
                                                 new KeyValuePair<string, object>("@Idcombo", pedido.idcombo),
                                                 new KeyValuePair<string, object>("@Cantidad", pedido.cantidad),

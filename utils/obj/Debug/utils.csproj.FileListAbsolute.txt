@@ -2,3 +2,4 @@ C:\Users\JPNESS\Desktop\Universidad\ordery\utils\bin\Debug\utils.dll
 C:\Users\JPNESS\Desktop\Universidad\ordery\utils\bin\Debug\utils.pdb
 C:\Users\JPNESS\Desktop\Universidad\ordery\utils\obj\Debug\utils.dll
 C:\Users\JPNESS\Desktop\Universidad\ordery\utils\obj\Debug\utils.pdb
+C:\Users\JPNESS\Desktop\Universidad\ordery\utils\obj\Debug\utils.csprojResolveAssemblyReference.cache
