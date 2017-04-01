@@ -33,7 +33,8 @@ namespace presentation
         {
             Combo combo = new Combo();
             DataTable dt = new DataTable();
-            dt = combo.getCombosTodays().Tables[0];
+            //dt = combo.getCombosTodays().Tables[0];
+            dt = combo.getCombos().Tables[0];
             int cont = 1;
             foreach (DataRow dr in dt.Rows)
             {
