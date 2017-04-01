@@ -71,7 +71,29 @@ namespace data
                                             new KeyValuePair<string, object>("@descripcion", descripcion));
         }
 
-       
+        // abrir caja
+        // return a int with the number of control of the caja
+        public int openCaja(int idcaja, int idusuario)
+        {
+            return Convert.ToInt32(database.executeQuery("EXEC openCaja @idcaja, @idusuario",
+                                                new KeyValuePair<string, object>("@idcaja", idcaja),
+                                                new KeyValuePair<string, object>("@idusuario", idusuario)
+                                                ).Tables[0].Rows[0]["idcontrol_caja"]);
+        }
+
+        // check if the caja is already open
+        public bool checkIfOpen(int idcaja)
+        {
+            bool isOpen;
+            DataTable dt = database.executeQuery("EXEC getOpenControlsByCaja @idcaja",
+                                            new KeyValuePair<string, object>("@idcaja", idcaja)
+                                           ).Tables[0];
+            if (dt.Rows.Count > 0 && dt != null)
+                isOpen = true;
+            else
+                isOpen = false;
+            return isOpen;
+        }
 
     }
 }

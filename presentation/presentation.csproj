@@ -58,6 +58,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dstester.xsd</DependentUpon>
     </Compile>
+    <Compile Include="POpenCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POpenCaja.Designer.cs">
+      <DependentUpon>POpenCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="PCobrar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="POpenCaja.resx">
+      <DependentUpon>POpenCaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PCobrar.resx">
       <DependentUpon>PCobrar.cs</DependentUpon>
     </EmbeddedResource>
@@ -303,6 +312,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cash-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caja.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

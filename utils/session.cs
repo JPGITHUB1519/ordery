@@ -9,5 +9,6 @@ namespace utils
     public class session
     {
         public static int userId = 7;
+        public static int idControlCaja = 0;
     }
 }

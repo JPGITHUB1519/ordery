@@ -158,5 +158,17 @@ namespace ordery
             doform.MdiParent = this;
             doform.Show();
         }
+
+        private void abrirTurnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void abrirCajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            POpenCaja doform = new POpenCaja();
+            doform.MdiParent = this;
+            doform.Show();
+        }
     }
 }
