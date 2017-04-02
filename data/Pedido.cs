@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using utils;
 
 namespace data
 {
@@ -75,8 +76,9 @@ namespace data
         public int createPedido(Pedido pedido)
         {
             DataTable dt = new DataTable();
-            dt = database.executeQuery("EXEC createPedido  @idcliente, @idusuario, @tipo_pedido, @pago_con",
+            dt = database.executeQuery("EXEC createPedido  @idcliente, @idcontrol_pedido, @idusuario, @tipo_pedido, @pago_con",
                                                 new KeyValuePair<string, object>("@idcliente", pedido.idcliente),
+                                                new KeyValuePair<string, object>("@idcontrol_pedido", session.idControlTurno),
                                                 new KeyValuePair<string, object>("@idusuario", pedido.idusuario),
                                                 new KeyValuePair<string, object>("@tipo_pedido", pedido.tipo_pedido),
                                                 new KeyValuePair<string, object>("@pago_con", pedido.pago_con)).Tables[0];
