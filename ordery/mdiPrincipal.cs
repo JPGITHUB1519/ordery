@@ -170,5 +170,20 @@ namespace ordery
             doform.MdiParent = this;
             doform.Show();
         }
+
+        private void cerrarCajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // check that you do not have more than one turno open in a session
+            if (session.idControlTurno == 0)
+            {
+                POpenTurno doform = new POpenTurno();
+                doform.MdiParent = this;
+                doform.Show();
+            }
+            else
+            {
+                messages.errorMessage("Ya existe un turno abierto en esta caja. Por favor cierre el turno y cree uno nuevo");
+            }
+        }
     }
 }

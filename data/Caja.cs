@@ -81,6 +81,14 @@ namespace data
                                                 ).Tables[0].Rows[0]["idcontrol_caja"]);
         }
 
+        // return the idcontrol_caja to an specified caja
+        public int getOpenControlByIdcaja(int idcaja)
+        {
+            return Convert.ToInt32(database.executeQuery("EXEC getOpenControlsByCaja @idcaja",
+                                            new KeyValuePair<string, object>("@idcaja", idcaja)
+                                        ).Tables[0].Rows[0]["idcontrol_caja"]);
+        }
+
         // check if the caja is already open
         public bool checkIfOpen(int idcaja)
         {

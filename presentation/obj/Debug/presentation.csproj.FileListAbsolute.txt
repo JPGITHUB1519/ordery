@@ -58,3 +58,4 @@ C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.dll
 C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.pdb
 C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.PMantCaja.resources
 C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.POpenCaja.resources
+C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.POpenTurno.resources

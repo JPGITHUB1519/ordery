@@ -33,13 +33,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cmbcaja = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtusuario = new utils.ntextbox(this.components);
-            this.txtidusuario = new utils.ntextbox(this.components);
             this.label2 = new System.Windows.Forms.Label();
-            this.txttimestamp = new utils.ntextbox(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.txttimestamp = new utils.ntextbox(this.components);
+            this.txtidusuario = new utils.ntextbox(this.components);
+            this.txtusuario = new utils.ntextbox(this.components);
             this.SuspendLayout();
             // 
             // label8
@@ -84,23 +84,6 @@
             this.label1.TabIndex = 96;
             this.label1.Text = "Usuario";
             // 
-            // txtusuario
-            // 
-            this.txtusuario.Enabled = false;
-            this.txtusuario.Location = new System.Drawing.Point(322, 172);
-            this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(242, 22);
-            this.txtusuario.TabIndex = 97;
-            this.txtusuario.validate = false;
-            // 
-            // txtidusuario
-            // 
-            this.txtidusuario.Location = new System.Drawing.Point(582, 173);
-            this.txtidusuario.Name = "txtidusuario";
-            this.txtidusuario.Size = new System.Drawing.Size(65, 22);
-            this.txtidusuario.TabIndex = 98;
-            this.txtidusuario.validate = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -111,15 +94,6 @@
             this.label2.Size = new System.Drawing.Size(236, 25);
             this.label2.TabIndex = 99;
             this.label2.Text = "Fecha y Hora de Apertura";
-            // 
-            // txttimestamp
-            // 
-            this.txttimestamp.Enabled = false;
-            this.txttimestamp.Location = new System.Drawing.Point(322, 237);
-            this.txttimestamp.Name = "txttimestamp";
-            this.txttimestamp.Size = new System.Drawing.Size(242, 22);
-            this.txttimestamp.TabIndex = 100;
-            this.txttimestamp.validate = false;
             // 
             // timer1
             // 
@@ -144,6 +118,33 @@
             this.button2.Size = new System.Drawing.Size(127, 89);
             this.button2.TabIndex = 102;
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // txttimestamp
+            // 
+            this.txttimestamp.Enabled = false;
+            this.txttimestamp.Location = new System.Drawing.Point(322, 237);
+            this.txttimestamp.Name = "txttimestamp";
+            this.txttimestamp.Size = new System.Drawing.Size(242, 22);
+            this.txttimestamp.TabIndex = 100;
+            this.txttimestamp.validate = false;
+            // 
+            // txtidusuario
+            // 
+            this.txtidusuario.Location = new System.Drawing.Point(582, 173);
+            this.txtidusuario.Name = "txtidusuario";
+            this.txtidusuario.Size = new System.Drawing.Size(65, 22);
+            this.txtidusuario.TabIndex = 98;
+            this.txtidusuario.validate = false;
+            this.txtidusuario.Visible = false;
+            // 
+            // txtusuario
+            // 
+            this.txtusuario.Enabled = false;
+            this.txtusuario.Location = new System.Drawing.Point(322, 172);
+            this.txtusuario.Name = "txtusuario";
+            this.txtusuario.Size = new System.Drawing.Size(242, 22);
+            this.txtusuario.TabIndex = 97;
+            this.txtusuario.validate = false;
             // 
             // POpenCaja
             // 

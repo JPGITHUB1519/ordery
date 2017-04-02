@@ -115,6 +115,14 @@ namespace presentation
         
         }
 
+        // fill turnoTextBox
+
+        public void fillTurnoTextBox()
+        {
+            Turno turno = new Turno();
+            this.txtturno.Text = turno.getTurnoDescripcionByControlTurno(session.idControlTurno);
+        }
+
         public PPedido()
         {
             InitializeComponent();
@@ -134,6 +142,8 @@ namespace presentation
             // fill username
             this.fillUsernameToTextbox();
 
+            // fill turno textBox
+            this.fillTurnoTextBox();
             // set total a pagar to 0
             this.txttotal.Text = Convert.ToString(0);
         }

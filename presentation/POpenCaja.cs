@@ -50,7 +50,7 @@ namespace presentation
         {
             Caja caja = new Caja();
             int idcaja = Convert.ToInt32(this.cmbcaja.SelectedValue);
-            // valdiar si la caja ya esta abierta
+            // validar si la caja ya esta abierta
             if(caja.checkIfOpen(idcaja))
             {
                 messages.errorMessage("Esta caja ya sido Abierta");

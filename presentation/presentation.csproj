@@ -88,6 +88,12 @@
     <Compile Include="PMantUsuario.Designer.cs">
       <DependentUpon>PMantUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="POpenTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POpenTurno.Designer.cs">
+      <DependentUpon>POpenTurno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PMantUsuario.resx">
       <DependentUpon>PMantUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POpenTurno.resx">
+      <DependentUpon>POpenTurno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PVistaArticulos.resx">
       <DependentUpon>PVistaArticulos.cs</DependentUpon>
@@ -315,6 +324,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\caja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
