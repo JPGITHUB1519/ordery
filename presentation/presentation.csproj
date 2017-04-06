@@ -58,6 +58,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dstester.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PCloseTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCloseTurno.Designer.cs">
+      <DependentUpon>PCloseTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCombosVendidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCombosVendidos.Designer.cs">
+      <DependentUpon>PCombosVendidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="POpenCaja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +191,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="PCloseTurno.resx">
+      <DependentUpon>PCloseTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCombosVendidos.resx">
+      <DependentUpon>PCombosVendidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="POpenCaja.resx">
       <DependentUpon>POpenCaja.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,6 +254,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RArticulo.rdlc" />
     <EmbeddedResource Include="Reports\RPedido.rdlc" />
+    <EmbeddedResource Include="Reports\RReporteArticulosVendidos.rdlc" />
     <EmbeddedResource Include="testing.resx">
       <DependentUpon>testing.cs</DependentUpon>
     </EmbeddedResource>
@@ -327,6 +346,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -74,6 +74,8 @@ namespace presentation
                 {
                     session.idControlTurno = turno.openTurno(idturno, idcaja, session.userId, Convert.ToDouble(this.txtmonto_inicial.Text.Trim()));
                     messages.successMessage("Turno Abierto Exitosamente");
+                    // asignar el total en caja de sesion el valor del monto inicial
+                    session.total_en_caja = Convert.ToDouble(this.txtmonto_inicial.Text.Trim());
                     this.Close();
                 }
                 else

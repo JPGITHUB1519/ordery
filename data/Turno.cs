@@ -61,5 +61,20 @@ namespace data
                                         ).Tables[0].Rows[0]["turno_descripcion"].ToString();
         }
 
+        // GET THE TOTAL IN CAJA BY CONTROL TURNO
+        public double getTotalInCajaByControlTurno(int idcontrol_turno)
+        {
+            return Convert.ToDouble(database.executeQuery("EXEC getTotalInCajaByControlTurno @idcontrol_turno",
+                                            new KeyValuePair<string, object>("@idcontrol_turno", idcontrol_turno)
+                                        ).Tables[0].Rows[0]["total_in_caja_by_control_turno"]);
+        }
+
+        // Close the a Caja Turno
+        public string closeTurno(int idcontrol_turno, double total)
+        {
+            return database.executeNonQuery("EXEC closeTurno @idcontrol_turno, @total",
+                                            new KeyValuePair<string, object>("@idcontro_turno", idcontrol_turno),
+                                            new KeyValuePair<string, object>("@total", total));
+        }
     }
 }

@@ -13,8 +13,10 @@ namespace data
         int idpedido;
         int idcliente;
         int idusuario;
+        int control_turno;
         string tipo_pedido;
         double pago_con;
+
 
         public int Idpedido
         {
@@ -67,7 +69,11 @@ namespace data
             set { precio = value; }
         }
 
-        
+        public int Control_turno
+        {
+            get { return control_turno; }
+            set { control_turno = value; }
+        }
 
         // database Operations
 
@@ -78,7 +84,7 @@ namespace data
             DataTable dt = new DataTable();
             dt = database.executeQuery("EXEC createPedido  @idcliente, @idcontrol_pedido, @idusuario, @tipo_pedido, @pago_con",
                                                 new KeyValuePair<string, object>("@idcliente", pedido.idcliente),
-                                                new KeyValuePair<string, object>("@idcontrol_pedido", session.idControlTurno),
+                                                new KeyValuePair<string, object>("@idcontrol_pedido", pedido.control_turno),
                                                 new KeyValuePair<string, object>("@idusuario", pedido.idusuario),
                                                 new KeyValuePair<string, object>("@tipo_pedido", pedido.tipo_pedido),
                                                 new KeyValuePair<string, object>("@pago_con", pedido.pago_con)).Tables[0];

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using presentation;
 using utils;
+using data;
+using presentation.Reports;
 
 namespace ordery
 {
@@ -184,6 +186,18 @@ namespace ordery
             {
                 messages.errorMessage("Ya existe un turno abierto en esta caja. Por favor cierre el turno y cree uno nuevo");
             }
+        }
+
+        private void verTotalEnCajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            messages.successMessage(session.total_en_caja.ToString());
+        }
+
+        private void reportesCombosVendidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataSet ds = database.executeQuery("EXEC getCantidadCombosVendidos");
+            PReport frmreport = new PReport("presentation.Reports.RReporteArticulosVendidos.rdlc", ds);
+            frmreport.Show();
         }
     }
 }
