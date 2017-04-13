@@ -30,6 +30,34 @@ namespace data
 
         }
 
+        // Close Turno
+        /*
+            CERRAR TURNO
+	        Implica asignar el total de la caja al final del turno y asignarle una fecha de cierre
+        */
+
+        public string closeTurno(int idcontrol_turno, double total, DateTime fecha_cierre)
+        {
+            return database.executeNonQuery("EXEC closeTurno @idcontrol_turno, @total, @fecha_cierre",
+                                                new KeyValuePair<string, object>("@idcontrol_turno", idcontrol_turno),
+                                                new KeyValuePair<string, object>("@total", total),
+                                                new KeyValuePair<string, object>("@fecha_cierre", fecha_cierre));
+        }
+
+        // get a control_turno by id
+        public DataSet getControlTurnoById(int idcontrol_turno)
+        {
+            return database.executeQuery("EXEC getControlTurnoById @idcontrol_turno",
+                                            new KeyValuePair<string, object>("@idcontrol_turno", idcontrol_turno));
+        }
+
+        // get all joined data from a controlturno
+        public DataSet getAllInfoControlTurnoById(int idcontrol_turno)
+        {
+            return database.executeQuery("EXEC getAllInfoControlTurnoById @idcontrol_turno",
+                                            new KeyValuePair<string, object>("@idcontrol_turno", idcontrol_turno));
+        }
+
         // get open Control to a Turno
         public int getOpenControlByTurno(int idturno)
         {
@@ -67,14 +95,6 @@ namespace data
             return Convert.ToDouble(database.executeQuery("EXEC getTotalInCajaByControlTurno @idcontrol_turno",
                                             new KeyValuePair<string, object>("@idcontrol_turno", idcontrol_turno)
                                         ).Tables[0].Rows[0]["total_in_caja_by_control_turno"]);
-        }
-
-        // Close the a Caja Turno
-        public string closeTurno(int idcontrol_turno, double total)
-        {
-            return database.executeNonQuery("EXEC closeTurno @idcontrol_turno, @total",
-                                            new KeyValuePair<string, object>("@idcontro_turno", idcontrol_turno),
-                                            new KeyValuePair<string, object>("@total", total));
         }
     }
 }

@@ -62,3 +62,4 @@ C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.POpenTurno.re
 C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.PCloseTurno.resources
 C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.PCombosVendidos.resources
 C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.Test.resources
+C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.PMisVentas.resources

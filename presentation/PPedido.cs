@@ -143,7 +143,7 @@ namespace presentation
             this.fillUsernameToTextbox();
 
             // fill turno textBox
-            //this.fillTurnoTextBox();
+            this.fillTurnoTextBox();
             // set total a pagar to 0
             this.txttotal.Text = Convert.ToString(0);
         }
@@ -280,8 +280,8 @@ namespace presentation
             pedido.Idusuario = session.userId;
             pedido.Pago_con = Convert.ToDouble(this.txtPagarCon.Text.Trim());
             // agregar turno
-            //pedido.Control_turno = session.idControlTurno;
-            pedido.Control_turno = 1;
+            pedido.Control_turno = session.idControlTurno;
+            //pedido.Control_turno = 1;
             // getting the idpedido and create pedido
             idpedido = pedido.createPedido(pedido);
             // creando detalle de pedido para combos
@@ -304,7 +304,7 @@ namespace presentation
                 pedido.insertDetailToPedidoCombo(pedido);
             }
             // agregar a caja el total del pedido
-            session.total_en_caja += Convert.ToDouble(this.txttotal.Text.Trim());
+            //session.total_en_caja += Convert.ToDouble(this.txttotal.Text.Trim());
             // generar reporte
             DataSet ds = pedido.getPedidoDetailsById(idpedido);
             PReport frmreport = new PReport("presentation.Reports.RPedido.rdlc", ds);

@@ -70,6 +70,12 @@
     <Compile Include="PCombosVendidos.Designer.cs">
       <DependentUpon>PCombosVendidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="PMisVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PMisVentas.Designer.cs">
+      <DependentUpon>PMisVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="POpenCaja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PCombosVendidos.resx">
       <DependentUpon>PCombosVendidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PMisVentas.resx">
+      <DependentUpon>PMisVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POpenCaja.resx">
       <DependentUpon>POpenCaja.cs</DependentUpon>

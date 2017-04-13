@@ -199,5 +199,38 @@ namespace ordery
             PReport frmreport = new PReport("presentation.Reports.RReporteArticulosVendidos.rdlc", ds);
             frmreport.Show();
         }
+
+        private void cerrarTurnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (session.idControlTurno != 0)
+            {
+                PCloseTurno doform = new PCloseTurno();
+                doform.MdiParent = this;
+                doform.Show();
+            }
+            else
+            {
+                messages.errorMessage("No hay turnos abiertos");
+            }
+        }
+
+        private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void misVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (session.idControlTurno != 0)
+            {
+                PMisVentas doform = new PMisVentas();
+                doform.MdiParent = this;
+                doform.Show();
+            }
+            else
+            {
+                messages.errorMessage("No has abierto un turno todavia");
+            }
+        }
     }
 }

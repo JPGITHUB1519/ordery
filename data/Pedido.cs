@@ -108,5 +108,13 @@ namespace data
             return database.executeQuery("EXEC getPedidosDetailsById @Idpedido",
                                             new KeyValuePair<string, object>("@Idpedido", idpedido));
         }
+
+        /* obtiene las ventas de un usuario en un turno en especifico */
+        public DataSet getMisVentas(int idcontrol_turno)
+        {
+            return database.executeQuery("EXEC getMisVentas @idcontrol_turno",
+                                            new KeyValuePair<string, object>("@idcontrol_turno", idcontrol_turno));
+        }
+        
     }
 }
