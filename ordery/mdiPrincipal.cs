@@ -232,5 +232,17 @@ namespace ordery
                 messages.errorMessage("No has abierto un turno todavia");
             }
         }
+
+        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cheffBoardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PCheffBoard doform = new PCheffBoard();
+            doform.MdiParent = this;
+            doform.Show();
+        }
     }
 }

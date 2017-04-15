@@ -16,7 +16,7 @@ namespace data
         int control_turno;
         string tipo_pedido;
         double pago_con;
-
+        string status;
 
         public int Idpedido
         {
@@ -45,6 +45,12 @@ namespace data
         {
             get { return pago_con; }
             set { pago_con = value; }
+        }
+
+        public string Status
+        {
+            get { return status; }
+            set { status = value; }
         }
 
         // attributes for details
@@ -82,12 +88,13 @@ namespace data
         public int createPedido(Pedido pedido)
         {
             DataTable dt = new DataTable();
-            dt = database.executeQuery("EXEC createPedido  @idcliente, @idcontrol_pedido, @idusuario, @tipo_pedido, @pago_con",
+            dt = database.executeQuery("EXEC createPedido  @idcliente, @idcontrol_pedido, @idusuario, @tipo_pedido, @pago_con, @status",
                                                 new KeyValuePair<string, object>("@idcliente", pedido.idcliente),
                                                 new KeyValuePair<string, object>("@idcontrol_pedido", pedido.control_turno),
                                                 new KeyValuePair<string, object>("@idusuario", pedido.idusuario),
                                                 new KeyValuePair<string, object>("@tipo_pedido", pedido.tipo_pedido),
-                                                new KeyValuePair<string, object>("@pago_con", pedido.pago_con)).Tables[0];
+                                                new KeyValuePair<string, object>("@pago_con", pedido.pago_con),
+                                                new KeyValuePair<string, object>("@status", pedido.status)).Tables[0];
             // return the id of the created pedido
             return Convert.ToInt32(dt.Rows[0]["idpedido"]);
         }
@@ -100,6 +107,23 @@ namespace data
                                                 new KeyValuePair<string, object>("@Idcombo", pedido.idcombo),
                                                 new KeyValuePair<string, object>("@Cantidad", pedido.cantidad),
                                                 new KeyValuePair<string, object>("@Precio", pedido.precio));
+        }
+
+
+        public DataSet getPedidos()
+        {
+            return database.executeQuery("EXEC getPedidos");
+        }
+
+        // get pedidos with status ordenado
+        public DataSet getPedidosByStatusOrdenado()
+        {
+            return database.executeQuery("EXEC getPedidosByStatusOrdenado");
+        }
+
+        public DataSet getPedidosByStatusOrdenadoAndConcinando()
+        {
+            return database.executeQuery("EXEC getPedidosByStatusOrdenadoAndConcinando");
         }
 
         // get the pedido data
@@ -115,6 +139,22 @@ namespace data
             return database.executeQuery("EXEC getMisVentas @idcontrol_turno",
                                             new KeyValuePair<string, object>("@idcontrol_turno", idcontrol_turno));
         }
+
+        // set status to cocinando
+        public string setPedidoStatusToCocinando(int idpedido)
+        {
+            return database.executeNonQuery("EXEC setPedidoStatusToCocinando @idpedido",
+                                                new KeyValuePair<string, object>("@idpedido", idpedido));
+        }
+
+        // set status to listo(cuando ya esta cocinado)
+        public string setPedidoStatusToListo(int idpedido)
+        {
+            return database.executeNonQuery("EXEC setPedidoStatusToListo @idpedido", 
+                                                new KeyValuePair<string, object>("@idpedido", idpedido));
+        }
+
+
         
     }
 }

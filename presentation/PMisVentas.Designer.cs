@@ -97,7 +97,7 @@
             // txtTotalPedLocal
             // 
             this.txtTotalPedLocal.Enabled = false;
-            this.txtTotalPedLocal.Location = new System.Drawing.Point(601, 600);
+            this.txtTotalPedLocal.Location = new System.Drawing.Point(658, 600);
             this.txtTotalPedLocal.Name = "txtTotalPedLocal";
             this.txtTotalPedLocal.Size = new System.Drawing.Size(167, 22);
             this.txtTotalPedLocal.TabIndex = 53;
@@ -106,7 +106,7 @@
             // txtTotalPedDom
             // 
             this.txtTotalPedDom.Enabled = false;
-            this.txtTotalPedDom.Location = new System.Drawing.Point(601, 651);
+            this.txtTotalPedDom.Location = new System.Drawing.Point(658, 651);
             this.txtTotalPedDom.Name = "txtTotalPedDom";
             this.txtTotalPedDom.Size = new System.Drawing.Size(167, 22);
             this.txtTotalPedDom.TabIndex = 54;
@@ -115,7 +115,7 @@
             // txtTotalPedidos
             // 
             this.txtTotalPedidos.Enabled = false;
-            this.txtTotalPedidos.Location = new System.Drawing.Point(601, 703);
+            this.txtTotalPedidos.Location = new System.Drawing.Point(658, 703);
             this.txtTotalPedidos.Name = "txtTotalPedidos";
             this.txtTotalPedidos.Size = new System.Drawing.Size(167, 22);
             this.txtTotalPedidos.TabIndex = 55;
@@ -124,7 +124,7 @@
             // txtTotalVentas
             // 
             this.txtTotalVentas.Enabled = false;
-            this.txtTotalVentas.Location = new System.Drawing.Point(601, 774);
+            this.txtTotalVentas.Location = new System.Drawing.Point(658, 774);
             this.txtTotalVentas.Name = "txtTotalVentas";
             this.txtTotalVentas.Size = new System.Drawing.Size(167, 22);
             this.txtTotalVentas.TabIndex = 57;

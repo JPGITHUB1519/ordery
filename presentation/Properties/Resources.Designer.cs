@@ -113,9 +113,29 @@ namespace presentation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cooking_icon {
+            get {
+                object obj = ResourceManager.GetObject("Cooking-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap customer {
             get {
                 object obj = ResourceManager.GetObject("customer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Data_View_Details_icon {
+            get {
+                object obj = ResourceManager.GetObject("Data-View-Details-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +166,16 @@ namespace presentation.Properties {
         internal static System.Drawing.Bitmap food_icon {
             get {
                 object obj = ResourceManager.GetObject("food icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Food_Waiter_icon {
+            get {
+                object obj = ResourceManager.GetObject("Food-Waiter-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

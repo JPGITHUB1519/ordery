@@ -279,6 +279,8 @@ namespace presentation
             pedido.Tipo_pedido = cmbTipoPedido.Text.Trim();
             pedido.Idusuario = session.userId;
             pedido.Pago_con = Convert.ToDouble(this.txtPagarCon.Text.Trim());
+            // setting status ordenado
+            pedido.Status = "ordenado";
             // agregar turno
             pedido.Control_turno = session.idControlTurno;
             //pedido.Control_turno = 1;

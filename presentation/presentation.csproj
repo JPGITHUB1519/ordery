@@ -58,6 +58,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dstester.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PCheffBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCheffBoard.Designer.cs">
+      <DependentUpon>PCheffBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="PCloseTurno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,12 @@
     </Compile>
     <Compile Include="POpenTurno.Designer.cs">
       <DependentUpon>POpenTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPedidoDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPedidoDetail.Designer.cs">
+      <DependentUpon>PPedidoDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -203,6 +215,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="PCheffBoard.resx">
+      <DependentUpon>PCheffBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PCloseTurno.resx">
       <DependentUpon>PCloseTurno.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="POpenTurno.resx">
       <DependentUpon>POpenTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPedidoDetail.resx">
+      <DependentUpon>PPedidoDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PVistaArticulos.resx">
       <DependentUpon>PVistaArticulos.cs</DependentUpon>
@@ -367,6 +385,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Food-Waiter-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cooking-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data-View-Details-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
