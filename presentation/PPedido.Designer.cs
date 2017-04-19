@@ -83,6 +83,10 @@
             this.anombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
             this.txtturno = new utils.ntextbox(this.components);
+            this.lbldelivery = new System.Windows.Forms.Label();
+            this.txtdelivery = new utils.ntextbox(this.components);
+            this.btndelivery = new System.Windows.Forms.Button();
+            this.txtiddelivery = new utils.ntextbox(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvpedido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExtras)).BeginInit();
             this.SuspendLayout();
@@ -101,8 +105,8 @@
             // 
             // btncombo1
             // 
-            this.btncombo1.Location = new System.Drawing.Point(37, 268);
-            this.btncombo1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncombo1.Location = new System.Drawing.Point(56, 383);
+            this.btncombo1.Margin = new System.Windows.Forms.Padding(4);
             this.btncombo1.Name = "btncombo1";
             this.btncombo1.Size = new System.Drawing.Size(164, 132);
             this.btncombo1.TabIndex = 49;
@@ -111,8 +115,8 @@
             // 
             // btncombo2
             // 
-            this.btncombo2.Location = new System.Drawing.Point(235, 268);
-            this.btncombo2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncombo2.Location = new System.Drawing.Point(254, 383);
+            this.btncombo2.Margin = new System.Windows.Forms.Padding(4);
             this.btncombo2.Name = "btncombo2";
             this.btncombo2.Size = new System.Drawing.Size(164, 132);
             this.btncombo2.TabIndex = 50;
@@ -121,8 +125,8 @@
             // 
             // btncombo3
             // 
-            this.btncombo3.Location = new System.Drawing.Point(423, 268);
-            this.btncombo3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncombo3.Location = new System.Drawing.Point(442, 383);
+            this.btncombo3.Margin = new System.Windows.Forms.Padding(4);
             this.btncombo3.Name = "btncombo3";
             this.btncombo3.Size = new System.Drawing.Size(164, 132);
             this.btncombo3.TabIndex = 51;
@@ -131,8 +135,8 @@
             // 
             // btncombo4
             // 
-            this.btncombo4.Location = new System.Drawing.Point(609, 268);
-            this.btncombo4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncombo4.Location = new System.Drawing.Point(628, 383);
+            this.btncombo4.Margin = new System.Windows.Forms.Padding(4);
             this.btncombo4.Name = "btncombo4";
             this.btncombo4.Size = new System.Drawing.Size(164, 132);
             this.btncombo4.TabIndex = 52;
@@ -141,8 +145,8 @@
             // 
             // btncombo8
             // 
-            this.btncombo8.Location = new System.Drawing.Point(609, 427);
-            this.btncombo8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncombo8.Location = new System.Drawing.Point(628, 542);
+            this.btncombo8.Margin = new System.Windows.Forms.Padding(4);
             this.btncombo8.Name = "btncombo8";
             this.btncombo8.Size = new System.Drawing.Size(164, 132);
             this.btncombo8.TabIndex = 56;
@@ -151,8 +155,8 @@
             // 
             // btncombo7
             // 
-            this.btncombo7.Location = new System.Drawing.Point(423, 427);
-            this.btncombo7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncombo7.Location = new System.Drawing.Point(442, 542);
+            this.btncombo7.Margin = new System.Windows.Forms.Padding(4);
             this.btncombo7.Name = "btncombo7";
             this.btncombo7.Size = new System.Drawing.Size(164, 132);
             this.btncombo7.TabIndex = 55;
@@ -161,8 +165,8 @@
             // 
             // btncombo6
             // 
-            this.btncombo6.Location = new System.Drawing.Point(235, 427);
-            this.btncombo6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncombo6.Location = new System.Drawing.Point(254, 542);
+            this.btncombo6.Margin = new System.Windows.Forms.Padding(4);
             this.btncombo6.Name = "btncombo6";
             this.btncombo6.Size = new System.Drawing.Size(164, 132);
             this.btncombo6.TabIndex = 54;
@@ -171,8 +175,8 @@
             // 
             // btncombo5
             // 
-            this.btncombo5.Location = new System.Drawing.Point(37, 427);
-            this.btncombo5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncombo5.Location = new System.Drawing.Point(56, 542);
+            this.btncombo5.Margin = new System.Windows.Forms.Padding(4);
             this.btncombo5.Name = "btncombo5";
             this.btncombo5.Size = new System.Drawing.Size(164, 132);
             this.btncombo5.TabIndex = 53;
@@ -181,8 +185,8 @@
             // 
             // btncombo12
             // 
-            this.btncombo12.Location = new System.Drawing.Point(609, 580);
-            this.btncombo12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncombo12.Location = new System.Drawing.Point(628, 695);
+            this.btncombo12.Margin = new System.Windows.Forms.Padding(4);
             this.btncombo12.Name = "btncombo12";
             this.btncombo12.Size = new System.Drawing.Size(164, 132);
             this.btncombo12.TabIndex = 60;
@@ -191,8 +195,8 @@
             // 
             // btncombo11
             // 
-            this.btncombo11.Location = new System.Drawing.Point(423, 580);
-            this.btncombo11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncombo11.Location = new System.Drawing.Point(442, 695);
+            this.btncombo11.Margin = new System.Windows.Forms.Padding(4);
             this.btncombo11.Name = "btncombo11";
             this.btncombo11.Size = new System.Drawing.Size(164, 132);
             this.btncombo11.TabIndex = 59;
@@ -201,8 +205,8 @@
             // 
             // btncombo10
             // 
-            this.btncombo10.Location = new System.Drawing.Point(235, 580);
-            this.btncombo10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncombo10.Location = new System.Drawing.Point(254, 695);
+            this.btncombo10.Margin = new System.Windows.Forms.Padding(4);
             this.btncombo10.Name = "btncombo10";
             this.btncombo10.Size = new System.Drawing.Size(164, 132);
             this.btncombo10.TabIndex = 58;
@@ -211,8 +215,8 @@
             // 
             // btncombo9
             // 
-            this.btncombo9.Location = new System.Drawing.Point(37, 580);
-            this.btncombo9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncombo9.Location = new System.Drawing.Point(56, 695);
+            this.btncombo9.Margin = new System.Windows.Forms.Padding(4);
             this.btncombo9.Name = "btncombo9";
             this.btncombo9.Size = new System.Drawing.Size(164, 132);
             this.btncombo9.TabIndex = 57;
@@ -229,8 +233,8 @@
             this.Cantidad,
             this.price,
             this.importe});
-            this.dgvpedido.Location = new System.Drawing.Point(811, 240);
-            this.dgvpedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvpedido.Location = new System.Drawing.Point(822, 368);
+            this.dgvpedido.Margin = new System.Windows.Forms.Padding(4);
             this.dgvpedido.Name = "dgvpedido";
             this.dgvpedido.Size = new System.Drawing.Size(487, 219);
             this.dgvpedido.TabIndex = 62;
@@ -265,7 +269,7 @@
             // 
             this.lbltotal.AutoSize = true;
             this.lbltotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltotal.Location = new System.Drawing.Point(1095, 655);
+            this.lbltotal.Location = new System.Drawing.Point(1095, 726);
             this.lbltotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbltotal.Name = "lbltotal";
             this.lbltotal.Size = new System.Drawing.Size(87, 29);
@@ -277,7 +281,7 @@
             this.lbltotalcant.AutoSize = true;
             this.lbltotalcant.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltotalcant.ForeColor = System.Drawing.Color.Red;
-            this.lbltotalcant.Location = new System.Drawing.Point(1193, 655);
+            this.lbltotalcant.Location = new System.Drawing.Point(1193, 726);
             this.lbltotalcant.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbltotalcant.Name = "lbltotalcant";
             this.lbltotalcant.Size = new System.Drawing.Size(74, 29);
@@ -294,8 +298,8 @@
             this.artPUnitario,
             this.artCantidad,
             this.artImporte});
-            this.dgvExtras.Location = new System.Drawing.Point(797, 578);
-            this.dgvExtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvExtras.Location = new System.Drawing.Point(808, 706);
+            this.dgvExtras.Margin = new System.Windows.Forms.Padding(4);
             this.dgvExtras.Name = "dgvExtras";
             this.dgvExtras.Size = new System.Drawing.Size(531, 171);
             this.dgvExtras.TabIndex = 65;
@@ -330,7 +334,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1047, 463);
+            this.label1.Location = new System.Drawing.Point(1058, 591);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 29);
@@ -341,7 +345,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(81, 129);
+            this.label2.Location = new System.Drawing.Point(34, 124);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 25);
@@ -352,7 +356,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(313, 225);
+            this.label3.Location = new System.Drawing.Point(25, 264);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 25);
@@ -362,17 +366,18 @@
             // cmbTipoPedido
             // 
             this.cmbTipoPedido.FormattingEnabled = true;
-            this.cmbTipoPedido.Location = new System.Drawing.Point(462, 224);
-            this.cmbTipoPedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbTipoPedido.Location = new System.Drawing.Point(171, 264);
+            this.cmbTipoPedido.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTipoPedido.Name = "cmbTipoPedido";
             this.cmbTipoPedido.Size = new System.Drawing.Size(225, 24);
             this.cmbTipoPedido.TabIndex = 104;
+            this.cmbTipoPedido.SelectedIndexChanged += new System.EventHandler(this.cmbTipoPedido_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(238, 129);
+            this.label4.Location = new System.Drawing.Point(191, 124);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(147, 25);
@@ -383,7 +388,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(524, 129);
+            this.label5.Location = new System.Drawing.Point(477, 124);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 25);
@@ -422,7 +427,7 @@
             // 
             this.txtNombreCajero.Enabled = false;
             this.txtNombreCajero.Location = new System.Drawing.Point(126, 73);
-            this.txtNombreCajero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreCajero.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreCajero.Name = "txtNombreCajero";
             this.txtNombreCajero.Size = new System.Drawing.Size(259, 22);
             this.txtNombreCajero.TabIndex = 111;
@@ -430,17 +435,17 @@
             // 
             // txtdireccion
             // 
-            this.txtdireccion.Location = new System.Drawing.Point(522, 168);
-            this.txtdireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtdireccion.Location = new System.Drawing.Point(475, 163);
+            this.txtdireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtdireccion.Name = "txtdireccion";
-            this.txtdireccion.Size = new System.Drawing.Size(259, 22);
+            this.txtdireccion.Size = new System.Drawing.Size(292, 22);
             this.txtdireccion.TabIndex = 107;
             this.txtdireccion.validate = false;
             // 
             // txtidcliente
             // 
-            this.txtidcliente.Location = new System.Drawing.Point(86, 168);
-            this.txtidcliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtidcliente.Location = new System.Drawing.Point(39, 163);
+            this.txtidcliente.Margin = new System.Windows.Forms.Padding(4);
             this.txtidcliente.Name = "txtidcliente";
             this.txtidcliente.Size = new System.Drawing.Size(137, 22);
             this.txtidcliente.TabIndex = 105;
@@ -448,8 +453,8 @@
             // 
             // txtnombre_cliente
             // 
-            this.txtnombre_cliente.Location = new System.Drawing.Point(244, 168);
-            this.txtnombre_cliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtnombre_cliente.Location = new System.Drawing.Point(197, 163);
+            this.txtnombre_cliente.Margin = new System.Windows.Forms.Padding(4);
             this.txtnombre_cliente.Name = "txtnombre_cliente";
             this.txtnombre_cliente.Size = new System.Drawing.Size(259, 22);
             this.txtnombre_cliente.TabIndex = 102;
@@ -458,8 +463,8 @@
             // btnFacturar
             // 
             this.btnFacturar.Image = global::presentation.Properties.Resources.cash_icon;
-            this.btnFacturar.Location = new System.Drawing.Point(1151, 151);
-            this.btnFacturar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFacturar.Location = new System.Drawing.Point(1239, 168);
+            this.btnFacturar.Margin = new System.Windows.Forms.Padding(4);
             this.btnFacturar.Name = "btnFacturar";
             this.btnFacturar.Size = new System.Drawing.Size(100, 64);
             this.btnFacturar.TabIndex = 109;
@@ -469,8 +474,8 @@
             // button1
             // 
             this.button1.Image = global::presentation.Properties.Resources.customer;
-            this.button1.Location = new System.Drawing.Point(811, 140);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(796, 137);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 75);
             this.button1.TabIndex = 70;
@@ -480,8 +485,8 @@
             // btnDelete
             // 
             this.btnDelete.Image = global::presentation.Properties.Resources.delete;
-            this.btnDelete.Location = new System.Drawing.Point(1083, 496);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Location = new System.Drawing.Point(1087, 624);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(180, 75);
             this.btnDelete.TabIndex = 69;
@@ -491,8 +496,8 @@
             // btnNew
             // 
             this.btnNew.Image = global::presentation.Properties.Resources.add_icon;
-            this.btnNew.Location = new System.Drawing.Point(877, 496);
-            this.btnNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNew.Location = new System.Drawing.Point(888, 624);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(4);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(171, 75);
             this.btnNew.TabIndex = 67;
@@ -503,7 +508,7 @@
             // 
             this.txtcambio.Enabled = false;
             this.txtcambio.Location = new System.Drawing.Point(1083, 119);
-            this.txtcambio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtcambio.Margin = new System.Windows.Forms.Padding(4);
             this.txtcambio.Name = "txtcambio";
             this.txtcambio.Size = new System.Drawing.Size(256, 22);
             this.txtcambio.TabIndex = 118;
@@ -523,7 +528,7 @@
             // txtPagarCon
             // 
             this.txtPagarCon.Location = new System.Drawing.Point(1083, 71);
-            this.txtPagarCon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPagarCon.Margin = new System.Windows.Forms.Padding(4);
             this.txtPagarCon.Name = "txtPagarCon";
             this.txtPagarCon.Size = new System.Drawing.Size(256, 22);
             this.txtPagarCon.TabIndex = 116;
@@ -545,7 +550,7 @@
             // 
             this.txttotal.Enabled = false;
             this.txttotal.Location = new System.Drawing.Point(1083, 22);
-            this.txttotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txttotal.Margin = new System.Windows.Forms.Padding(4);
             this.txttotal.Name = "txttotal";
             this.txttotal.Size = new System.Drawing.Size(256, 22);
             this.txttotal.TabIndex = 114;
@@ -589,15 +594,63 @@
             this.txtturno.Location = new System.Drawing.Point(494, 74);
             this.txtturno.Margin = new System.Windows.Forms.Padding(4);
             this.txtturno.Name = "txtturno";
-            this.txtturno.Size = new System.Drawing.Size(259, 22);
+            this.txtturno.Size = new System.Drawing.Size(273, 22);
             this.txtturno.TabIndex = 120;
             this.txtturno.validate = false;
+            // 
+            // lbldelivery
+            // 
+            this.lbldelivery.AutoSize = true;
+            this.lbldelivery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldelivery.Location = new System.Drawing.Point(415, 260);
+            this.lbldelivery.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbldelivery.Name = "lbldelivery";
+            this.lbldelivery.Size = new System.Drawing.Size(82, 25);
+            this.lbldelivery.TabIndex = 121;
+            this.lbldelivery.Text = "Delivery";
+            this.lbldelivery.Visible = false;
+            // 
+            // txtdelivery
+            // 
+            this.txtdelivery.Location = new System.Drawing.Point(508, 264);
+            this.txtdelivery.Margin = new System.Windows.Forms.Padding(4);
+            this.txtdelivery.Name = "txtdelivery";
+            this.txtdelivery.Size = new System.Drawing.Size(259, 22);
+            this.txtdelivery.TabIndex = 122;
+            this.txtdelivery.validate = false;
+            this.txtdelivery.Visible = false;
+            // 
+            // btndelivery
+            // 
+            this.btndelivery.Image = global::presentation.Properties.Resources.motorcyclist_icon;
+            this.btndelivery.Location = new System.Drawing.Point(796, 238);
+            this.btndelivery.Margin = new System.Windows.Forms.Padding(4);
+            this.btndelivery.Name = "btndelivery";
+            this.btndelivery.Size = new System.Drawing.Size(100, 75);
+            this.btndelivery.TabIndex = 123;
+            this.btndelivery.UseVisualStyleBackColor = true;
+            this.btndelivery.Visible = false;
+            this.btndelivery.Click += new System.EventHandler(this.btndelivery_Click);
+            // 
+            // txtiddelivery
+            // 
+            this.txtiddelivery.Location = new System.Drawing.Point(508, 223);
+            this.txtiddelivery.Margin = new System.Windows.Forms.Padding(4);
+            this.txtiddelivery.Name = "txtiddelivery";
+            this.txtiddelivery.Size = new System.Drawing.Size(259, 22);
+            this.txtiddelivery.TabIndex = 124;
+            this.txtiddelivery.validate = false;
+            this.txtiddelivery.Visible = false;
             // 
             // PPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1371, 794);
+            this.ClientSize = new System.Drawing.Size(1371, 890);
+            this.Controls.Add(this.txtiddelivery);
+            this.Controls.Add(this.btndelivery);
+            this.Controls.Add(this.txtdelivery);
+            this.Controls.Add(this.lbldelivery);
             this.Controls.Add(this.txtturno);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtcambio);
@@ -639,7 +692,7 @@
             this.Controls.Add(this.btncombo2);
             this.Controls.Add(this.btncombo1);
             this.Controls.Add(this.label8);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PPedido";
             this.Text = "PPedido";
             this.Load += new System.EventHandler(this.PPedido_Load);
@@ -709,5 +762,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn artImporte;
         public System.Windows.Forms.Label label11;
         private utils.ntextbox txtturno;
+        public System.Windows.Forms.Label lbldelivery;
+        private utils.ntextbox txtdelivery;
+        private System.Windows.Forms.Button btndelivery;
+        private utils.ntextbox txtiddelivery;
     }
 }

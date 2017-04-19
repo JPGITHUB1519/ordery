@@ -78,6 +78,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(734, 378);
             this.dataGridView1.TabIndex = 75;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // button1
             // 
@@ -88,6 +89,7 @@
             this.button1.Size = new System.Drawing.Size(114, 65);
             this.button1.TabIndex = 76;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_buscar2
             // 
@@ -126,7 +128,7 @@
         public System.Windows.Forms.TextBox txtbuscar;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Button btn_buscar2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

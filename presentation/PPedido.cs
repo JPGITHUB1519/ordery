@@ -120,7 +120,9 @@ namespace presentation
         public void fillTurnoTextBox()
         {
             Turno turno = new Turno();
-            this.txtturno.Text = turno.getTurnoDescripcionByControlTurno(session.idControlTurno);
+            // quit this for turno testing
+           this.txtturno.Text = turno.getTurnoDescripcionByControlTurno(session.idControlTurno);
+           // this.txtturno.Text = turno.getTurnoDescripcionByControlTurno(1);
         }
 
         public PPedido()
@@ -146,6 +148,8 @@ namespace presentation
             this.fillTurnoTextBox();
             // set total a pagar to 0
             this.txttotal.Text = Convert.ToString(0);
+            // set tipo pedido to local by default
+            this.cmbTipoPedido.SelectedIndex = 0;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -281,6 +285,12 @@ namespace presentation
             pedido.Pago_con = Convert.ToDouble(this.txtPagarCon.Text.Trim());
             // setting status ordenado
             pedido.Status = "ordenado";
+            // agregar delivery
+            // si el campo de delivery esta vacio guardar como 0 en la bd
+            if (this.txtdelivery.Text == string.Empty)
+                pedido.Iddelivery = 0;
+            else
+                pedido.Iddelivery = Convert.ToInt32(this.txtiddelivery.Text.Trim());
             // agregar turno
             pedido.Control_turno = session.idControlTurno;
             //pedido.Control_turno = 1;
@@ -339,6 +349,33 @@ namespace presentation
         private void dgvExtras_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cmbTipoPedido_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(this.cmbTipoPedido.SelectedIndex == 1)
+            {
+                this.txtdelivery.Visible = true;
+                this.btndelivery.Visible = true;
+                this.lbldelivery.Visible = true;
+                
+            }
+        }
+
+        private void btndelivery_Click(object sender, EventArgs e)
+        {
+            PAsignarPedidoDelivery doform = new PAsignarPedidoDelivery();
+            if (doform.ShowDialog() == DialogResult.OK)
+            {
+                int pos = doform.dataGridView1.CurrentCell.RowIndex;
+                this.txtiddelivery.Text = doform.dataGridView1.Rows[pos].Cells["iddelivery"].Value.ToString();
+                this.txtdelivery.Text = doform.dataGridView1.Rows[pos].Cells["nombre"].Value.ToString();
+            }
         }
     }
 }

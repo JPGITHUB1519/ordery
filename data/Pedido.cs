@@ -17,6 +17,7 @@ namespace data
         string tipo_pedido;
         double pago_con;
         string status;
+        int iddelivery;
 
         public int Idpedido
         {
@@ -51,6 +52,12 @@ namespace data
         {
             get { return status; }
             set { status = value; }
+        }
+
+        public int Iddelivery
+        {
+            get { return iddelivery; }
+            set { iddelivery = value; }
         }
 
         // attributes for details
@@ -88,13 +95,14 @@ namespace data
         public int createPedido(Pedido pedido)
         {
             DataTable dt = new DataTable();
-            dt = database.executeQuery("EXEC createPedido  @idcliente, @idcontrol_pedido, @idusuario, @tipo_pedido, @pago_con, @status",
+            dt = database.executeQuery("EXEC createPedido  @idcliente, @idcontrol_pedido, @idusuario, @tipo_pedido, @pago_con, @status, @iddelivery",
                                                 new KeyValuePair<string, object>("@idcliente", pedido.idcliente),
                                                 new KeyValuePair<string, object>("@idcontrol_pedido", pedido.control_turno),
                                                 new KeyValuePair<string, object>("@idusuario", pedido.idusuario),
                                                 new KeyValuePair<string, object>("@tipo_pedido", pedido.tipo_pedido),
                                                 new KeyValuePair<string, object>("@pago_con", pedido.pago_con),
-                                                new KeyValuePair<string, object>("@status", pedido.status)).Tables[0];
+                                                new KeyValuePair<string, object>("@status", pedido.status),
+                                                new KeyValuePair<string, object>("@iddelivery", pedido.iddelivery)).Tables[0];
             // return the id of the created pedido
             return Convert.ToInt32(dt.Rows[0]["idpedido"]);
         }

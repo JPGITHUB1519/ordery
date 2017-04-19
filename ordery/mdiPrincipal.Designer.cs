@@ -67,6 +67,7 @@
             this.cajasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cheffBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arqueoDeCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirTurnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,7 +101,6 @@
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cheffBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -410,9 +410,16 @@
             // pedidosToolStripMenuItem
             // 
             this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
-            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
+            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.pedidosToolStripMenuItem.Text = "Pedidos";
             this.pedidosToolStripMenuItem.Click += new System.EventHandler(this.pedidosToolStripMenuItem_Click);
+            // 
+            // cheffBoardToolStripMenuItem
+            // 
+            this.cheffBoardToolStripMenuItem.Name = "cheffBoardToolStripMenuItem";
+            this.cheffBoardToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.cheffBoardToolStripMenuItem.Text = "Cheff Board";
+            this.cheffBoardToolStripMenuItem.Click += new System.EventHandler(this.cheffBoardToolStripMenuItem_Click);
             // 
             // arqueoDeCajaToolStripMenuItem
             // 
@@ -696,13 +703,6 @@
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
             this.searchToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.searchToolStripMenuItem.Text = "&Search";
-            // 
-            // cheffBoardToolStripMenuItem
-            // 
-            this.cheffBoardToolStripMenuItem.Name = "cheffBoardToolStripMenuItem";
-            this.cheffBoardToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.cheffBoardToolStripMenuItem.Text = "Cheff Board";
-            this.cheffBoardToolStripMenuItem.Click += new System.EventHandler(this.cheffBoardToolStripMenuItem_Click);
             // 
             // mdiPrincipal
             // 

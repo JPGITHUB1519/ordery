@@ -39,5 +39,30 @@ namespace presentation
         {
             this.searchDelivery();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count == 0 || dataGridView1.Rows[0].Cells[0].Value == null)
+            {
+                return;
+            }
+            DialogResult = DialogResult.OK;
+            Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows.Count == 0 || dataGridView1.Rows[0].Cells[0].Value == null)
+            {
+                return;
+            }
+            DialogResult = DialogResult.OK;
+            Close();
+        }
     }
 }
