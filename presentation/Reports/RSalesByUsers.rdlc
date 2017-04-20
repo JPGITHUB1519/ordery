@@ -2,38 +2,38 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Chart Name="Chart1">
+      <Chart Name="Chart4">
         <ChartCategoryHierarchy>
           <ChartMembers>
             <ChartMember>
-              <Group Name="Chart1_CategoryGroup">
+              <Group Name="Chart4_CategoryGroup">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!idcombo.Value</GroupExpression>
+                  <GroupExpression>=Fields!username.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
-              <Label>=Fields!idcombo.Value</Label>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!idcombo.Value</Value>
+                  <Value>=Fields!username.Value</Value>
                 </SortExpression>
               </SortExpressions>
+              <Label>=Fields!username.Value</Label>
             </ChartMember>
           </ChartMembers>
         </ChartCategoryHierarchy>
         <ChartSeriesHierarchy>
           <ChartMembers>
             <ChartMember>
-              <Label>cantidad vendida</Label>
+              <Label>total vendido</Label>
             </ChartMember>
           </ChartMembers>
         </ChartSeriesHierarchy>
         <ChartData>
           <ChartSeriesCollection>
-            <ChartSeries Name="cantidad_vendida">
+            <ChartSeries Name="total_vendido">
               <ChartDataPoints>
                 <ChartDataPoint>
                   <ChartDataPointValues>
-                    <Y>=Sum(Fields!cantidad_vendida.Value)</Y>
+                    <Y>=Sum(Fields!total_vendido.Value)</Y>
                   </ChartDataPointValues>
                   <ChartDataLabel>
                     <Style />
@@ -45,7 +45,6 @@
                   <DataElementOutput>Output</DataElementOutput>
                 </ChartDataPoint>
               </ChartDataPoints>
-              <Type>Shape</Type>
               <Style />
               <ChartEmptyPoints>
                 <Style />
@@ -73,7 +72,7 @@
                   <FontSize>8pt</FontSize>
                 </Style>
                 <ChartAxisTitle>
-                  <Caption>Axis Title</Caption>
+                  <Caption>Nombre de Usuarios</Caption>
                   <Style>
                     <FontSize>8pt</FontSize>
                   </Style>
@@ -148,7 +147,7 @@
                   <FontSize>8pt</FontSize>
                 </Style>
                 <ChartAxisTitle>
-                  <Caption>Axis Title</Caption>
+                  <Caption>Ventas</Caption>
                   <Style>
                     <FontSize>8pt</FontSize>
                   </Style>
@@ -240,7 +239,7 @@
         </ChartLegends>
         <ChartTitles>
           <ChartTitle Name="Default">
-            <Caption>Chart Title</Caption>
+            <Caption>Reporte de Ventas Por Usuarios</Caption>
             <Style>
               <BackgroundGradientType>None</BackgroundGradientType>
               <FontWeight>Bold</FontWeight>
@@ -266,10 +265,10 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.38833in</Top>
-        <Left>1.32167in</Left>
-        <Height>2.91667in</Height>
-        <Width>4.575in</Width>
+        <Top>0.48833in</Top>
+        <Left>1.47167in</Left>
+        <Height>4.675in</Height>
+        <Width>5.80833in</Width>
         <Style>
           <Border>
             <Color>LightGrey</Color>
@@ -280,10 +279,10 @@
         </Style>
       </Chart>
     </ReportItems>
-    <Height>4.375in</Height>
+    <Height>6.925in</Height>
     <Style />
   </Body>
-  <Width>7.39167in</Width>
+  <Width>8.24167in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
@@ -298,7 +297,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>055eff85-0a5a-4b5b-af34-f9e3aab9ef40</rd:DataSourceID>
+      <rd:DataSourceID>4c27edff-7086-4cd9-89cb-903328641887</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -308,25 +307,25 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="idcombo">
-          <DataField>idcombo</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="username">
+          <DataField>username</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="cantidad_vendida">
-          <DataField>cantidad_vendida</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="total_vendido">
+          <DataField>total_vendido</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dsPrincipal</rd:DataSetName>
         <rd:SchemaPath>C:\Users\Tester\Desktop\ordery\presentation\dsPrincipal.xsd</rd:SchemaPath>
-        <rd:TableName>getCantidadCombosVendidos</rd:TableName>
+        <rd:TableName>RTotalSalesByEmployee</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>getCantidadCombosVendidosTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>RTotalSalesByEmployeeTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>22a6d5c5-ebab-4215-8327-82bde1da3237</rd:ReportID>
+  <rd:ReportID>e8f64630-51b7-42d1-b596-7c091a29a03c</rd:ReportID>
 </Report>

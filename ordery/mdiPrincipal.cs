@@ -198,7 +198,7 @@ namespace ordery
         private void reportesCombosVendidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DataSet ds = database.executeQuery("EXEC getCantidadCombosVendidos");
-            PReport frmreport = new PReport("presentation.Reports.RReporteArticulosVendidos.rdlc", ds);
+            PReport frmreport = new PReport("presentation.Reports.RReporteCombosVendidos.rdlc", ds);
             frmreport.Show();
         }
 
@@ -252,6 +252,13 @@ namespace ordery
             PPedidoDetails doform = new PPedidoDetails();
             doform.MdiParent = this;
             doform.Show();
+        }
+
+        private void reporteDeVentasPorUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataSet ds = database.executeQuery("EXEC RTotalSalesByEmployee");
+            PReport frmreport = new PReport("presentation.Reports.RSalesByUsers.rdlc", ds);
+            frmreport.Show();
         }
     }
 }

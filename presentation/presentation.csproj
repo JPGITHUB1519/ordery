@@ -314,7 +314,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RArticulo.rdlc" />
     <EmbeddedResource Include="Reports\RPedido.rdlc" />
-    <EmbeddedResource Include="Reports\RReporteArticulosVendidos.rdlc" />
+    <EmbeddedResource Include="Reports\RReporteCombosVendidos.rdlc" />
+    <EmbeddedResource Include="Reports\RSalesByUsers.rdlc" />
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,0 +1,2 @@
+DELETE FROM control_turnos
+DELETE FROM control_cajas
