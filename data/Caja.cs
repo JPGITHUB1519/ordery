@@ -59,6 +59,12 @@ namespace data
             return database.executeQuery("EXEC getCajas");
         }
 
+        // get todays open cajas
+        public DataSet getOpenCajasToday()
+        {
+            return database.executeQuery("EXEC getOpenCajasToday");
+        }
+
         public DataSet getCajasById(int idcaja)
         {
             return database.executeQuery("EXEC getCajasById @idcajas",
@@ -79,6 +85,14 @@ namespace data
                                                 new KeyValuePair<string, object>("@idcaja", idcaja),
                                                 new KeyValuePair<string, object>("@idusuario", idusuario)
                                                 ).Tables[0].Rows[0]["idcontrol_caja"]);
+        }
+
+        // close caja
+        public string closeCaja(int idcaja, DateTime fecha_cierre)
+        {
+            return database.executeNonQuery("EXEC closeCaja @idcaja, @fecha_cierre",
+                                                new KeyValuePair<string, object>("@idcaja", idcaja),
+                                                new KeyValuePair<string, object>("@fecha_cierre", fecha_cierre));
         }
 
         // return the idcontrol_caja to an specified caja

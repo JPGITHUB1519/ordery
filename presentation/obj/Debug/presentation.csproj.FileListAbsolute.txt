@@ -67,3 +67,4 @@ C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.PCheffBoard.r
 C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.PPedidoDetail.resources
 C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.PAsignarPedidoDelivery.resources
 C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.PPedidoDetails.resources
+C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.PCloseCaja.resources

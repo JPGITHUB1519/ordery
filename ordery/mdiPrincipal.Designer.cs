@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdiPrincipal));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,6 +79,7 @@
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cheffBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoDePedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arqueoDeCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirTurnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,8 +100,7 @@
             this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.listadoDePedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip = new System.Windows.Forms.ToolTip();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -533,6 +532,13 @@
             this.cheffBoardToolStripMenuItem.Text = "Cheff Board";
             this.cheffBoardToolStripMenuItem.Click += new System.EventHandler(this.cheffBoardToolStripMenuItem_Click);
             // 
+            // listadoDePedidosToolStripMenuItem
+            // 
+            this.listadoDePedidosToolStripMenuItem.Name = "listadoDePedidosToolStripMenuItem";
+            this.listadoDePedidosToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.listadoDePedidosToolStripMenuItem.Text = "Listado de Pedidos";
+            this.listadoDePedidosToolStripMenuItem.Click += new System.EventHandler(this.listadoDePedidosToolStripMenuItem_Click);
+            // 
             // arqueoDeCajaToolStripMenuItem
             // 
             this.arqueoDeCajaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -706,26 +712,24 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(49, 20);
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // listadoDePedidosToolStripMenuItem
-            // 
-            this.listadoDePedidosToolStripMenuItem.Name = "listadoDePedidosToolStripMenuItem";
-            this.listadoDePedidosToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
-            this.listadoDePedidosToolStripMenuItem.Text = "Listado de Pedidos";
-            this.listadoDePedidosToolStripMenuItem.Click += new System.EventHandler(this.listadoDePedidosToolStripMenuItem_Click);
-            // 
             // mdiPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ordery.Properties.Resources.logo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(843, 558);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.menuStrip);
+            this.DoubleBuffered = true;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "mdiPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ordery";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.mdiPrincipal_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();

@@ -70,6 +70,12 @@
     <Compile Include="PCheffBoard.Designer.cs">
       <DependentUpon>PCheffBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="PCloseCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCloseCaja.Designer.cs">
+      <DependentUpon>PCloseCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="PCloseTurno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PCheffBoard.resx">
       <DependentUpon>PCheffBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCloseCaja.resx">
+      <DependentUpon>PCloseCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PCloseTurno.resx">
       <DependentUpon>PCloseTurno.cs</DependentUpon>

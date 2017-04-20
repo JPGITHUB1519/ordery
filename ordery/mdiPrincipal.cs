@@ -163,7 +163,9 @@ namespace ordery
 
         private void abrirTurnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            PCloseCaja doform = new PCloseCaja();
+            doform.MdiParent = this;
+            doform.Show();
         }
 
         private void abrirCajaToolStripMenuItem_Click(object sender, EventArgs e)
