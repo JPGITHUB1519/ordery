@@ -66,3 +66,4 @@ C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.PMisVentas.re
 C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.PCheffBoard.resources
 C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.PPedidoDetail.resources
 C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.PAsignarPedidoDelivery.resources
+C:\Users\Tester\Desktop\ordery\presentation\obj\Debug\presentation.PPedidoDetails.resources

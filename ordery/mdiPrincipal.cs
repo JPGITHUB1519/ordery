@@ -244,5 +244,12 @@ namespace ordery
             doform.MdiParent = this;
             doform.Show();
         }
+
+        private void listadoDePedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PPedidoDetails doform = new PPedidoDetails();
+            doform.MdiParent = this;
+            doform.Show();
+        }
     }
 }

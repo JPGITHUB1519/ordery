@@ -123,11 +123,76 @@ namespace data
             return database.executeQuery("EXEC getPedidos");
         }
 
+        public DataSet getPedidosDetails()
+        {
+            return database.executeQuery("EXEC getPedidosDetails");
+        }
+
         // get pedidos with status ordenado
         public DataSet getPedidosByStatusOrdenado()
         {
             return database.executeQuery("EXEC getPedidosByStatusOrdenado");
         }
+
+        public DataSet getPedidosByStatusCocinando()
+        {
+            return database.executeQuery("EXEC getPedidosByStatusCocinando");
+        }
+
+        public DataSet getPedidosByStatusListo()
+        {
+            return database.executeQuery("EXEC getPedidosByStatusListo");
+        }
+
+        public DataSet getPedidosByStatusEntregando()
+        {
+            return database.executeQuery("EXEC getPedidosByStatusEntregando");
+        }
+
+        public DataSet getPedidosByStatusEntregado()
+        {
+            return database.executeQuery("EXEC getPedidosByStatusEntregado");
+        }
+
+        // get pedidos details by idpedido
+        public DataSet getPedidosDetailsByIdPedido(int idpedido)
+        {
+            return database.executeQuery("EXEC getPedidosDetailsByIdPedido @idpedido",
+                                            new KeyValuePair<string, object>("@idpedido", idpedido));
+        }
+
+        public DataSet getPedidosDetailsByClienteNombre(string nombre_cliente)
+        {
+            return database.executeQuery("EXEC getPedidosDetailsByClienteNombre @nombre_cliente",
+                                            new KeyValuePair<string, object>("@nombre_cliente", nombre_cliente));
+        }
+
+        // get pedidos details by status...
+        public DataSet getPedidosDetailsByStatusOrdenado()
+        {
+            return database.executeQuery("EXEC getPedidosDetailsByStatusOrdenado");
+        }
+
+        public DataSet getPedidosDetailsByStatusCocinando()
+        {
+            return database.executeQuery("EXEC getPedidosDetailsByStatusCocinando");
+        }
+
+        public DataSet getPedidosDetailsByStatusListo()
+        {
+            return database.executeQuery("EXEC getPedidosDetailsByStatusListo");
+        }
+
+        public DataSet getPedidosDetailsByStatusEntregando()
+        {
+            return database.executeQuery("EXEC getPedidosDetailsByStatusEntregando");
+        }
+
+        public DataSet getPedidosDetailsByStatusEntregado()
+        {
+            return database.executeQuery("EXEC getPedidosDetailsByStatusEntregado");
+        }
+
 
         public DataSet getPedidosByStatusOrdenadoAndConcinando()
         {
@@ -159,6 +224,19 @@ namespace data
         public string setPedidoStatusToListo(int idpedido)
         {
             return database.executeNonQuery("EXEC setPedidoStatusToListo @idpedido", 
+                                                new KeyValuePair<string, object>("@idpedido", idpedido));
+        }
+
+        public string setPedidoStatusToEntregando(int idpedido)
+        {
+            return database.executeNonQuery("EXEC setPedidoStatusToEntregando @idpedido",
+                                                new KeyValuePair<string, object>("@idpedido", idpedido));
+        }
+
+        // set pedido status to entregado
+        public string setPedidoStatusToEntregado(int idpedido)
+        {
+            return database.executeNonQuery("EXEC setPedidoStatusToEntregado @idpedido",
                                                 new KeyValuePair<string, object>("@idpedido", idpedido));
         }
 

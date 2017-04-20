@@ -153,6 +153,16 @@ namespace presentation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delivered {
+            get {
+                object obj = ResourceManager.GetObject("delivered", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap edit {
             get {
                 object obj = ResourceManager.GetObject("edit", resourceCulture);
@@ -276,6 +286,16 @@ namespace presentation.Properties {
         internal static System.Drawing.Bitmap User_Interface_Login_icon {
             get {
                 object obj = ResourceManager.GetObject("User-Interface-Login-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap verification_of_delivery_list_clipboard_symbol {
+            get {
+                object obj = ResourceManager.GetObject("verification-of-delivery-list-clipboard-symbol", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
