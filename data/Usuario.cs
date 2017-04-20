@@ -94,8 +94,16 @@ namespace data
             DataSet ds = database.executeQuery("EXEC authenticateUsuario @username, @password",
                                                     new KeyValuePair<string, object>("@username", usuario.Username),
                                                     new KeyValuePair<string, object>("@password", Security.Encrypt(usuario.Password)));
-            if (ds.Tables[0].Rows.Count == 0) return false;
-            return true;
+            if (ds.Tables[0].Rows.Count == 0)
+            {
+                return false;
+            }
+            else
+            {
+                // save user in session
+                session.userId =  Convert.ToInt32(ds.Tables[0].Rows[0]["idusuario"]);
+                return true;
+            }  
         }
 
 

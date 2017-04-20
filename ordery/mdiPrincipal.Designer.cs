@@ -86,7 +86,6 @@
             this.abrirTurnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarTurnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verTotalEnCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesCombosVendidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.misVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -547,8 +546,7 @@
             this.abrirCajaToolStripMenuItem,
             this.abrirTurnoToolStripMenuItem,
             this.cerrarCajaToolStripMenuItem,
-            this.cerrarTurnoToolStripMenuItem,
-            this.verTotalEnCajaToolStripMenuItem});
+            this.cerrarTurnoToolStripMenuItem});
             this.arqueoDeCajaToolStripMenuItem.Name = "arqueoDeCajaToolStripMenuItem";
             this.arqueoDeCajaToolStripMenuItem.Size = new System.Drawing.Size(124, 24);
             this.arqueoDeCajaToolStripMenuItem.Text = "Arqueo de Caja";
@@ -580,13 +578,6 @@
             this.cerrarTurnoToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.cerrarTurnoToolStripMenuItem.Text = "Cerrar Turno";
             this.cerrarTurnoToolStripMenuItem.Click += new System.EventHandler(this.cerrarTurnoToolStripMenuItem_Click);
-            // 
-            // verTotalEnCajaToolStripMenuItem
-            // 
-            this.verTotalEnCajaToolStripMenuItem.Name = "verTotalEnCajaToolStripMenuItem";
-            this.verTotalEnCajaToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
-            this.verTotalEnCajaToolStripMenuItem.Text = "Ver Total en Caja";
-            this.verTotalEnCajaToolStripMenuItem.Click += new System.EventHandler(this.verTotalEnCajaToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -820,7 +811,6 @@
         private System.Windows.Forms.ToolStripMenuItem abrirTurnoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarCajaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarTurnoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verTotalEnCajaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesCombosVendidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem misVentasToolStripMenuItem;
